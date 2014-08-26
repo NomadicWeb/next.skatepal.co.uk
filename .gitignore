@@ -1,2 +1,3 @@
 ruby/
 log/
+config/deploy.yml
