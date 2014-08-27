@@ -1,3 +1,11 @@
+%script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js",
+  type: "text/javascript"}
+
+%script{src: "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css",
+  type: "text/stylesheet"}
+
+{{ 'bootstrap.min.js' | javascript_tag }}
+
 .container-fluid.footer
   %p.pull-left
     %small &copy; SkatePAL {{ now | localized_date: '%Y' }}
