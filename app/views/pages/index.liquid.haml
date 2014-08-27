@@ -24,7 +24,9 @@ published: true
         .col-md-12
           .content-block.topmost
             {% block 'header' %} 
+            {% editable_text title, hint: "a title", format: raw, rows: 2 %}
             HEADER 
+            {% endeditable_text %}
             {% endblock %}
 
       .row
