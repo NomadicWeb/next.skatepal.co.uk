@@ -1,3 +1,4 @@
 ruby/
 log/
 config/deploy.yml
+.sass-cache
