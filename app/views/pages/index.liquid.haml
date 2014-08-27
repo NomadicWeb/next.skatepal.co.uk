@@ -9,8 +9,8 @@ published: true
   .container
 
     -# fixed sidebar social icons
-    - ["facebook", "twitter", "youtube", "mail"].each do |social|
-      %div#fixedsocial
+    %div#fixedsocial
+      - ["facebook", "twitter", "youtube", "mail"].each do |social|
         %div{:class => "#{social}flat"}
           %i{:class => "fa fa-#{social} fa-2x"}
 
