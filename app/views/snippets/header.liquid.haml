@@ -1,0 +1,15 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "content-type"}
+    %meta{charset: "utf-8"}
+    %title {{ page.title }}
+
+    -# @TODO: set this from the admin
+    %meta{content: "SkatePAL", name: "SkatePAL"}
+
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}
+
+    -# @TODO: get SASS working
+    -# @TODO: add font-awesome
+    {{ 'application.css.sass' | stylesheet_tag }}

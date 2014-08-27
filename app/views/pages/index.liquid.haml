@@ -2,58 +2,52 @@
 title: Home
 published: true
 ---
-!!!
-%html{lang: "en"}
-  %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "content-type"}
-    %meta{charset: "utf-8"}
-    %title {{ page.title }}
-    %meta{content: "SkatePAL", name: "SkatePAL"}
-    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}
+{% include 'header' %}
 
-    -# @TODO: get SASS working
-    -# @TODO: add font-awesome
-    {{ 'application.css.sass' | stylesheet_tag }}
-  %body
-    .container
+%body
+  -# page container
+  .container
 
-      -# fixed sidebar social icons
-      - ["facebook", "twitter", "youtube", "mail"].each do |social|
-        %div#fixedsocial
-          %div{:class => "#{social}flat"}
-            %i{:class => "fa fa-#{social} fa-2x"}
+    -# fixed sidebar social icons
+    - ["facebook", "twitter", "youtube", "mail"].each do |social|
+      %div#fixedsocial
+        %div{:class => "#{social}flat"}
+          %i{:class => "fa fa-#{social} fa-2x"}
 
-      -# @TODO: navigation 
+    -# @TODO: navigation 
 
-      -# @TODO: main body
-      .container-fluid.content-background
-        .row
-          .col-md-12
-            .content-block.topmost
-              {% block 'header' %} 
-              HEADER 
-              {% endblock %}
+    -# @TODO: main body
+    .container-fluid.content-background
+      .row
+        .col-md-12
+          .content-block.topmost
+            {% block 'header' %} 
+            HEADER 
+            {% endblock %}
 
-        .row
-          .col-md-8
-            .row
-              .col-md-12
-                .content-block
-                  CAROUSEL
-            .row
-              .col-md-12
-                .content-block
-                  FEATURED
+      -# carousel
+      .row
+        .col-md-8
+          .row
+            .col-md-12
+              .content-block
+                CAROUSEL
 
-          .col-md-4
-            .row
-              .col-md-12
-                .content-block
-                  SIDEBAR
+          -# featured projects
+          .row
+            .col-md-12
+              .content-block
+                FEATURED
 
-      .container-fluid.footer
-        %p.pull-left
-          %small COPYRIGHT
+        -# blog sidebar
+        .col-md-4
+          .row
+            .col-md-12
+              .content-block
+                SIDEBAR
 
-      -# @TODO: get SASS javascript way working
-      {{ 'bootstrap.min.js' | javascript_tag }}
+
+    -# @TODO: get SASS javascript way working
+    {{ 'bootstrap.min.js' | javascript_tag }}
+
+{% include 'footer' %}
