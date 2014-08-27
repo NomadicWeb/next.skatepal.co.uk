@@ -5,27 +5,28 @@ published: true
 {% include 'header' %}
 
 %body
-  -# page container
   .container
+    .row.logo_and_navbar
+      .col-md-3
+        %p.pull-left LOGO
 
-    -# fixed sidebar social icons
+      .col-md-9
+        %p.pull-right NAV BAR
+
+  .container
     %div#fixedsocial
       - ["facebook", "twitter", "youtube", "mail"].each do |social|
         %div{:class => "#{social}flat"}
           %i{:class => "fa fa-#{social} fa-2x"}
 
-    -# @TODO: navigation 
-
-    -# @TODO: main body
     .container-fluid.content-background
-      .row
+      .row.header
         .col-md-12
           .content-block.topmost
             {% block 'header' %} 
             HEADER 
             {% endblock %}
 
-      -# carousel
       .row
         .col-md-8
           .row
@@ -33,17 +34,15 @@ published: true
               .content-block
                 CAROUSEL
 
-          -# featured projects
           .row
             .col-md-12
               .content-block
                 FEATURED
 
-        -# blog sidebar
         .col-md-4
           .row
             .col-md-12
               .content-block
                 SIDEBAR
 
-{% include 'footer' %}
+    {% include 'footer' %}
