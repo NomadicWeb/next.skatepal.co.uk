@@ -1,8 +1,14 @@
 {% for post in contents.posts %}
 .a-post
-  -# @TODO: add featured image with correct scaling
-  %h3    
+
+  {% if post.featured_image.url %}
+  %img.post-featured-image{:src => "{{ post.featured_image.url }}", 
+       :alt => "{{ post.title | escape }}"}
+  {% endif %}
+
+  %h3.post-title
     %a{:href => "/posts/{{ post._slug }}"} {{ post.title | escape}}
+
   %small.post-posted-at Posted at: {{ post.posted_at | escape }}
   %small.post-tags Tags: {{ post.tags | escape }}
   %p.post-teaser {{ post.teaser | escape | truncatewords: 30, ""}}
