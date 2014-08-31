@@ -1,8 +1,11 @@
 {% for post in contents.posts %}
 .a-post
   -# @TODO: add featured image with correct scaling
-  %h1    {{ post.title     | escape }}
-  %small {{ post.posted_at | escape }}
-  %small {{ post.tags      | escape }}
-  %p     {{ post.teaser    | escape }}
+  %h3    
+    %a{:href => "/posts/{{ post._slug }}"} {{ post.title | escape}}
+  %small.post-posted-at Posted at: {{ post.posted_at | escape }}
+  %small.post-tags Tags: {{ post.tags | escape }}
+  %p.post-teaser {{ post.teaser | escape | truncatewords: 30, ""}}
+  %small
+    %a.post-read-more{:href => "/posts/{{ post._slug }}"} ... read more ...
 {% endfor %}
