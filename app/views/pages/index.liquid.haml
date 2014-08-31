@@ -13,7 +13,22 @@ published: true
         %p.pull-left LOGO
 
       .col-md-9
-        %p.pull-right NAV BAR
+        %nav.navbar.navbar-default{:role => "navigation"}
+          .container-fluid
+            .navbar-header
+              %button.navbar-toggle.collapsed{:type => "button",
+                "data-toggle" => "collapse", 
+                "data-target" => "#navbar-collapse"}
+
+              %span.sr-only Toggle Navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+
+              %a.navbar-brand{:href => "#"} Brand
+
+            .collapse.navbar-collapse#navbar-collapse
+              %ul.nav.navbar-nav.pull-right {% nav 'site', no_wrapper: true, active_class: "active" %}
 
   .container
     %div#fixedsocial
@@ -25,7 +40,7 @@ published: true
       .row.header
         .col-md-12
           .content-block.topmost
-            {% block 'head' %} 
+            {% block 'head' %}
             {% editable_text title, hint: "a title", format: raw, rows: 2 %}
             {% endeditable_text %}
             {% endblock %}
