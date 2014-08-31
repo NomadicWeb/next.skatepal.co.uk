@@ -16,8 +16,9 @@ published: true
         %nav.navbar.navbar-default{:role => "navigation"}
           .container-fluid
             .navbar-header
+
               %button.navbar-toggle.collapsed{:type => "button",
-                "data-toggle" => "collapse", 
+                "data-toggle" => "collapse",
                 "data-target" => "#navbar-collapse"}
 
               %span.sr-only Toggle Navigation
@@ -28,21 +29,23 @@ published: true
               %a.navbar-brand{:href => "#"} Brand
 
             .collapse.navbar-collapse#navbar-collapse
-              %ul.nav.navbar-nav.pull-right {% nav 'site', no_wrapper: true, active_class: "active" %}
+              %ul.nav.navbar-nav.pull-right
+                {% nav 'site', no_wrapper: true, active_class: "active" %}
 
   .container
     %div#fixedsocial
       - ["facebook", "twitter", "youtube"].each do |social|
         %div{:class => "#{social}flat"}
-          %i{:class => "fa fa-#{social} fa-2x", "data-toggle" => "tooltip", "title" => "Join us on #{social}!"}
+          %i{:class => "fa fa-#{social} fa-2x",
+            "data-toggle" => "tooltip",
+            "title" => "Join us on #{social}!"}
 
     .container-fluid.content-background
       .row.header
         .col-md-12
           .content-block.topmost
             {% block 'head' %}
-            {% editable_text title, hint: "a title", format: raw, rows: 2 %}
-            {% endeditable_text %}
+            {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
             {% endblock %}
 
       {% block 'main' %}
@@ -63,7 +66,7 @@ published: true
           .row
             .col-md-12
               .content-block
-                SIDEBAR
+                BLOG POSTS -- @TODO: add content type
 
       {% endblock %}
 
