@@ -1,3 +1,8 @@
 {% for post in contents.posts %}
-{{ post.title | escape }}
+.a-post
+  -# @TODO: add featured image with correct scaling
+  %h1    {{ post.title     | escape }}
+  %small {{ post.posted_at | escape }}
+  %small {{ post.tags      | escape }}
+  %p     {{ post.teaser    | escape }}
 {% endfor %}
