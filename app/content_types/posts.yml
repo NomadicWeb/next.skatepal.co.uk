@@ -1,0 +1,45 @@
+name: Post
+slug: posts
+description: A blog post
+label_field_name: title
+order_by: posted_at
+order_direction: desc
+
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    localized: false
+
+- posted_at:
+    label: Posted at
+    type: date_time
+    required: true
+    localized: false
+
+- tags:
+    label: Tags
+    type: tags
+    required: false
+    localized: false
+
+- teaser:
+    label: Teaser
+    type: text
+    required: false
+    localized: false
+
+- featured_image:
+    label: Featured image
+    type: file
+    required: false
+    hint: An image displayed next to `teaser` when listing posts
+    localized: false
+
+- body:
+    label: Body
+    type: text
+    required: false
+    localized: false
+    text_formatting: html
