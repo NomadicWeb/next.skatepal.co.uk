@@ -1,20 +1,6 @@
 - "Sample 1":
-    teaser: "Laudantium temporibus et esse labore in minima amet cum. Et eum quas maiores velit quae ducimus aut officia. Adipisci velit qui a velit voluptatem facilis. Cupiditate illo incidunt itaque et eius quia aut corrupti."
-    featured_image: null # Path to a file in the public/samples folder or to a remote and external file.
-    body: "Repellat tempora eligendi quos sint. Aliquid est esse cupiditate vel reiciendis aut animi molestias. Atque distinctio cumque ab sapiente sed beatae. Qui aliquam non necessitatibus."
-
-- "Sample 2":
-    teaser: "Esse qui hic ullam consectetur libero laboriosam at. Aliquid aut quis eos. Veniam incidunt vel perferendis."
-    featured_image: null # Path to a file in the public/samples folder or to a remote and external file.
-    body: "Aspernatur ut ea dolores et. Ea illo porro non possimus voluptatem debitis saepe rerum. Aut reprehenderit praesentium aliquam facere aut aspernatur ratione neque."
-
-- "Sample 3":
-    teaser: "Consectetur exercitationem rerum sint non. Doloremque sint praesentium non aperiam aut voluptas. Quaerat dolorum quidem pariatur voluptas et suscipit quo."
-    featured_image: null # Path to a file in the public/samples folder or to a remote and external file.
-    body: "Nihil quod cum autem excepturi explicabo magni officiis sit. Ad debitis qui consectetur perferendis. Enim quia reprehenderit nihil eum ipsa non quod. Voluptates minima molestias aut odit et et fugiat tenetur."
-
-- "Sample 4":
-    teaser: "Porro qui officia est suscipit dolores recusandae. Adipisci soluta suscipit facere sunt magnam recusandae. Qui odit architecto consectetur sint dolorem. Voluptate et nihil quia qui ex exercitationem repudiandae. Quae voluptas esse natus accusantium ducimus aspernatur."
-    featured_image: null # Path to a file in the public/samples folder or to a remote and external file.
-    body: "Sint earum quae soluta aut molestias in. Totam necessitatibus quo facere vero dolore. Nulla sit est natus aut et fugiat. Est modi nisi iste natus corporis. Voluptatum architecto non blanditiis est quia."
-
+    featured_image: "http://placehold.it/350x65"
+    posted_at: "10/10/2014"
+    tags: "star_wars, jabba_the_hut, hand_solo, something_else"
+    teaser: "Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. The more you tighten your grip, Tarkin, the more star systems will slip through your fingers. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct."
+    body: "Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. The more you tighten your grip, Tarkin, the more star systems will slip through your fingers. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct.  I call it luck. What!? Ye-ha! Dantooine. They're on Dantooine.  Hey, Luke! May the Force be with you. Oh God, my uncle. How am I ever gonna explain this? Don't underestimate the Force. What?! Hokey religions and ancient weapons are no match for a good blaster at your side, kid.  Red Five standing by. Dantooine. They're on Dantooine. I can't get involved! I've got work to do! It's not that I like the Empire, I hate it, but there's nothing I can do about it right now. It's such a long way from here.  Ye-ha! Still, she's got a lot of spirit. I don't know, what do you think? Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. Escape is not his plan. I must face him, alone. I'm trying not to, kid."
