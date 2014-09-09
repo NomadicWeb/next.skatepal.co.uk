@@ -1,10 +1,18 @@
 %div#homecarousel{:class => "carousel slide", "data-ride" => "carousel"}
-  <!--Indicators-->
+
+  -# indicators
   %ol.carousel-indicators
     %li.active{"data-target" => "#homecarousel", "data-slide-to" => "0"}
     %li{"data-target" => "#homecarousel", "data-slide-to" => "1"}
     %li{"data-target" => "#homecarousel", "data-slide-to" => "2"}
+
+      -# images in the carousel
       .carousel-inner
         .item.active
           %img{:src => "http://dummyimage.com/800x600/c2a9c2/4d4e69.jpg", :alt => ""}
-          <!-- TODO LOGIC FOR IMAGES SEE: https://github.com/locomotivecms/engine/issues/573 -->
+
+      -# left/right UI controls for carousel
+      %a.left.carousel-control{:href => "#homecarousel", :role => "button", "data-slide" => "prev"}
+        %span.glyphicon.glyphicon-chevron-left
+      %a.right.carousel-control{:href => "#homecarousel", :role => "button", "data-slide" => "next"}
+        %span.glyphicon.glyphicon-chevron-right
