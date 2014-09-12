@@ -5,3 +5,13 @@
     location: "Ramallah, State of Palestine"
     sectors: "Wooden construction"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
+    project_image: "http://placehold.it/250x325"
+
+- "Sample 2 - Mini ramp":
+    client: "Islamic Youth Centre"
+    status: "Completed"
+    area: "Urban"
+    location: "Ramallah, State of Palestine"
+    sectors: "Wooden construction"
+    description: "A big long write up about how rad the shit mini ramp is in Ramallah"
+    project_image: "http://placehold.it/250x325"
