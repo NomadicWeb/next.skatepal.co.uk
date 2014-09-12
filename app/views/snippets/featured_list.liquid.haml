@@ -1,0 +1,9 @@
+{% for project in contents.featured_projects %}
+.a-project
+
+  %h3.project-title {{ project.title | escape}}
+  %h4.project-location {{ project.location | escape}}
+  %img.post-featured-image.img-responsive{:src => "{{ post.featured_image.url }}", 
+       :alt => "{{ post.title | escape }}"}
+
+{% endfor %}
