@@ -53,3 +53,9 @@ fields:
     type: text
     required: false
     localized: false
+
+- project_image:
+    label: Featured image
+    type: file
+    required: false
+    localized: false
