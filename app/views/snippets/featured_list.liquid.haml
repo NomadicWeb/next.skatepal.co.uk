@@ -1,7 +1,8 @@
 {% for project in contents.featured_projects %}
 .col-md-4.a-project
-  %h4.project-title {{ project.title | escape}}
-  %small.project-location {{ project.location | escape}}
-  %img.post-featured-image.img-responsive{:src => "{{ project.project_image.url }}", 
-       :alt => "{{ project.title | escape }}"}
+  .content-block
+    %h4.project-title {{ project.title | escape}}
+    %small.project-location {{ project.location | escape}}
+    %img.post-featured-image.img-responsive{:src => "{{ project.project_image.url }}", 
+      :alt => "{{ project.title | escape }}"} 
 {% endfor %}
