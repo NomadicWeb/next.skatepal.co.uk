@@ -1,0 +1,55 @@
+name: Featured projects
+slug: featured_projects
+description: A project completed or in progress by SkatePAL
+label_field_name: title
+order_by: project_date
+order_direction: desc
+
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    localized: false
+
+- project_date:
+    label: Project date
+    type: date_time
+    required: true
+    localized: false
+
+- client:
+    label: Client
+    type: text
+    required: false
+    localized: false
+
+- status:
+    label: Status
+    type: text
+    required: false
+    localized: false
+
+- area:
+    label: Area
+    type: text
+    required: false
+    localized: false
+
+- location:
+    label: Location
+    type: text
+    required: false
+    localized: false
+
+- sectors:
+    label: Sectors
+    type: text
+    required: false
+    localized: false
+
+- description:
+    label: Description
+    type: text
+    required: false
+    localized: false
