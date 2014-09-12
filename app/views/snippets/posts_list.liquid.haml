@@ -2,7 +2,7 @@
 .a-post
 
   {% if post.featured_image.url %}
-  %img.post-featured-image{:src => "{{ post.featured_image.url }}", 
+  %img.post-featured-image.img-responsive{:src => "{{ post.featured_image.url }}", 
        :alt => "{{ post.title | escape }}"}
   {% endif %}
 
