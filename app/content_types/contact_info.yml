@@ -1,0 +1,30 @@
+name: Contact info
+slug: contact_info
+description: Contact information for the big dogs of SkatePAL
+label_field_name: name
+order_by: manually
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    localized: false
+
+- email:
+    label: Email
+    type: string
+    required: false
+    localized: false
+
+- number:
+    label: Number
+    type: string
+    required: false
+    localized: false
+
+- img:
+    label: Img
+    type: file
+    required: false
+    localized: false
