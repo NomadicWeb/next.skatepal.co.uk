@@ -4,18 +4,19 @@ listed: true
 published: true
 ---
 {% extends 'index'%}
-{% include 'header' %}
 
-{% block 'head' %}
-.row
-  .col-md-3
-    {% editable_text title, hint: "The description", format: raw, rows: 3 %}
-    {% endeditable_text %}
-
-  .col-md-9 PROJECTS
+{% block 'head' %} 
+%small.page-breadcrumb {{ page.title }} 
 {% endblock %}
 
 {% block 'main' %}
+.row
+  .col-md-3
+    .content-block
+      filter column
+  .col-md-9
+    .content-block
+      projects column
 {% endblock %}
 
 {% include 'footer' %}
