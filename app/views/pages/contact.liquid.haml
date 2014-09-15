@@ -13,18 +13,15 @@ published: true
 {% block 'main' %}
 .row.content-padding
   .col-md-8
-    .content-block
-      -# including james,kev and charlie. That makes 3.
-      {% for i in (1..3) %}      
-      {% for contact in contents.contact_info %}
+    {% for contact in contents.contact_info %}
+    .col-md-3
+      .content-block
+        %h3 {{ contact.name }}
+        %h4 {{ contact.email }}
+        %h5 {{ contact.number }}
+        {{ contact.img.url | image_tag: 'class:img-responsive'}}
 
-      %h3 {{ contact.name }}
-      %h4 {{ contact.email }}
-      %h5 {{ contact.number }}
-      {{ contact.img.url | image_tag }}
-
-      {% endfor %}
-      {% endfor %}
+    {% endfor %}
 
   .col-md-4
     .content-block
