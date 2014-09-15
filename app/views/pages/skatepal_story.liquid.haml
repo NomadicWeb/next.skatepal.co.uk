@@ -6,31 +6,44 @@ published: true
 
 {% capture img_one %}{% editable_file 'img_one' %}{% endeditable_file %}{% endcapture %}
 {% capture img_two %}{% editable_file 'img_two' %}{% endeditable_file %}{% endcapture %}
+{% capture img_three %}{% editable_file 'img_three' %}{% endeditable_file %}{% endcapture %}
+{% capture img_four %}{% editable_file 'img_four' %}{% endeditable_file %}{% endcapture %}
 
 {% extends 'index'%}
 {% include 'header' %}
-
-{% block 'head' %}
-.row
+{% block 'head' %} @TODO - MENU ITEM BREADCRUMBS {% endblock %}
+{% block 'main' %}
+.row.content-padding
   .col-md-3
     {% editable_text title, hint: "The description", format: raw, rows: 3 %}
     This text will describe the SkatePAL organisation
     {% endeditable_text %}
 
-  .col-md-9
+  .col-md-9.about-img
+
+    @TODO - make sure the images line up vertically at the bottom (measure pixels)
+
     .col-md-7
       {% if img_one != '' %} {{ img_one | image_tag }} {% else %}
-      {{ 'http://placehold.it/350x150' | image_tag }}
+      {{ 'http://placehold.it/450x300' | image_tag }}
       {% endif %}
 
-    .col-md-2
-      {% if img_two != '' %} {{ img_two | image_tag }} {% else %}
-      {{ 'http://placehold.it/200x120' | image_tag }}
+      {% if img_one != '' %} {{ img_one | image_tag }} {% else %}
+      {{ 'http://placehold.it/450x300' | image_tag }}
+      {% endif %}
+
+    .col-md-5
+      {% if img_two != '' %} {{ img_two | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'http://placehold.it/300x200'  | image_tag: 'class:img-responsive' }}
+      {% endif %}
+
+      {% if img_three != '' %} {{ img_three | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'http://placehold.it/300x200'  | image_tag: 'class:img-responsive' }}
+      {% endif %}
+
+      {% if img_four != '' %} {{ img_four | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'http://placehold.it/300x200'  | image_tag: 'class:img-responsive' }}
       {% endif %}
 
 {% endblock %}
-
-{% block 'main' %}
-{% endblock %}
-
 {% include 'footer' %}
