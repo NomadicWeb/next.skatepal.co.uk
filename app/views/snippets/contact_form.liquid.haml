@@ -1,0 +1,27 @@
+%form{:method => "POST", :action => "{{contents.contact_msgs.public_submission_url}}"}
+  {% csrf_param %}
+  %input{:type => "hidden", :value => "/", :name => "success_callback"}
+  %input{:type => "hidden", :value => "/contact", :name => "error_callback"}
+
+  {% if contact_msgs.errors %}
+  %p
+    The following errors occured:
+    %ul
+      {% for error in contact_msgs.errors %}
+      %li {{error[0] | capitalize}} -  {{error[1]}}</li>
+      {% endfor %}
+  {% endif %}
+
+  %table.contact-form
+    %tr
+      %td Name:
+      %td 
+        %input{:type => "text", :name => "content[name]", :value => "{{ contact_msgs.name }}"}
+      %td Email:
+      %td 
+        %input{:type => "text", :name => "content[name]", :value => "{{ contact_msgs.email }}"}
+      %td Message:
+      %td 
+        %input{:type => "text", :name => "content[message]", :value => "{{ contact_msgs.message }}"}
+  %input{:type => "submit"}
+

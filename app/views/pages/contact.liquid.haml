@@ -12,21 +12,21 @@ published: true
 
 {% block 'main' %}
 .row.content-padding
-  .col-md-8
+  .col-md-9
     {% for contact in contents.contact_info %}
-    .col-md-3
-      .content-block
+    .col-md-4
+      .content-block.contact-info
         %h3 {{ contact.name }}
+        {{ contact.img.url | image_tag: 'class:img-responsive'}}
         %h4 {{ contact.email }}
         %h5 {{ contact.number }}
-        {{ contact.img.url | image_tag: 'class:img-responsive'}}
 
     {% endfor %}
 
-  .col-md-4
-    .content-block
-      contact form
-    
+  .col-md-3
+    .col-md-12
+      .content-block
+        {% include 'contact_form' %}
 {% endblock %}
 
 {% include 'footer' %}
