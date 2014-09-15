@@ -3,7 +3,9 @@ title: Home
 listed: true
 published: true
 ---
-{% capture img_one %}{% editable_file 'img_one' %}{% endeditable_file %}{% endcapture %}
+{% capture carousel_img_one %}{% editable_file 'carousel_img_one' %}{% endeditable_file %}{% endcapture %}
+{% capture carousel_img_two %}{% editable_file 'carousel_img_two' %}{% endeditable_file %}{% endcapture %}
+{% capture carousel_img_three %}{% editable_file 'carousel_img_three' %}{% endeditable_file %}{% endcapture %}
 
 {% include 'header' %}
 
@@ -34,8 +36,8 @@ published: true
           .row
             .col-md-12
               .content-block
-                #homeslider{:class => "carousel slide", "data-ride" => "carousel"}
-                  {% include 'carousel' with img_one %}
+                #homecarousel{:class => "carousel slide", "data-ride" => "carousel"}
+                  {% include 'carousel' with carousel_image_one, carousel_image_two, carousel_image_three %}
 
           .row
             .col-md-12
