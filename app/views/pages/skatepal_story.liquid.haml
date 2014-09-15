@@ -3,17 +3,31 @@ title: SkatePAL Story
 listed: true
 published: true
 ---
+
+{% capture img_one %}{% editable_file 'img_one' %}{% endeditable_file %}{% endcapture %}
+{% capture img_two %}{% editable_file 'img_two' %}{% endeditable_file %}{% endcapture %}
+
 {% extends 'index'%}
 {% include 'header' %}
 
 {% block 'head' %}
 .row
-  .col-md-4
+  .col-md-3
     {% editable_text title, hint: "The description", format: raw, rows: 3 %}
     This text will describe the SkatePAL organisation
     {% endeditable_text %}
 
-  .col-md-8 IMAGES
+  .col-md-9
+    .col-md-7
+      {% if img_one != '' %} {{ img_one | image_tag }} {% else %}
+      {{ 'http://placehold.it/350x150' | image_tag }}
+      {% endif %}
+
+    .col-md-2
+      {% if img_two != '' %} {{ img_two | image_tag }} {% else %}
+      {{ 'http://placehold.it/200x120' | image_tag }}
+      {% endif %}
+
 {% endblock %}
 
 {% block 'main' %}
