@@ -11,9 +11,15 @@ published: true
 
 {% block 'main' %}
 .row
-  .col-md-3
+  .col-md-3.filter-column
     .content-block
-      filter column
+      %h5 
+        %p Arrange by:
+        %ul
+          %li Location:
+          {% for selector in contents.featured_projects %}
+          %li {{ selector.location }}
+          {% endfor %}
   .col-md-9
     .content-block
       projects column
