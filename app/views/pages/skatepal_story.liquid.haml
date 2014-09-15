@@ -24,12 +24,12 @@ published: true
     @TODO - make sure the images line up vertically at the bottom (measure pixels)
 
     .col-md-7
-      {% if img_one != '' %} {{ img_one | image_tag }} {% else %}
-      {{ 'http://placehold.it/450x300' | image_tag }}
+      {% if img_one != '' %} {{ img_one | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'http://placehold.it/450x300' | image_tag: 'class:img-responsive'  }}
       {% endif %}
 
-      {% if img_one != '' %} {{ img_one | image_tag }} {% else %}
-      {{ 'http://placehold.it/450x300' | image_tag }}
+      {% if img_one != '' %} {{ img_one | image_tag: 'class:img-responsive'  }} {% else %}
+      {{ 'http://placehold.it/450x300' | image_tag: 'class:img-responsive'  }}
       {% endif %}
 
     .col-md-5
