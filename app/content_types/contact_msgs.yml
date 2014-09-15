@@ -1,0 +1,21 @@
+name: Contact msgs
+slug: contact_msgs
+description: User messages from the contact form
+label_field_name: name
+order_by: manually
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+
+- email:
+    label: Email
+    type: string
+    required: true
+
+- message:
+    label: Message
+    type: text
+    required: true
