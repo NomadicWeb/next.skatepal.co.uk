@@ -3,6 +3,8 @@ title: Home
 listed: true
 published: true
 ---
+{% capture img_one %}{% editable_file 'img_one' %}{% endeditable_file %}{% endcapture %}
+
 {% include 'header' %}
 
 %body
@@ -33,7 +35,7 @@ published: true
             .col-md-12
               .content-block
                 #homeslider{:class => "carousel slide", "data-ride" => "carousel"}
-                  {% include 'carousel' %}
+                  {% include 'carousel' with img_one %}
 
           .row
             .col-md-12
