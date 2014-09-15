@@ -8,11 +8,12 @@ published: true
 
 {% block 'head' %}
 .row
-  .col-md-3
+  .col-md-4
     {% editable_text title, hint: "The description", format: raw, rows: 3 %}
+    This text will describe the SkatePAL organisation
     {% endeditable_text %}
 
-  .col-md-9 IMAGES
+  .col-md-8 IMAGES
 {% endblock %}
 
 {% block 'main' %}
