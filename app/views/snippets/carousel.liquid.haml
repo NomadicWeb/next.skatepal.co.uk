@@ -1,12 +1,26 @@
+{% capture carousel_img_one %}{% editable_file 'carousel_img_one' %}{% endeditable_file %}{% endcapture %}
+{% capture carousel_img_two %}{% editable_file 'carousel_img_two' %}{% endeditable_file %}{% endcapture %}
+{% capture carousel_img_three %}{% editable_file 'carousel_img_three' %}{% endeditable_file %}{% endcapture %}
 -# indicators
 %ol.carousel-indicators
   %li.active{"data-target" => "#homecarousel", "data-slide-to" => "0"}
+  %li{"data-target" => "#homecarousel", "data-slide-to" => "1"}
+  %li{"data-target" => "#homecarousel", "data-slide-to" => "2"}
 
 -# images in the carousel
 .carousel-inner
   .item.active
-    %img{:src => "http://dummyimage.com/800x600/c2a9c2/4d4e69.jpg", :alt => ""}
-
+    {% if carousel_img_one != '' %} {{carousel_img_one | image_tag}} {% else %} 
+    {{'http://dummyimage.com/800x600/c2a9c2/4d4e69.jpg' | image_tag}}
+    {% endif %}
+  .item
+    {% if carousel_img_two != '' %} {{carousel_img_two | image_tag}} {% else %}
+    {{'http://dummyimage.com/800x600/c2a9c2/4d4e69.jpg' | image_tag}}
+    {% endif %}
+  .item
+    {% if carousel_img_three != '' %} {{carousel_img_three | image_tag}} {% else %}
+    {{'http://dummyimage.com/800x600/c2a9c2/4d4e69.jpg' | image_tag}}
+    {% endif %}
 -# left/right UI controls for carousel
 %a.left.carousel-control{:href => "#homecarousel", :role => "button", "data-slide" => "prev"}
   %span.glyphicon.glyphicon-chevron-left
