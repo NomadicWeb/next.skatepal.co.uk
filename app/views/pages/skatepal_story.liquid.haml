@@ -11,7 +11,11 @@ published: true
 
 {% extends 'index'%}
 {% include 'header' %}
-{% block 'head' %} @TODO - MENU ITEM BREADCRUMBS {% endblock %}
+
+{% block 'head' %} 
+%small.page-breadcrumb {{ page.title }} 
+{% endblock %}
+
 {% block 'main' %}
 .row.content-padding
   .col-md-3
