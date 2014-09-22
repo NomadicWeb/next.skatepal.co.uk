@@ -5,12 +5,18 @@ $('i[data-toggle="tooltip"]').tooltip({
    container: 'body'
 });
 
+// merge project dicts and remove duplicates
+fs = $.extend(fs[0], fs[1]);
 
 // writing list of unique filters
-for(f in fs){
-    var el = document.createElement("li"); // create new 'li' element
-    el.innerHTML = fs[f];                  // set filter text
-    $('.filters').append(el);              // add new 'li' to 'ul'
-}
+for(var f in fs){
+    var header_li = document.createElement("li");
+    var filter_link = document.createElement("a");
 
-// 
+    header_li.innerHTML = f;       // set filter title
+    filter_link.innerHTML = fs[f]; // set filter contents
+
+    $('.filters').append(header_li).append(filter_link);
+
+    // @todo - set the href of the 'a' to something
+}
