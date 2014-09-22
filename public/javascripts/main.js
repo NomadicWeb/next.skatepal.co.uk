@@ -8,7 +8,9 @@ $('i[data-toggle="tooltip"]').tooltip({
 
 // writing list of unique filters
 for(f in fs){
-    var el = document.createElement("li");
-    el.innerHTML = fs[f];
-    $('.filters').append(el);
+    var el = document.createElement("li"); // create new 'li' element
+    el.innerHTML = fs[f];                  // set filter text
+    $('.filters').append(el);              // add new 'li' to 'ul'
 }
+
+// 
