@@ -10,13 +10,16 @@ fs = $.extend(fs[0], fs[1]);
 
 // writing list of unique filters
 for(var f in fs){
-    var header_li = document.createElement("li");
-    var filter_link = document.createElement("a");
+    filter_section = f.replace(" ", "_").toLowerCase();
+    filter_contents = fs[f].replace(/\s/g, "_").toLowerCase().replace(",", "");
 
-    header_li.innerHTML = f;       // set filter title
-    filter_link.innerHTML = fs[f]; // set filter contents
+    var el = $("<li>").addClass("filter_section_" + filter_section).append(
+        $("<li>").append(
+            $("<a>").attr("href", "#").addClass("filter_contents_" + filter_contents)
+        )
+    );
 
-    $('.filters').append(header_li).append(filter_link);
-
-    // @todo - set the href of the 'a' to something
+    $('.filters').append(el);
+    $('.filters .filter_section_' + filter_section + ' li').prepend(f);
+    $('.filters .filter_contents_' + filter_contents).html(fs[f]);
 }
