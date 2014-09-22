@@ -3,6 +3,7 @@ title: Projects
 listed: true
 published: true
 ---
+
 {% extends 'index'%}
 
 {% block 'head' %} 
@@ -16,13 +17,31 @@ published: true
       %h5 
         %p Arrange by:
         %ul
-          %li Location:
-          {% for selector in contents.featured_projects %}
-          %li {{ selector.location }}
+
+          // init the filters array
+          %script var filters = [];
+
+          {% for project in contents.featured_projects %}
+          %script
+            // for each project, push each field onto 'filters'
+            filters.push(
+            "{{ project.client }}", "{{ project.status }}", 
+            "{{ project.area }}", "{{ project.location }}", 
+            "{{ project.sectors }}"
+            );
           {% endfor %}
+
+          // remove duplicates
+          %script
+            filters = filters.filter(function(v, i, a){return a.indexOf (v) == i});
+
+          // write list of filters
+          // @TODO
+
   .col-md-9
     .content-block
       projects column
+
 {% endblock %}
 
 {% include 'footer' %}
