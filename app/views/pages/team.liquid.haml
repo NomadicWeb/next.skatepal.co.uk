@@ -4,17 +4,6 @@ listed: true
 published: true
 ---
 
--# init the filters array
-%script var filters = [];
-
--# for each project, push each field onto 'fs'
-{% for member in contents.team %}
-%script
-  filters.push({
-  "location":   "{{ member.filter }}", 
-  });
-{% endfor %}
-
 {% extends 'index'%}
 {% include 'header' %}
 
@@ -22,21 +11,26 @@ published: true
 {% endblock %}
 
 {% block 'main' %}
-
 .row
   .col-md-3.filter-column
     .content-block
-      %h5 
-        %p Arrange by:
-        %ul.filters
-          -# we create this list from main.js
-          -# by writing unique filters to the DOM
-          %script write_filters(dedup(filters));
+      %p Arrange by:
+      %ul#filter
+        %li 
+          %a.active{:href => "#", "data-group" => "all"} All
+        %li 
+          %a{:href => "#", "data-group" => "dublin"} Dublin
+        %li 
+          %a{:href => "#", "data-group" => "cork"} Cork
+        %li 
+          %a{:href => "#", "data-group" => "scotland"} Scotland
 
-  .col-md-9
-    .content-block
-      team column
-
+#grid
+  {% for member in contents.team %}
+  .item{"data-groups" => '["all" , "{{ member.filter }}"]'}
+    {{ member.img.url | image_tag: 'class:img-responsive'}}
+    %p {{ member.name }}
+  {% endfor %}
 {% endblock %}
 
 {% include 'footer' %}
