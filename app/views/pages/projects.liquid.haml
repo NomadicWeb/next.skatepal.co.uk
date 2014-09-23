@@ -19,6 +19,7 @@ published: true
   });
 {% endfor %}
 
+
 {% extends 'index'%}
 
 {% block 'head' %} 
@@ -34,6 +35,7 @@ published: true
         %ul.filters
           -# we create this list from main.js
           -# by writing unique filters to the DOM
+          %script write_filters(dedup(filters));
 
   .col-md-9
     .content-block

@@ -1,16 +1,10 @@
+// @TODO - PUT INTO A FUNCTION
 // tooltip init for 'i' tags
-$('i[data-toggle="tooltip"]').tooltip({
-   animated : 'fade',
-   placement : 'left',
-   container: 'body'
-});
-
-
-// write filters to dom for Projects page
-write_filters(dedup(filters));
-
-
-/* UTILITY FUNCTIONS */
+// $('i[data-toggle="tooltip"]').tooltip({
+//    animated : 'fade',
+//    placement : 'left',
+//    container: 'body'
+// });
 
 // 'fs' is a list of dictionaries
 // dedup takes the list of dicts and merges them all into one
@@ -28,12 +22,12 @@ function clean(s){
     return s.replace(/[, ]+/g, " ").replace(/\s/g, "_").toLowerCase();
 }
 
-// @TODO
+// 'the_filters' is a unique dict which are written to the
+// DOM in a nested li > li > a structure
 function write_filters(the_filters){
-    fs = the_filters;
-    for(var f in fs){
+    for(var f in the_filters){
         filter_header = clean(f);
-        filter_contents = clean(fs[f]);
+        filter_contents = clean(the_filters[f]);
 
         var el = $("<li>").addClass(filter_header).append(
             $("<li>").append(
@@ -43,6 +37,6 @@ function write_filters(the_filters){
 
         $('.filters').append(el);
         $('.filters .' + filter_header + ' li').prepend(f);
-        $('.filters .' + filter_contents).html(fs[f]);
+        $('.filters .' + filter_contents).html(the_filters[f]);
     }
 }
