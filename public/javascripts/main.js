@@ -1,10 +1,11 @@
-// @TODO - PUT INTO A FUNCTION
-// tooltip init for 'i' tags
-// $('i[data-toggle="tooltip"]').tooltip({
-//    animated : 'fade',
-//    placement : 'left',
-//    container: 'body'
-// });
+// function to initialise tooltips for social icons
+function get_tooltips(){
+    $('i[data-toggle="tooltip"]').tooltip({
+       animated : 'fade',
+       placement : 'left',
+       container: 'body'
+    });
+}
 
 // 'fs' is a list of dictionaries
 // dedup takes the list of dicts and merges them all into one
