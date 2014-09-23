@@ -42,6 +42,8 @@ function write_filters(the_filters){
     }
 }
 
+// Shuffle filtering
+// @TODO - needs to be called if on a page which requires filtering
 $(document).ready(function() {
     var $grid = $('#grid');
     $grid.shuffle({ itemSelector: '.item' });
