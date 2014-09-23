@@ -3,6 +3,7 @@ title: Team
 listed: true
 published: true
 ---
+
 {% extends 'index'%}
 {% include 'header' %}
 
@@ -10,6 +11,18 @@ published: true
 {% endblock %}
 
 {% block 'main' %}
+%ul#filter
+  %li 
+    %a.active{:href => "#", "data-group" => "all"} All
+  %li 
+    %a{:href => "#", "data-group" => "red"} Red
+  %li 
+    %a{:href => "#", "data-group" => "green"} Green
+
+#grid
+  .item.red{"data-groups" => '["all", "red"]'} Something Red?
+  .item.blue{"data-groups" => '["all", "green"]'} Something Green?
+
 {% endblock %}
 
 {% include 'footer' %}

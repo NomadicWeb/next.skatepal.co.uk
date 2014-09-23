@@ -41,3 +41,16 @@ function write_filters(the_filters){
         $('.filters .' + filter_contents).html(the_filters[f]);
     }
 }
+
+$(document).ready(function() {
+    var $grid = $('#grid');
+    $grid.shuffle({ itemSelector: '.item' });
+
+    $('#filter li a').click(function (e) {
+        e.preventDefault();
+        $('#filter li a').removeClass('active');
+        $(this).addClass('active');
+        var groupName = $(this).attr('data-group');
+        $grid.shuffle('shuffle', groupName );
+    });
+});
