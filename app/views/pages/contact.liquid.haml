@@ -12,7 +12,7 @@ published: true
 
 {% block 'main' %}
 .row.content-padding
-  .col-md-9
+  .col-md-12
     {% for contact in contents.contact_info %}
     .col-md-4
       .content-block.contact-info
@@ -20,13 +20,7 @@ published: true
         {{ contact.img.url | image_tag: 'class:img-responsive'}}
         %h4 {{ contact.email }}
         %h5 {{ contact.number }}
-
     {% endfor %}
-
-  .col-md-3
-    .col-md-12
-      .content-block
-        {% include 'contact_form' %}
 {% endblock %}
 
 {% include 'footer' %}
