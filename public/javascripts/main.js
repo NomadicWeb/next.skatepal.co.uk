@@ -36,9 +36,9 @@ function write_filters(the_filters){
             )
         );
 
-        $('.filters').append(el);
-        $('.filters .' + filter_header + ' li').prepend(f);
-        $('.filters .' + filter_contents).html(the_filters[f]);
+        $('#filter').append(el);
+        $('#filter .' + filter_header + ' li').prepend(f);
+        $('#filter .' + filter_contents).html(the_filters[f]);
     }
 }
 

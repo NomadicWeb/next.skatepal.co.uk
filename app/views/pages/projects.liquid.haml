@@ -32,14 +32,15 @@ published: true
     .content-block
       %h5 
         %p Arrange by:
-        %ul.filters
+        %ul#filter
           -# we create this list from main.js
           -# by writing unique filters to the DOM
           %script write_filters(dedup(filters));
 
-  .col-md-9
-    .content-block
-      projects column
+  .col-md-9#grid
+    {% for project in contents.featured_projects %}
+    .content-block.item
+    {% endfor %}
 
 {% endblock %}
 
