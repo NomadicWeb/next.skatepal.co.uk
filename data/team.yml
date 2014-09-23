@@ -1,0 +1,35 @@
+- "Charlie":
+    filter: "scotland"
+    img: "http://placehold.it/200X200"
+
+- "Martin":
+    filter: "dublin"
+    img: "http://placehold.it/200X200"
+
+- "Luke":
+    filter: "cork"
+    img: "http://placehold.it/200X200"
+
+- "Sam":
+    filter: "scotland"
+    img: "http://placehold.it/200X200"
+
+- "Chris":
+    filter: "dublin"
+    img: "http://placehold.it/200X200"
+
+- "fanny":
+    filter: "cork"
+    img: "http://placehold.it/200X200"
+
+- "yolo":
+    filter: "scotland"
+    img: "http://placehold.it/200X200"
+
+- "mojo":
+    filter: "dublin"
+    img: "http://placehold.it/200X200"
+
+- "hola":
+    filter: "cork"
+    img: "http://placehold.it/200X200"

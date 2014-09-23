@@ -4,6 +4,17 @@ listed: true
 published: true
 ---
 
+-# init the filters array
+%script var filters = [];
+
+-# for each project, push each field onto 'fs'
+{% for member in contents.team %}
+%script
+  filters.push({
+  "location":   "{{ member.filter }}", 
+  });
+{% endfor %}
+
 {% extends 'index'%}
 {% include 'header' %}
 
@@ -11,17 +22,20 @@ published: true
 {% endblock %}
 
 {% block 'main' %}
-%ul#filter
-  %li 
-    %a.active{:href => "#", "data-group" => "all"} All
-  %li 
-    %a{:href => "#", "data-group" => "red"} Red
-  %li 
-    %a{:href => "#", "data-group" => "green"} Green
 
-#grid
-  .item.red{"data-groups" => '["all", "red"]'} Something Red?
-  .item.blue{"data-groups" => '["all", "green"]'} Something Green?
+.row
+  .col-md-3.filter-column
+    .content-block
+      %h5 
+        %p Arrange by:
+        %ul.filters
+          -# we create this list from main.js
+          -# by writing unique filters to the DOM
+          %script write_filters(dedup(filters));
+
+  .col-md-9
+    .content-block
+      team column
 
 {% endblock %}
 
