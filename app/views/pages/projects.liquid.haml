@@ -5,12 +5,12 @@ published: true
 ---
 
 -# init the filters array
-%script var fs = [];
+%script var filters = [];
 
 -# for each project, push each field onto 'fs'
 {% for project in contents.featured_projects %}
 %script
-  fs.push({
+  filters.push({
   "Client":   "{{ project.client }}", 
   "Status":   "{{ project.status }}", 
   "Area":     "{{ project.area }}", 

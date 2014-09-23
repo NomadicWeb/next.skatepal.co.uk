@@ -5,21 +5,39 @@ $('i[data-toggle="tooltip"]').tooltip({
    container: 'body'
 });
 
-// merge project dicts and remove duplicates
-fs = $.extend(fs[0], fs[1]);
 
-// writing list of unique filters
+// 'fs' is a list of dictionaries
+// dedup takes the list of dicts and merges them all into one
+// removing duplicates
+function dedup(fs){
+    var acc = {};
+    for(f in fs){$.extend(acc, fs[f])};
+    return acc;
+}
+
+// 's' is a string that contains commas and whitespace
+// clean removes commas, replaces whitespace with underscores
+// and brings the word to lowercase (for use as a class name)
+function clean(s){
+    return s.replace(/[, ]+/g, " ").replace(/\s/g, "_").toLowerCase();
+}
+
+fs = dedup(filters);
 for(var f in fs){
-    filter_section = f.replace(" ", "_").toLowerCase();
-    filter_contents = fs[f].replace(/\s/g, "_").toLowerCase().replace(",", "");
-
-    var el = $("<li>").addClass("filter_section_" + filter_section).append(
+    filter_header = clean(f);
+    filter_contents = clean(fs[f]);
+    
+    var el = $("<li>").addClass(filter_header).append(
         $("<li>").append(
-            $("<a>").attr("href", "#").addClass("filter_contents_" + filter_contents)
+            $("<a>").attr("href", "#").addClass(filter_contents)
         )
     );
 
+    console.log(filter_header);
+    console.log(filter_contents);
+    console.log(el);
+    
     $('.filters').append(el);
-    $('.filters .filter_section_' + filter_section + ' li').prepend(f);
-    $('.filters .filter_contents_' + filter_contents).html(fs[f]);
+    $('.filters .' + filter_header + ' li').prepend(f);
+    $('.filters .' + filter_contents).html(fs[f]);
 }
