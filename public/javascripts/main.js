@@ -6,6 +6,12 @@ $('i[data-toggle="tooltip"]').tooltip({
 });
 
 
+// write filters to dom for Projects page
+write_filters(dedup(filters));
+
+
+/* UTILITY FUNCTIONS */
+
 // 'fs' is a list of dictionaries
 // dedup takes the list of dicts and merges them all into one
 // removing duplicates
@@ -22,22 +28,21 @@ function clean(s){
     return s.replace(/[, ]+/g, " ").replace(/\s/g, "_").toLowerCase();
 }
 
-fs = dedup(filters);
-for(var f in fs){
-    filter_header = clean(f);
-    filter_contents = clean(fs[f]);
-    
-    var el = $("<li>").addClass(filter_header).append(
-        $("<li>").append(
-            $("<a>").attr("href", "#").addClass(filter_contents)
-        )
-    );
+// @TODO
+function write_filters(the_filters){
+    fs = the_filters;
+    for(var f in fs){
+        filter_header = clean(f);
+        filter_contents = clean(fs[f]);
 
-    console.log(filter_header);
-    console.log(filter_contents);
-    console.log(el);
-    
-    $('.filters').append(el);
-    $('.filters .' + filter_header + ' li').prepend(f);
-    $('.filters .' + filter_contents).html(fs[f]);
+        var el = $("<li>").addClass(filter_header).append(
+            $("<li>").append(
+                $("<a>").attr("href", "#").addClass(filter_contents)
+            )
+        );
+
+        $('.filters').append(el);
+        $('.filters .' + filter_header + ' li').prepend(f);
+        $('.filters .' + filter_contents).html(fs[f]);
+    }
 }
