@@ -7,14 +7,38 @@ function get_tooltips(){
     });
 }
 
-// 'fs' is a list of dictionaries
+// 'ds' is a list of dictionaries
 // dedup takes the list of dicts and merges them all into one
-// removing duplicates
-function dedup(fs){
-    var acc = {};
-    for(f in fs){$.extend(acc, fs[f])};
-    return acc;
-}
+// removing duplicates keys but keeping duplicate values
+function dedup(ds){
+  acc = {};
+  for(d in ds){
+    curr_dict = ds[d];
+    var ks = Object.keys(curr_dict);
+    for(k in ks){
+      curr_key = ks[k];
+      var acc_keys = Object.keys(acc);
+      if(acc_keys.indexOf(curr_key) > -1){
+        acc[curr_key].push(curr_dict[curr_key]);
+      }else{
+        acc[curr_key] = [curr_dict[curr_key]];
+      }
+
+    }
+  }
+
+  // filter duplicates in lists
+  for(i in acc){
+    dict = acc[i];
+    dict = dict.filter( function( item, index, inputArray ) {
+      return inputArray.indexOf(item) == index;
+    });
+    acc[i] = dict;
+  }
+
+  // done :|
+  return acc;
+};
 
 // 's' is a string that contains commas and whitespace
 // clean removes commas, replaces whitespace with underscores
