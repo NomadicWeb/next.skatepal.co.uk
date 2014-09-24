@@ -4,6 +4,17 @@ listed: true
 published: true
 ---
 
+-# init the filters array
+%script var filters = [];
+
+-# for each project, push each field onto 'fs'
+{% for member in contents.team %}
+%script
+  filters.push({
+  "Location":   "{{ member.filter }}", 
+  });
+{% endfor %}
+
 {% extends 'index'%}
 {% include 'header' %}
 
