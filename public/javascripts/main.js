@@ -46,7 +46,6 @@ function write_filters(the_filters){
 // @TODO - needs to be called if on a page which requires filtering
 $(document).ready(function() {
     var $grid = $('#grid');
-    $grid.shuffle({ itemSelector: '.item' });
 
     $('#filter li a').click(function (e) {
         e.preventDefault();
