@@ -30,15 +30,14 @@ published: true
 .row
   .col-md-3.filter-column
     .content-block
-      %h5 
-        %ul#filter
-          -# we create this list from main.js
-          -# by writing unique filters to the DOM
+      %ul#filter
+        -# we create this list from main.js
+        -# by writing unique filters to the DOM
+        %li 
           %li 
-            %li 
-              Arrange by:
-              %a.active{:href => "#", "data-group" => "all"} All
-          %script write_filters(dedup(filters));
+            Arrange by:
+            %a.active{:href => "#", "data-group" => "all"} All
+        %script write_filters(dedup(filters));
 
   .col-md-9#grid
     {% for project in contents.featured_projects %}

@@ -25,16 +25,14 @@ published: true
 .row
   .col-md-3.filter-column
     .content-block
-      %p Arrange by:
       %ul#filter
+        -# we create this list from main.js
+        -# by writing unique filters to the DOM
         %li 
-          %a.active{:href => "#", "data-group" => "all"} All
-        %li 
-          %a{:href => "#", "data-group" => "dublin"} Dublin
-        %li 
-          %a{:href => "#", "data-group" => "cork"} Cork
-        %li 
-          %a{:href => "#", "data-group" => "scotland"} Scotland
+          %li 
+            Arrange by:
+            %a.active{:href => "#", "data-group" => "all"} All
+        %script write_filters(dedup(filters));
 
   .col-md-9
     #grid

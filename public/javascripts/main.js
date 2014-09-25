@@ -53,8 +53,12 @@ function clean(s){
 // 'the_filters' is a unique dict which are written to the
 // DOM in a nested li > li > a structure
 function write_filters(the_filters){
+    var ks = Object.keys(the_filters);
+    var ks_len = ks.length
+
     for(var f in the_filters){
         filter_header = clean(f);
+        var written = false;
 
         var el = $("<li>").addClass(filter_header)
         list_of_fs = the_filters[f];
@@ -62,11 +66,19 @@ function write_filters(the_filters){
         for(var item in list_of_fs){
             filter_contents = clean(list_of_fs[item]);
             el.append($("<li>").append(
-                $("<a>").attr("href", "#").addClass(filter_contents)
+                $("<a>").attr("href", "#").attr(
+                    "data-group", list_of_fs[item]
+                ).addClass(filter_contents)
             ));
 
             $('#filter').append(el);
-            $('#filter .' + filter_header + ' li').prepend(f);
+            if(ks_len == 1 && ! written){
+                $('#filter .' + filter_header + ' li').prepend(f);
+                if(ks_len == 1){ written = true; }
+            }
+            if(ks_len > 1){
+                $('#filter .' + filter_header + ' li').prepend(f);
+            }
             $('#filter .' + filter_contents).html(list_of_fs[item]);
         }
     }
