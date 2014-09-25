@@ -39,9 +39,13 @@ published: true
             %a.active{:href => "#", "data-group" => "all"} All
         %script write_filters(dedup(filters));
 
-  .col-md-9#grid
+  .col-md-9
+    #grid
     {% for project in contents.featured_projects %}
-    .content-block.item
+    .col-md-3.item{"data-group" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}"]'} 
+    .content-block
+      {{ project.project_image.url | image_tag}}
+      {{ project.title }} {{ project.location }}
     {% endfor %}
 
 {% endblock %}

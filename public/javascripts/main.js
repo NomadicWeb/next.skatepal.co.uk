@@ -54,7 +54,6 @@ function clean(s){
 // DOM in a nested li > li > a structure
 function write_filters(the_filters){
     var ks = Object.keys(the_filters);
-    var ks_len = ks.length
 
     for(var f in the_filters){
         filter_header = clean(f);
@@ -72,13 +71,12 @@ function write_filters(the_filters){
             ));
 
             $('#filter').append(el);
-            if(ks_len == 1 && ! written){
+
+            if(!written){ 
                 $('#filter .' + filter_header + ' li').prepend(f);
-                if(ks_len == 1){ written = true; }
+                written = true
             }
-            if(ks_len > 1){
-                $('#filter .' + filter_header + ' li').prepend(f);
-            }
+
             $('#filter .' + filter_contents).html(list_of_fs[item]);
         }
     }
