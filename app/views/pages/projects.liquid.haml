@@ -31,10 +31,13 @@ published: true
   .col-md-3.filter-column
     .content-block
       %h5 
-        %p Arrange by:
         %ul#filter
           -# we create this list from main.js
           -# by writing unique filters to the DOM
+          %li 
+            %li 
+              Arrange by:
+              %a.active{:href => "#", "data-group" => "all"} All
           %script write_filters(dedup(filters));
 
   .col-md-9#grid
