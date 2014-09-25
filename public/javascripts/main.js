@@ -12,12 +12,15 @@ function get_tooltips(){
 // removing duplicates keys but keeping duplicate values
 function dedup(ds){
   acc = {};
+
   for(d in ds){
     curr_dict = ds[d];
     var ks = Object.keys(curr_dict);
+
     for(k in ks){
       curr_key = ks[k];
       var acc_keys = Object.keys(acc);
+
       if(acc_keys.indexOf(curr_key) > -1){
         acc[curr_key].push(curr_dict[curr_key]);
       }else{
@@ -38,7 +41,7 @@ function dedup(ds){
 
   // done :|
   return acc;
-};
+}
 
 // 's' is a string that contains commas and whitespace
 // clean removes commas, replaces whitespace with underscores
@@ -52,17 +55,20 @@ function clean(s){
 function write_filters(the_filters){
     for(var f in the_filters){
         filter_header = clean(f);
-        filter_contents = clean(the_filters[f]);
 
-        var el = $("<li>").addClass(filter_header).append(
-            $("<li>").append(
+        var el = $("<li>").addClass(filter_header)
+        list_of_fs = the_filters[f];
+
+        for(var item in list_of_fs){
+            filter_contents = clean(list_of_fs[item]);
+            el.append($("<li>").append(
                 $("<a>").attr("href", "#").addClass(filter_contents)
-            )
-        );
+            ));
 
-        $('#filter').append(el);
-        $('#filter .' + filter_header + ' li').prepend(f);
-        $('#filter .' + filter_contents).html(the_filters[f]);
+            $('#filter').append(el);
+            $('#filter .' + filter_header + ' li').prepend(f);
+            $('#filter .' + filter_contents).html(list_of_fs[item]);
+        }
     }
 }
 
