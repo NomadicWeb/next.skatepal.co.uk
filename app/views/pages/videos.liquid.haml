@@ -1,0 +1,21 @@
+---
+title: Trick tips
+listed: true
+published: true
+---
+
+{% extends 'index'%}
+{% include 'header' %}
+
+{% block 'head' %} 
+%small.page-breadcrumb {{ page.title }} 
+{% endblock %}
+
+{% block 'main' %}
+.row.content-padding
+  .col-md-12
+    .content-block
+      stuff
+
+{% endblock %}
+{% include 'footer' %}

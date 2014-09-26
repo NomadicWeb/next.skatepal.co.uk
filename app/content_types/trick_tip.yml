@@ -1,0 +1,17 @@
+name: Trick tip
+slug: trick_tip
+description: A trick tip video
+order_direction: desc
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    localized: false
+
+- url:
+    label: Url
+    type: text
+    required: true
+    localized: false
