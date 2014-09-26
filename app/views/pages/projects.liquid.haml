@@ -42,12 +42,11 @@ published: true
   .col-md-9
     #grid
     {% for project in contents.featured_projects %}
-    .col-md-3.item{"data-group" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}"]'} 
+    .col-md-3.item{"data-groups" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}"]'} 
     .content-block
-      {{ project.project_image.url | image_tag}}
+      {{ project.project_image.url | image_tag: 'class:img-responsive'}}
       {{ project.title }} {{ project.location }}
     {% endfor %}
-
 {% endblock %}
 
 {% include 'footer' %}
