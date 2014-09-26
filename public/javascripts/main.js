@@ -72,6 +72,7 @@ function write_filters(the_filters){
 
             $('#filter').append(el);
 
+            // only write the filter section header once
             if(!written){ 
                 $('#filter .' + filter_header + ' li').prepend(f);
                 written = true
@@ -80,6 +81,11 @@ function write_filters(the_filters){
             $('#filter .' + filter_contents).html(list_of_fs[item]);
         }
     }
+}
+
+// a percentage width string
+function rwidth(min, max){
+   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Shuffle filtering
@@ -94,4 +100,23 @@ $(document).ready(function() {
         var groupName = $(this).attr('data-group');
         $grid.shuffle('shuffle', groupName );
     });
+
+    // masonry item stuff
+    // give each item a different class name
+    var items = $('.item');
+    for (var i = 0, l = items.length; i < l; i ++){
+        var rand_width = rwidth(20, 70);
+        var v = $(items[i]);
+        v.addClass("w" + i);
+        v.css("width", rand_width);
+    }
+
+    // masonry init
+    var container = document.querySelector('#grid');
+    var msnry = new Masonry( container, {
+        // options
+        columnWidth: 20,
+        itemSelector: '.item'
+    });
 });
+
