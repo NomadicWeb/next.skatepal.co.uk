@@ -13,10 +13,16 @@ position: 4
 {% endblock %}
 
 {% block 'main' %}
-.row.content-padding
+.row.video-content-padding
   .col-md-12
-    .content-block
-      stuff
-
+    #grid 
+      {% for video in contents.trick_tip %}
+      .item
+        .content-block
+          %iframe.allowfullscreen{ "src" => "{{ video.url }}", "frameborder" => "0", "width" => "100%", "height" => "200"}
+          %p{ "align" => "center"} {{ video.name }}
+      {% endfor %}
+      :javascript
+        get_masonry(30, 35, {columnwidth:15, gutter:5});
 {% endblock %}
 {% include 'footer' %}
