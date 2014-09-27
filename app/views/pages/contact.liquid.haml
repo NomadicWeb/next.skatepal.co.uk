@@ -18,9 +18,9 @@ position: 5
     .col-md-4
       .content-block.contact-info
         {{ contact.img.url | image_tag: 'class:img-responsive'}}
-        %h3 {{ contact.name }}
-        %h4 {{ contact.email }}
-        %h5 {{ contact.number }}
+        %p.c-name   {{ contact.name }}
+        %p.c-email  {{ contact.email }}
+        %p.c-number {{ contact.number }}
     {% endfor %}
 {% endblock %}
 
