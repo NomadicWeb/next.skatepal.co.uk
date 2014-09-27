@@ -45,8 +45,9 @@ position: 2
       {% for project in contents.featured_projects %}
       .col-md-3.item{"data-groups" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}"]'} 
         .content-block
+          %p.project-title    {{ project.title }} 
+          %p.project-info {{ project.location }} | {{ project.sectors }}
           {{ project.project_image.url | image_tag: 'class:img-responsive'}}
-          %p.project-title {{ project.title }} {{ project.location }}
       {% endfor %}
       :javascript
         get_masonry(45, 50, {columnwidth:30, gutter:5});

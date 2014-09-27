@@ -39,7 +39,7 @@ position: 3
     #grid
       {% for member in contents.team %}
       .item{"data-groups" => '["all" , "{{ member.filter }}"]'}
-        .content-block
+        .content-block.team
           {{ member.img.url | image_tag: 'class:img-responsive'}}
           %p.member-name {{ member.name }}
       {% endfor %}
