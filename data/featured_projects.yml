@@ -1,4 +1,4 @@
-- "Sample 1 - Mini ramp":
+- "Mini ramp":
     client: "Islamic Youth Centre"
     status: "Completed"
     area: "Urban"
@@ -7,7 +7,7 @@
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
     project_image: "http://placehold.it/350x300"
 
-- "Sample 2 - Concrete park":
+- "Concrete park":
     client: "Nazir K. foundation"
     status: "Completed"
     area: "Rural"
@@ -16,7 +16,7 @@
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
     project_image: "http://placehold.it/350x300"
 
-- "Sample 3 - Another place":
+- "Another place":
     client: "Some other client"
     status: "In progress"
     area: "Urban"
@@ -25,7 +25,7 @@
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
     project_image: "http://placehold.it/350x300"
 
-- "Sample 4 - Another another place":
+- "Another another place":
     client: "Some other other client"
     status: "In progress"
     area: "Urban"
