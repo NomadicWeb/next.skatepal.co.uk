@@ -105,8 +105,8 @@ function get_masonry(min, max, options){
     var container = document.querySelector('#grid');
     var msnry = new Masonry( container, {
         // options
-        columnWidth: options["columnwidth],
-        gutter: options["gutter],
+        columnWidth: options["columnwidth"],
+        gutter: options["gutter"],
         itemSelector: '.item'
     });
 }
@@ -123,6 +123,5 @@ $(document).ready(function() {
         var groupName = $(this).attr('data-group');
         $grid.shuffle('shuffle', groupName );
     });
-
 });
 

@@ -37,11 +37,13 @@ published: true
   .col-md-9
     #grid
       {% for member in contents.team %}
-      .col-md-3.item{"data-groups" => '["all" , "{{ member.filter }}"]'}
+      .item{"data-groups" => '["all" , "{{ member.filter }}"]'}
         .content-block
           {{ member.img.url | image_tag: 'class:img-responsive'}}
-          %p {{ member.name }}
+          %p.member-name {{ member.name }}
       {% endfor %}
+      :javascript
+        get_masonry(20, 25, {columnwidth:"20", gutter:"10"});
 {% endblock %}
 
 {% include 'footer' %}
