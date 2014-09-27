@@ -29,9 +29,8 @@ published: true
         -# we create this list from main.js
         -# by writing unique filters to the DOM
         %li 
-          %li 
-            Arrange by:
-            %a.active{:href => "#", "data-group" => "all"} All
+          %li.arrange
+            Arrange by
         %script write_filters(dedup(filters));
 
   .col-md-9
