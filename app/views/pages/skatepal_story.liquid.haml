@@ -19,13 +19,12 @@ published: true
 {% block 'main' %}
 .row.content-padding
   .col-md-3
-    {% editable_text title, hint: "The description", format: raw, rows: 3 %}
-    This text will describe the SkatePAL organisation
-    {% endeditable_text %}
+    .content-block.about
+      {% editable_text title, hint: "The description", format: raw, rows: 3 %}
+      This text will describe the SkatePAL organisation
+      {% endeditable_text %}
 
   .col-md-9.about-img
-
-    @TODO - make sure the images line up vertically at the bottom (measure pixels)
 
     .col-md-7
       {% if img_one != '' %} {{ img_one | image_tag: 'class:img-responsive' }} {% else %}
