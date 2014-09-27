@@ -88,6 +88,29 @@ function rwidth(min, max){
    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// masonry call
+function get_masonry(min, max, options){
+    // masonry item stuff
+    // give each item a different class name
+    var items = $('.item');
+    console.log(filters.length);
+    for (var i = 0, l = items.length; i < l; i ++){
+        var rand_width = rwidth(min, max).toString() + "%";
+        var v = $(items[i]);
+        v.addClass("w" + i);
+        v.css("width", rand_width);
+    }
+
+    // masonry init
+    var container = document.querySelector('#grid');
+    var msnry = new Masonry( container, {
+        // options
+        columnWidth: options["columnwidth],
+        gutter: options["gutter],
+        itemSelector: '.item'
+    });
+}
+
 // Shuffle filtering
 // @TODO - needs to be called if on a page which requires filtering
 $(document).ready(function() {
@@ -101,22 +124,5 @@ $(document).ready(function() {
         $grid.shuffle('shuffle', groupName );
     });
 
-    // masonry item stuff
-    // give each item a different class name
-    var items = $('.item');
-    for (var i = 0, l = items.length; i < l; i ++){
-        var rand_width = rwidth(20, 70);
-        var v = $(items[i]);
-        v.addClass("w" + i);
-        v.css("width", rand_width);
-    }
-
-    // masonry init
-    var container = document.querySelector('#grid');
-    var msnry = new Masonry( container, {
-        // options
-        columnWidth: 20,
-        itemSelector: '.item'
-    });
 });
 
