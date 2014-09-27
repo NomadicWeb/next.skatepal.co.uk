@@ -89,11 +89,10 @@ function rwidth(min, max){
 }
 
 // masonry call
-function get_masonry(min, max, options){
+function get_masonry(min, max, opts){
     // masonry item stuff
     // give each item a different class name
     var items = $('.item');
-    console.log(filters.length);
     for (var i = 0, l = items.length; i < l; i ++){
         var rand_width = rwidth(min, max).toString() + "%";
         var v = $(items[i]);
@@ -105,8 +104,8 @@ function get_masonry(min, max, options){
     var container = document.querySelector('#grid');
     var msnry = new Masonry( container, {
         // options
-        columnWidth: options["columnwidth"],
-        gutter: options["gutter"],
+        columnWidth: opts["columnwidth"],
+        gutter: opts["gutter"],
         itemSelector: '.item'
     });
 }
