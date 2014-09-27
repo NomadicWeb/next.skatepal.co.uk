@@ -6,8 +6,20 @@ content_type: "featured_projects"
 ---
 {% extends parent %}
 
+{% block 'head' %} 
+%small.page-breadcrumb Projects -> {{ page.title }} 
+{% endblock %}
+
 {% block main %}
-
-{{ featured_project.client }}
-
+.row
+  .col-md-8
+    .col-md-3
+      .content-block
+        text and stuff
+    .col-md-9
+      .content-block
+        photos and stuff
+  .col-md-4.sidebar
+    .content-block
+      sidebar crap
 {% endblock %}
