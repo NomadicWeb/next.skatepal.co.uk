@@ -16,8 +16,8 @@ published: true
     {% for contact in contents.contact_info %}
     .col-md-4
       .content-block.contact-info
-        %h3 {{ contact.name }}
         {{ contact.img.url | image_tag: 'class:img-responsive'}}
+        %h3 {{ contact.name }}
         %h4 {{ contact.email }}
         %h5 {{ contact.number }}
     {% endfor %}
