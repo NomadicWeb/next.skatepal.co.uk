@@ -5,7 +5,7 @@
     location: "Ramallah, State of Palestine"
     sectors: "Wooden construction"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_image: "http://placehold.it/150x100"
+    project_image: "http://placehold.it/350x300"
 
 - "Sample 2 - Concrete park":
     client: "Nazir K. foundation"
@@ -14,7 +14,7 @@
     location: "Zebabdeh, State of Palestine"
     sectors: "Concrete"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_image: "http://placehold.it/150x100"
+    project_image: "http://placehold.it/350x300"
 
 - "Sample 3 - Another place":
     client: "Some other client"
@@ -23,7 +23,7 @@
     location: "Another place in the world"
     sectors: "Plastic"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_image: "http://placehold.it/150x100"
+    project_image: "http://placehold.it/350x300"
 
 - "Sample 4 - Another another place":
     client: "Some other other client"
@@ -32,4 +32,4 @@
     location: "Another another place in the world"
     sectors: "Plastic"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_image: "http://placehold.it/150x100"
+    project_image: "http://placehold.it/350x300"

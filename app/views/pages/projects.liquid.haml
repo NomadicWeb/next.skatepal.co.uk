@@ -45,8 +45,10 @@ published: true
       .col-md-3.item{"data-groups" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}"]'} 
         .content-block
           {{ project.project_image.url | image_tag: 'class:img-responsive'}}
-          %p {{ project.title }} {{ project.location }}
+          %p.project-title {{ project.title }} {{ project.location }}
       {% endfor %}
+      :javascript
+        get_masonry(45, 50, {columnwidth:30, gutter:5});
 {% endblock %}
 
 {% include 'footer' %}
