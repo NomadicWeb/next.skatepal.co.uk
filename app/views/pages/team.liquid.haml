@@ -36,6 +36,7 @@ position: 3
         %script write_filters(dedup(filters));
 
   .col-md-9
+    -# the grid that will be used by masonry and shuffle
     #grid
       {% for member in contents.team %}
       .item{"data-groups" => '["all" , "{{ member.filter }}"]'}
