@@ -6,7 +6,11 @@
     sectors: "Wooden construction"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
     project_date: "2013-08-04 15:00:00 -0500"
-    project_image: "http://placehold.it/350x300"
+    featured_image: "http://placehold.it/350x300"
+    project_image1: "http://placehold.it/700x480"
+    project_image2: "http://placehold.it/335x300"
+    project_image3: "http://placehold.it/335x300"
+    project_image4: "http://placehold.it/700x300"
 
 - "Concrete park":
     client: "Nazir K. foundation"
@@ -16,7 +20,7 @@
     sectors: "Concrete"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
     project_date: "2013-08-04 15:00:00 -0500"
-    project_image: "http://placehold.it/350x300"
+    featured_image: "http://placehold.it/350x300"
 
 - "Another place":
     client: "Some other client"
@@ -26,7 +30,7 @@
     sectors: "Plastic"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
     project_date: "2013-08-04 15:00:00 -0500"
-    project_image: "http://placehold.it/350x300"
+    featured_image: "http://placehold.it/350x300"
 
 - "Another another place":
     client: "Some other other client"
@@ -36,4 +40,4 @@
     sectors: "Plastic"
     description: "A big long write up about how rad the shit mini ramp is in Ramallah"
     project_date: "2013-08-04 15:00:00 -0500"
-    project_image: "http://placehold.it/350x300"
+    featured_image: "http://placehold.it/350x300"

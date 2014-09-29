@@ -12,23 +12,19 @@ content_type: "featured_projects"
 
 {% block main %}
 .row
-  .col-md-8
-    .col-md-4
-      .content-block
-        .project-stats
-          %p Date: {{ featured_project.project_date }}
-          %p Client: {{ featured_project.client }}
-          %p Status: {{ featured_project.status }}
-          %p Area: {{ featured_project.area }}
-          %p Location: {{ featured_project.location }}
-          %p Sector: {{ featured_project.sectors }}
-
-        .project-description
-          %p {{ featured_project.description }}
-    .col-md-8
-      .content-block
-        photos and stuff
-  .col-md-3.sidebar
+  .col-md-12
     .content-block
-      sidebar crap
+      %p Date: {{ featured_project.project_date }}
+      %p Client: {{ featured_project.client }}
+      %p Status: {{ featured_project.status }}
+      %p Area: {{ featured_project.area }}
+      %p Location: {{ featured_project.location }}
+      %p Sector: {{ featured_project.sectors }}
+      %p {{ featured_project.description }}
+
+      .project-images
+        {{ featured_project.project_image1.url | image_tag: 'class:img-responsive header-img' }}
+        {{ featured_project.project_image2.url | image_tag: 'class:img-responsive float-img' }}
+        {{ featured_project.project_image3.url | image_tag: 'class:img-responsive' }}
+        {{ featured_project.project_image4.url | image_tag: 'class:img-responsive' }}
 {% endblock %}
