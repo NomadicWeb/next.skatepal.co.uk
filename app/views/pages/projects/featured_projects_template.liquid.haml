@@ -13,29 +13,30 @@ content_type: "featured_projects"
 {% block main %}
 .row
   .col-md-12
-    .content-block
-      .project-info
-        %p Date: {{ featured_project.project_date }}
-        %p Client: {{ featured_project.client }}
-        %p Status: {{ featured_project.status }}
-        %p Area: {{ featured_project.area }}
-        %p Location: {{ featured_project.location }}
-        %p Sector: {{ featured_project.sectors }}
+    .col-md-3
+      .content-block
+        .project-info
+          %p Date: {{ featured_project.project_date }}
+          %p Client: {{ featured_project.client }}
+          %p Status: {{ featured_project.status }}
+          %p Area: {{ featured_project.area }}
+          %p Location: {{ featured_project.location }}
+          %p Sector: {{ featured_project.sectors }}
 
         .project-description
-        %p {{ featured_project.description }}
+          %p {{ featured_project.description }}
 
         .project-extras
           .project-map
             %p map
 
-          .project-gallery
+          .project-image-gallery
             %p gallery
 
           .project-share
             %p share
-
-      .project-images
+    .col-md-9
+      .content-block.project-images
         {{ featured_project.project_image1.url | image_tag: 'class:img-responsive header-img' }}
         {{ featured_project.project_image2.url | image_tag: 'class:img-responsive float-img' }}
         {{ featured_project.project_image3.url | image_tag: 'class:img-responsive' }}
