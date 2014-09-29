@@ -54,8 +54,32 @@ fields:
     required: false
     localized: false
 
-- project_image:
+- featured_image:
     label: Featured image
+    type: file
+    required: false
+    localized: false
+
+- project_image1:
+    label: Project image 1
+    type: file
+    required: false
+    localized: false
+
+- project_image2:
+    label: Project image 2
+    type: file
+    required: false
+    localized: false
+
+- project_image3:
+    label: Project image 3
+    type: file
+    required: false
+    localized: false
+
+- project_image4:
+    label: Project image 4
     type: file
     required: false
     localized: false
