@@ -16,9 +16,15 @@ content_type: "featured_projects"
     .col-md-4
       .content-block
         .project-stats
-          stats
+          %p Date: {{ featured_project.project_date }}
+          %p Client: {{ featured_project.client }}
+          %p Status: {{ featured_project.status }}
+          %p Area: {{ featured_project.area }}
+          %p Location: {{ featured_project.location }}
+          %p Sector: {{ featured_project.sectors }}
+
         .project-description
-          description
+          %p {{ featured_project.description }}
     .col-md-8
       .content-block
         photos and stuff
