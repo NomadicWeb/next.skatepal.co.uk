@@ -25,6 +25,16 @@ content_type: "featured_projects"
         .project-description
         %p {{ featured_project.description }}
 
+        .project-extras
+          .project-map
+            %p map
+
+          .project-gallery
+            %p gallery
+
+          .project-share
+            %p share
+
       .project-images
         {{ featured_project.project_image1.url | image_tag: 'class:img-responsive header-img' }}
         {{ featured_project.project_image2.url | image_tag: 'class:img-responsive float-img' }}
