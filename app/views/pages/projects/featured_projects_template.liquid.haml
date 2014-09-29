@@ -14,13 +14,16 @@ content_type: "featured_projects"
 .row
   .col-md-12
     .content-block
-      %p Date: {{ featured_project.project_date }}
-      %p Client: {{ featured_project.client }}
-      %p Status: {{ featured_project.status }}
-      %p Area: {{ featured_project.area }}
-      %p Location: {{ featured_project.location }}
-      %p Sector: {{ featured_project.sectors }}
-      %p {{ featured_project.description }}
+      .project-info
+        %p Date: {{ featured_project.project_date }}
+        %p Client: {{ featured_project.client }}
+        %p Status: {{ featured_project.status }}
+        %p Area: {{ featured_project.area }}
+        %p Location: {{ featured_project.location }}
+        %p Sector: {{ featured_project.sectors }}
+
+        .project-description
+        %p {{ featured_project.description }}
 
       .project-images
         {{ featured_project.project_image1.url | image_tag: 'class:img-responsive header-img' }}
