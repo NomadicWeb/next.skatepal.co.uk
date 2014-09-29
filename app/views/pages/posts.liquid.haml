@@ -1,0 +1,53 @@
+---
+title: News
+listed: true
+published: true
+---
+
+
+-# init the filters array
+%script var filters = [];
+
+-# for each project, push each field onto 'fs'
+{% for post in contents.posts %}
+%script
+  filters.push({
+  "Year":   "{{ post.posted_at | localized_date: '20%y' }}"
+  });
+{% endfor %}
+
+{% extends parent %}
+
+{% block 'head' %} 
+%small.page-breadcrumb {{ page.title }} 
+{% endblock %}
+
+{% block main %}
+
+.row
+  .col-md-3.filter-column
+    .content-block
+      %ul#filter
+        -# we create this list from main.js
+        -# by writing unique filters to the DOM
+        %li 
+          %li.arrange 
+            Arrange by
+            %a.active{:href => "#", "data-group" => "all"} All
+        %script write_filters(dedup(filters));
+
+  .col-md-9
+    #grid
+      {% for post in contents.posts %}
+      .col-md-3.item{"data-groups" => '["all", "{{ post.posted_at | localized_date: "20%y"  }}"]'} 
+        .content-block
+          %p.project-title {{ post.title }} 
+          .project-info 
+            %p {{ post.posted_at | localized_date: '%m/%d/%y' }}
+            %p {{post.teaser | escape | truncatewords: 25, "" }} 
+            %a.post-read-more{:href => "/posts/{{ post._slug }}"} Read full article here
+          {{ post.featured_image.url | image_tag: 'class:img-responsive'}}
+      {% endfor %}
+      :javascript
+        get_masonry(45, 50, {columnwidth:10, gutter:15});    
+{% endblock %}
