@@ -16,7 +16,7 @@ content_type: "featured_projects"
     .col-md-3
       .content-block
         .project-info
-          %p Date: {{ featured_project.project_date }}
+          %p Date: {{ featured_project.project_date | localized_date: "20%y"}}
           %p Client: {{ featured_project.client }}
           %p Status: {{ featured_project.status }}
           %p Area: {{ featured_project.area }}
