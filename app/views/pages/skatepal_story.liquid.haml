@@ -9,6 +9,7 @@ position: 2
 {% capture img_two %}{% editable_file 'img_two' %}{% endeditable_file %}{% endcapture %}
 {% capture img_three %}{% editable_file 'img_three' %}{% endeditable_file %}{% endcapture %}
 {% capture img_four %}{% editable_file 'img_four' %}{% endeditable_file %}{% endcapture %}
+{% capture img_five %}{% editable_file 'img_five' %}{% endeditable_file %}{% endcapture %}
 
 {% extends 'index'%}
 {% include 'header' %}
@@ -28,25 +29,25 @@ position: 2
   .col-md-9.about-img
 
     .col-md-7
-      {% if img_one != '' %} {{ img_one | image_tag: 'class:img-responsive' }} {% else %}
-      {{ 'http://placehold.it/450x300' | image_tag: 'class:img-responsive'  }}
+      {% if img_one != '' %} {{ img_one | resize: '450x300#' | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'samples/images.jpeg' | resize: '450x300#' | image_tag: 'class:img-responsive'}}
       {% endif %}
 
-      {% if img_one != '' %} {{ img_one | image_tag: 'class:img-responsive'  }} {% else %}
-      {{ 'http://placehold.it/450x300' | image_tag: 'class:img-responsive'  }}
+      {% if img_two != '' %} {{ img_two | resize: '450x300#' | image_tag: 'class:img-responsive'  }} {% else %}
+      {{ 'samples/images.jpeg' | resize: '450x300#' | image_tag: 'class:img-responsive'  }}
       {% endif %}
 
     .col-md-5
-      {% if img_two != '' %} {{ img_two | image_tag: 'class:img-responsive' }} {% else %}
-      {{ 'http://placehold.it/300x200'  | image_tag: 'class:img-responsive' }}
+      {% if img_three != '' %} {{ img_three | resize: '300x200#' | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'samples/images.jpeg' | resize: '300x200#' | image_tag: 'class:img-responsive' }}
       {% endif %}
 
-      {% if img_three != '' %} {{ img_three | image_tag: 'class:img-responsive' }} {% else %}
-      {{ 'http://placehold.it/300x200'  | image_tag: 'class:img-responsive' }}
+      {% if img_four != '' %} {{ img_four | resize: '300x200#' | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'samples/images.jpeg' | resize: '300x200#' | image_tag: 'class:img-responsive' }}
       {% endif %}
 
-      {% if img_four != '' %} {{ img_four | image_tag: 'class:img-responsive' }} {% else %}
-      {{ 'http://placehold.it/300x200'  | image_tag: 'class:img-responsive' }}
+      {% if img_five != '' %} {{ img_five | resize: '300x200#' | image_tag: 'class:img-responsive' }} {% else %}
+      {{ 'samples/images.jpeg' | resize: '300x200#' | image_tag: 'class:img-responsive' }}
       {% endif %}
 
 {% endblock %}
