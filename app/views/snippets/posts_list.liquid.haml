@@ -1,9 +1,7 @@
 {% for post in contents.posts %}
 .a-post
 
-  %h3.post-title
-    %a{:href => "/posts/{{ post._slug }}"} {{ post.title | escape}}
-
+  %h3.post-title {{ post.title | escape}}
   %small.post-posted-at {{ post.posted_at | localized_date: %m/%d/%y }}
   %p.post-teaser {{ post.teaser | escape | truncatewords: 30, ""}}
   %small
