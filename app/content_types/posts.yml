@@ -37,6 +37,30 @@ fields:
     hint: An image displayed next to `teaser` when listing posts
     localized: false
 
+- post_image1:
+    label: Project image 1
+    type: file
+    required: false
+    localized: false
+
+- post_image2:
+    label: Project image 2
+    type: file
+    required: false
+    localized: false
+
+- post_image3:
+    label: Project image 3
+    type: file
+    required: false
+    localized: false
+
+- post_image4:
+    label: Project image 4
+    type: file
+    required: false
+    localized: false
+    
 - body:
     label: Body
     type: text

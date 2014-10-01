@@ -4,10 +4,26 @@ listed: false
 published: true
 content_type: "posts"
 ---
+
 {% extends parent %}
+
+{% block 'head' %} 
+%small.page-breadcrumb News -> {{ post.title }}
+{% endblock %}
 
 {% block main %}
 
-%p Hello world
+.row.content-padding
+  .col-md-3
+    .content-block.about
+      %p {{ post.posted_at | localized_date: '%m.%d.%y' }}
+      {{ post.body }}
+  .col-md-9
+    .content-block.project-images
+      {{ post.post_image1.url | image_tag: 'class:img-responsive header-img' }}
+      {{ post.post_image2.url | image_tag: 'class:img-responsive float-img' }}
+      {{ post.post_image3.url | image_tag: 'class:img-responsive' }}
+      {{ post.post_image4.url | image_tag: 'class:img-responsive' }}
+ 
 
 {% endblock %}
