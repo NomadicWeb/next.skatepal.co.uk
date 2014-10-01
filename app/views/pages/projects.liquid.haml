@@ -44,7 +44,7 @@ position: 2
   .col-md-9
     #grid
       {% for project in contents.featured_projects %}
-      .col-md-3.item{"data-groups" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}", "{{project.project_date | localized_date: "20%y"}}""]'} 
+      .col-md-3.item{"data-groups" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}", "{{project.project_date | localized_date: "20%y"}}"]'} 
         .content-block
           %p.project-title    {{ project.title }}
           %p.project-info {{ project.location }} | {{ project.sectors }}
