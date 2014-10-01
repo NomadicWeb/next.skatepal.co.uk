@@ -2,8 +2,8 @@
 .a-post
 
   %h3.post-title {{ post.title | escape}}
-  %small.post-posted-at {{ post.posted_at | localized_date: %m/%d/%y }}
-  %p.post-teaser {{ post.teaser | escape | truncatewords: 30, ""}}
+  %small.post-info {{ post.posted_at | localized_date: %m/%d/%y }}
+  %p.post-info {{ post.teaser | escape | truncatewords: 30, ""}}
   %small.read-more
     %a.post-read-more{:href => "/posts/{{ post._slug }}"} Read the full story
   {% if post.featured_image.url %}

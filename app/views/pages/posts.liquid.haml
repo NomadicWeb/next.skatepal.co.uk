@@ -42,9 +42,10 @@ position: 1
       {% for post in contents.posts %}
       .col-md-3.item{"data-groups" => '["all", "{{ post.posted_at | localized_date: "20%y"  }}"]'} 
         .content-block
-          %p.project-title {{ post.title }} 
-          .project-info 
-            %p {{ post.posted_at | localized_date: '%m/%d/%y' }}
+          %p.post-title {{ post.title }}
+          %p.post-info {{ post.posted_at | localized_date: '%m/%d/%y' }}
+          .post-info 
+            %p
             %p {{post.teaser | escape | truncatewords: 25, "" }} 
             %a.post-read-more{:href => "/posts/{{ post._slug }}"} Read full article here
           {{ post.featured_image.url | image_tag: 'class:img-responsive'}}
