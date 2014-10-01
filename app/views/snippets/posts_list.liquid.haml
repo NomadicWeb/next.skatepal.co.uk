@@ -9,5 +9,5 @@
   {% if post.featured_image.url %}
   %img.post-featured-image.img-responsive{:src => "{{ post.featured_image.url }}", :alt => "{{ post.title | escape }}"}
   {% endif %}
-
 {% endfor %}
+%a.see-all{:href => "/posts"} See all posts ...
