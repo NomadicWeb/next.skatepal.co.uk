@@ -8,14 +8,14 @@
             "data-toggle" => "collapse",
             "data-target" => "#navbar-collapse"}
 
-          %span.sr-only Toggle Navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-          %a.navbar-brand{:href => "/"} @TODO: LOGO HERE
+            %span.sr-only Toggle Navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %img.navbar-brand{:src => "/samples/skatepal_logo.png", "style" => "margin-top: -7px"}
 
         .collapse.navbar-collapse#navbar-collapse
-          %ul.nav.navbar-nav.pull-right
+          %ul.nav.navbar-nav.pull-right.going-down
             {% nav 'site', no_wrapper: true, active_class: "active" %}
             %li#lang-link.link.last
               %a{:href => "#"} English | العربية
