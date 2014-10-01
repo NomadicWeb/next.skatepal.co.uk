@@ -28,7 +28,8 @@ published: true
         .col-md-12
           .content-block.topmost
             {% block 'head' %}
-            {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
+            %p
+              {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
             {% endblock %}
 
       {% block 'main' %}
@@ -37,7 +38,7 @@ published: true
         .col-md-8.home-left-content
           .row
             .col-md-12
-              .content-block
+              .content-block.carousel-holder
                 #homecarousel{:class => "carousel slide", "data-ride" => "carousel"}
                   {% include 'carousel' with carousel_image_one, carousel_image_two, carousel_image_three %}
 
