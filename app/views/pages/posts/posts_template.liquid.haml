@@ -8,7 +8,7 @@ content_type: "posts"
 {% extends parent %}
 
 {% block 'head' %} 
-%small.page-breadcrumb News -> {{ post.title }}
+%small.page-breadcrumb News > {{ post.title }}
 {% endblock %}
 
 {% block main %}
@@ -16,8 +16,10 @@ content_type: "posts"
 .row.content-padding
   .col-md-3
     .content-block.about
-      %p {{ post.posted_at | localized_date: '%m.%d.%y' }}
-      {{ post.body }}
+      .post-title
+        %p {{ post.posted_at | localized_date: '%m.%d.%y' }}
+      .textcol
+        %p {{ post.body }}
   .col-md-9
     .content-block.project-images
       {{ post.post_image1.url | image_tag: 'class:img-responsive header-img' }}
