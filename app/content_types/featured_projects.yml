@@ -13,73 +13,73 @@ fields:
     localized: false
 
 - project_date:
-    label: Project date
+    label: Start date of project
     type: date_time
     required: true
     localized: false
 
 - client:
-    label: Client
+    label: There all need to be redone
     type: text
     required: false
     localized: false
 
 - status:
-    label: Status
+    label: Blurgh
     type: text
     required: false
     localized: false
 
 - area:
-    label: Area
+    label: Someting else
     type: text
     required: false
     localized: false
 
 - location:
-    label: Location
+    label: Which location did this project occur at?
     type: text
     required: false
     localized: false
 
 - sectors:
-    label: Sectors
+    label: An explanation of what sector means
     type: text
     required: false
     localized: false
 
 - description:
-    label: Description
+    label: A description of the project
     type: text
     required: false
     localized: false
 
 - featured_image:
-    label: Featured image
+    label: Another goddamn image
     type: file
     required: false
     localized: false
 
 - project_image1:
-    label: Project image 1
+    label: Image1
     type: file
     required: false
     localized: false
 
 - project_image2:
-    label: Project image 2
+    label: Image2
     type: file
     required: false
     localized: false
 
 - project_image3:
-    label: Project image 3
+    label: Image3
     type: file
     required: false
     localized: false
 
 - project_image4:
-    label: Project image 4
+    label: Image4
     type: file
     required: false
     localized: false
