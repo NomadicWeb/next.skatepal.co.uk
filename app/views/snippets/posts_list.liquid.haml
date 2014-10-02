@@ -5,7 +5,8 @@
   %small.post-info {{ post.posted_at | localized_date: %m/%d/%y }}
   %p.post-info {{ post.teaser | escape | truncatewords: 30, ""}}
   %small.read-more
-    %a.post-read-more{:href => "/posts/{{ post._slug }}"} Read the full story
+    .post-read-more
+      %a{:href => "/posts/{{ post._slug }}"} Read the full story
   {% if post.featured_image.url %}
   %img.post-featured-image.img-responsive{:src => "{{ post.featured_image.url }}", :alt => "{{ post.title | escape }}"}
   {% endif %}

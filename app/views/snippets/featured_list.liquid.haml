@@ -1,8 +1,9 @@
 {% for project in contents.featured_projects %}
 .col-md-4.a-project
   .content-block
-    %a{:href => "projects/{{project.title | downcase | dasherize }}"}
-      %h4.project-title {{ project.title | escape}}
+    .featured-list-hover
+      %a{:href => "projects/{{project.title | downcase | dasherize }}"}
+        %h4.project-title {{ project.title | escape}}
       %small.project-location {{ project.location | escape}}
     %img.post-featured-image.img-responsive{:src => "{{ project.featured_image.url }}", 
       :alt => "{{ project.title | escape }}"} 
