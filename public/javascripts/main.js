@@ -102,11 +102,13 @@ function get_masonry(min, max, opts){
 
     // masonry init
     var container = document.querySelector('#grid');
-    var msnry = new Masonry( container, {
-        // options
-        columnWidth: opts["columnwidth"],
-        gutter: opts["gutter"],
-        itemSelector: '.item'
+    $(window).load(function(){
+        var msnry = new Masonry( container, {
+            // options
+            columnWidth: opts["columnwidth"],
+            gutter: opts["gutter"],
+            itemSelector: '.item'
+        });
     });
 }
 
