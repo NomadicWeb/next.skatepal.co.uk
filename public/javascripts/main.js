@@ -119,7 +119,7 @@ jQuery(document).ready(function() {
     if(showmap == true){
         google.maps.event.addDomListener(window, 'load', initialize_map);
     }else{
-            document.getElementById('map-canvas').style.display = 'none';
+            document.getElementById('hide').style.display = 'none';
     }
     var $grid = jQuery('#grid');
 

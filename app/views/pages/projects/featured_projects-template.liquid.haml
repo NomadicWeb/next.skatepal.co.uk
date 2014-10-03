@@ -37,10 +37,9 @@ content_type: "featured_projects"
           %p {{ featured_project.description }}
 
         .project-extras
-          .project-map
+          .project-map#hide
+            %p Location
             #map-canvas
-              %p Location
-
           .project-image-gallery
             %p gallery
 
