@@ -8,7 +8,10 @@ content_type: "featured_projects"
 :javascript
   var lat = {{featured_project.lat_coord}};
   var lon = {{featured_project.lon_coord}};
-
+  var showmap = true;
+  if(lat && lon == ""){
+    showmap = false;
+  }
 {% extends parent %}
 
 
@@ -35,8 +38,8 @@ content_type: "featured_projects"
 
         .project-extras
           .project-map
-            %p Map Canvas
             #map-canvas
+              %p Location
 
           .project-image-gallery
             %p gallery

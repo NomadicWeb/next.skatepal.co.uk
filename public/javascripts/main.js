@@ -115,8 +115,12 @@ function get_masonry(min, max, opts){
 // Shuffle filtering
 // @TODO - needs to be called if on a page which requires filtering
 jQuery(document).ready(function() {
-    
-    google.maps.event.addDomListener(window, 'load', initialize_map);
+    //If no co-ordinates are entered by the user we hide the map div and do not initialize the map
+    if(showmap == true){
+        google.maps.event.addDomListener(window, 'load', initialize_map);
+    }else{
+            document.getElementById('map-canvas').style.display = 'none';
+    }
     var $grid = jQuery('#grid');
 
     jQuery('#filter li a').click(function (e) {
