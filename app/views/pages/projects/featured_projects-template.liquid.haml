@@ -4,11 +4,18 @@ listed: false
 published: true
 content_type: "featured_projects"
 ---
+
+:javascript
+  var lat = {{featured_project.lat_coord}};
+  var lon = {{featured_project.lon_coord}};
+
 {% extends parent %}
+
 
 {% block 'head' %} 
 %small.page-breadcrumb Projects -> {{ page.title }} 
 {% endblock %}
+
 
 {% block main %}
 .row
@@ -28,7 +35,8 @@ content_type: "featured_projects"
 
         .project-extras
           .project-map
-            %p map
+            %p Map Canvas
+            #map-canvas
 
           .project-image-gallery
             %p gallery

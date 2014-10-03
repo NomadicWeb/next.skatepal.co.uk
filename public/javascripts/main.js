@@ -114,15 +114,33 @@ function get_masonry(min, max, opts){
 
 // Shuffle filtering
 // @TODO - needs to be called if on a page which requires filtering
-$(document).ready(function() {
-    var $grid = $('#grid');
+jQuery(document).ready(function() {
+    
+    google.maps.event.addDomListener(window, 'load', initialize_map);
+    var $grid = jQuery('#grid');
 
-    $('#filter li a').click(function (e) {
+    jQuery('#filter li a').click(function (e) {
         e.preventDefault();
-        $('#filter li a').removeClass('active');
-        $(this).addClass('active');
+        jQuery('#filter li a').removeClass('active');
+        jQuery(this).addClass('active');
         var groupName = $(this).attr('data-group');
         $grid.shuffle('shuffle', groupName );
     });
 });
+
+
+function initialize_map() {
+    
+    var location = new google.maps.LatLng(lat,lon);
+    var mapOptions = {
+        center: location,
+        zoom: 12
+        };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+        google.maps.event.trigger(map, 'resize');
+    var marker = new google.maps.Marker({
+        position: location, });
+    marker.setMap(map);
+}
 

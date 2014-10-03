@@ -11,6 +11,8 @@
     project_image2: "http://placehold.it/335x300"
     project_image3: "http://placehold.it/335x300"
     project_image4: "http://placehold.it/700x300"
+    lat_coord: 51.508742
+    lon_coord: -0.120850
 
 - "Concrete park":
     client: "Nazir K. foundation"
@@ -25,6 +27,8 @@
     project_image2: "http://placehold.it/335x300"
     project_image3: "http://placehold.it/335x300"
     project_image4: "http://placehold.it/700x300"
+    lat_coord: 51.508742
+    lon_coord: -0.120850
 
 - "Another place":
     client: "Some other client"
@@ -39,6 +43,8 @@
     project_image2: "http://placehold.it/335x300"
     project_image3: "http://placehold.it/335x300"
     project_image4: "http://placehold.it/700x300"
+    lat_coord: 51.508742
+    lon_coord: -0.120850
 
 - "Another another place":
     client: "Some other other client"
@@ -53,3 +59,5 @@
     project_image2: "http://placehold.it/335x300"
     project_image3: "http://placehold.it/335x300"
     project_image4: "http://placehold.it/700x300"
+    lat_coord: 51.508742
+    lon_coord: -0.120850

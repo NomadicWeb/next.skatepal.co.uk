@@ -83,3 +83,15 @@ fields:
     type: file
     required: false
     localized: false
+
+- lat_coord:
+    label: latitude co-ordinates
+    type: float
+    required: false
+    localized: false
+         
+- lon_coord:
+    label: longitude co-ordinates
+    type: float
+    required: false
+    localized: false
