@@ -40,11 +40,6 @@ content_type: "featured_projects"
           .project-map#hide
             %p Location
             #map-canvas
-          .project-image-gallery
-            %p gallery
-
-          .project-share
-            %p share
     .col-md-9
       .content-block.project-images
         {{ featured_project.project_image1.url | image_tag: 'class:img-responsive header-img' }}
