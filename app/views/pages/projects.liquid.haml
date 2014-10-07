@@ -12,11 +12,11 @@ position: 3
 {% for project in contents.featured_projects %}
 %script
   filters.push({
-  "Client":   "{{ project.client }}", 
-  "Status":   "{{ project.status }}", 
-  "Area":     "{{ project.area }}", 
-  "Location": "{{ project.location }}", 
-  "Date":     "{{ project.project_date | localized_date: "20%y" }}", 
+  "Client":   "{{ project.client }}",
+  "Status":   "{{ project.status }}",
+  "Area":     "{{ project.area }}",
+  "Location": "{{ project.location }}",
+  "Date":     "{{ project.project_date | localized_date: "20%y" }}",
   "Sector":   "{{ project.sectors }}"
   });
 {% endfor %}
@@ -24,8 +24,8 @@ position: 3
 
 {% extends 'index'%}
 
-{% block 'head' %} 
-%small.page-breadcrumb {{ page.title }} 
+{% block 'head' %}
+%small.page-breadcrumb {{ page.title }}
 {% endblock %}
 
 {% block 'main' %}
@@ -35,16 +35,41 @@ position: 3
       %ul#filter
         -# we create this list from main.js
         -# by writing unique filters to the DOM
-        %li 
-          %li.arrange 
+        %li
+          %li.arrange
             Arrange by
-            %a.active{:href => "#", "data-group" => "all"} All
+            %a.active{:href => "#", "data-filter" => "*"} All
         %script write_filters(dedup(filters));
 
   .col-md-9
     #grid
       {% for project in contents.featured_projects %}
-      .col-md-3.item{"data-groups" => '["all", "{{project.client}}", "{{project.status}}", "{{project.area}}", "{{project.location}}", "{{project.sectors}}", "{{project.project_date | localized_date: "20%y"}}"]'} 
+
+      {% capture client %} 
+      {{project.client | dasherize | downcase}} 
+      {% endcapture %}
+
+      {% capture status %} 
+      {{project.status | dasherize | downcase}} 
+      {% endcapture %}
+
+      {% capture area %} 
+      {{project.area | dasherize | downcase}} 
+      {% endcapture %}
+
+      {% capture location %} 
+      {{project.location | dasherize | downcase}} 
+      {% endcapture %}
+
+      {% capture sector %} 
+      {{project.sectors | dasherize | downcase}} 
+      {% endcapture %}
+
+      {% capture project_date %} 
+      {{project.project_date | localized_date: "20%y"}} 
+      {% endcapture %}
+
+      .col-md-3.item{:class => "{{client}} {{status}} {{area}} {{location}} {{project_date}} {{sector}}"}
         .content-block
           %a{:href => "/projects/{{ project._slug }}"}
             %p.project-title    {{ project.title }}
@@ -52,7 +77,6 @@ position: 3
           {{ project.featured_image.url | image_tag: 'class:img-responsive'}}
       {% endfor %}
       :javascript
-        get_masonry(45, 50, {columnwidth:30, gutter:5});
+        get_layout(45, 50);
 {% endblock %}
-
 {% include 'footer' %}

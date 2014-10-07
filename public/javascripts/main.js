@@ -1,3 +1,23 @@
+// main call
+jQuery(document).ready(function() {
+    // @todo - getting error, 'showmap' is not defined?
+    //if no co-ordinates are entered by the user we hide 
+    the map div and do not initialize the map
+    if(showmap == true){
+        google.maps.event.addDomListener(window, 'load', initialize_map);
+    }else{
+        document.getElementById('hide').style.display = 'none';
+    }
+    
+    $('#filter li a').on( 'click', function() {
+        var container = $('#grid');
+        var filterValue = $(this).attr('data-filter');
+        console.log(filterValue);
+        container.isotope({ filter: filterValue });
+    });
+});
+
+
 // function to initialise tooltips for social icons
 function get_tooltips(){
     $('i[data-toggle="tooltip"]').tooltip({
@@ -47,7 +67,7 @@ function dedup(ds){
 // clean removes commas, replaces whitespace with underscores
 // and brings the word to lowercase (for use as a class name)
 function clean(s){
-    return s.replace(/[, ]+/g, " ").replace(/\s/g, "_").toLowerCase();
+    return s.replace(/[, ]+/g, " ").replace(/\s/g, "-").toLowerCase();
 }
 
 // 'the_filters' is a unique dict which are written to the
@@ -66,7 +86,7 @@ function write_filters(the_filters){
             filter_contents = clean(list_of_fs[item]);
             el.append($("<li>").append(
                 $("<a>").attr("href", "#").attr(
-                    "data-group", list_of_fs[item]
+                    "data-filter", ".".concat(filter_contents)
                 ).addClass(filter_contents)
             ));
 
@@ -88,10 +108,8 @@ function rwidth(min, max){
    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// masonry call
-function get_masonry(min, max, opts){
-    // masonry item stuff
-    // give each item a different class name
+// create layout of items
+function get_layout(min, max){
     var items = $('.item');
     for (var i = 0, l = items.length; i < l; i ++){
         var rand_width = rwidth(min, max).toString() + "%";
@@ -100,38 +118,13 @@ function get_masonry(min, max, opts){
         v.css("width", rand_width);
     }
 
-    // masonry init
-    var container = document.querySelector('#grid');
-    $(window).load(function(){
-        var msnry = new Masonry( container, {
-            // options
-            columnWidth: opts["columnwidth"],
-            gutter: opts["gutter"],
-            itemSelector: '.item'
-        });
+    // get masonry layout from isotope
+    var $container = $('#grid');
+    $container.isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
     });
 }
-
-// Shuffle filtering
-// @TODO - needs to be called if on a page which requires filtering
-jQuery(document).ready(function() {
-    //If no co-ordinates are entered by the user we hide the map div and do not initialize the map
-    if(showmap == true){
-        google.maps.event.addDomListener(window, 'load', initialize_map);
-    }else{
-            document.getElementById('hide').style.display = 'none';
-    }
-    var $grid = jQuery('#grid');
-
-    jQuery('#filter li a').click(function (e) {
-        e.preventDefault();
-        jQuery('#filter li a').removeClass('active');
-        jQuery(this).addClass('active');
-        var groupName = $(this).attr('data-group');
-        $grid.shuffle('shuffle', groupName );
-    });
-});
-
 
 function initialize_map() {
     
