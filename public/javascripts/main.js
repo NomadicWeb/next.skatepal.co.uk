@@ -2,7 +2,7 @@
 jQuery(document).ready(function() {
     // @todo - getting error, 'showmap' is not defined?
     //if no co-ordinates are entered by the user we hide 
-    the map div and do not initialize the map
+    //the map div and do not initialize the map
     if(showmap == true){
         google.maps.event.addDomListener(window, 'load', initialize_map);
     }else{
