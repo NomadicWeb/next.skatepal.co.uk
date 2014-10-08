@@ -1,6 +1,5 @@
 // main call
 jQuery(document).ready(function() {
-    // @todo - getting error, 'showmap' is not defined?
     //if no co-ordinates are entered by the user we hide 
     //the map div and do not initialize the map
     if("showmap" in window ){
@@ -123,9 +122,11 @@ function get_layout(min, max){
 
     // get masonry layout from isotope
     var $container = $('#grid');
-    $container.isotope({
+    $container.imagesLoaded(function(){
+        $container.isotope({
         itemSelector: '.item',
         layoutMode: 'fitRows'
+        })
     });
 }
 
