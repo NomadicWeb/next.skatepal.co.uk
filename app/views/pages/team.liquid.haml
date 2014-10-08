@@ -32,20 +32,22 @@ position: 4
         %li 
           %li.arrange 
             Arrange by
-            %a.active{:href => "#", "data-group" => "all"} All
+            %a.active{:href => "#", "data-filter" => "*"} All
         %script write_filters(dedup(filters));
 
   .col-md-9
-    -# the grid that will be used by masonry and shuffle
     #grid
       {% for member in contents.team %}
-      .item{"data-groups" => '["all" , "{{ member.filter }}"]'}
+
+      {% capture filter %} {{ member.filter | downcase | dasherize }} {% endcapture %}
+
+      .item{:class => "{{filter}}"}
         .content-block.team
           {{ member.img.url | image_tag: 'class:img-responsive'}}
           %p.member-name {{ member.name }}
       {% endfor %}
       :javascript
-        get_masonry(20, 25, {columnwidth:20, gutter:10});
+        get_layout(20, 25);
 {% endblock %}
 
 {% include 'footer' %}
