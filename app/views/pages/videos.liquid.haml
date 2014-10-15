@@ -20,7 +20,7 @@ position: 5
 {% block 'main' %}
 .row.video-content-padding
   .col-md-12
-    #grid 
+    #grid.trick-tips-grid
       {% for video in contents.trick_tip %}
       .item
         .content-block
@@ -28,6 +28,6 @@ position: 5
           %p.video-name{ "align" => "center"} {{ video.name }}
       {% endfor %}
       :javascript
-        get_masonry(30, 35, {columnwidth:15, gutter:5});
+        get_layout(28, 33);
 {% endblock %}
 {% include 'footer' %}
