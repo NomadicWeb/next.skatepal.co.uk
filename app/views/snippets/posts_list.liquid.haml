@@ -1,4 +1,4 @@
-{% for post in contents.posts %}
+{% for post in contents.posts limit:3 %}
 .a-post
 
   %h3.post-title {{ post.title | escape}}
