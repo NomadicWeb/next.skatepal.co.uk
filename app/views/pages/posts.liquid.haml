@@ -37,23 +37,26 @@ position: 1
         %li 
           %li.arrange 
             Arrange by
-            %a.active{:href => "#", "data-group" => "all"} All
+            %a.active{:href => "#", "data-filter" => "*"} All
         %script write_filters(dedup(filters));
 
   .col-md-9
     #grid
       {% for post in contents.posts %}
-      .col-md-3.item{"data-groups" => '["all", "{{ post.posted_at | localized_date: "20%y"  }}"]'} 
+      {% capture posted_at %} 
+      {{post.posted_at | localized_date: "20%y"}} 
+      {% endcapture %}
+      .col-md-3.item{:class => "{{posted_at}}"} 
         .content-block
           %p.post-title {{ post.title }}
           %p.post-info {{ post.posted_at | localized_date: '%m/%d/%y' }}
           .post-info 
             %p
-            %p {{post.teaser | escape | truncatewords: 25, "" }}
+            %p {{post.body | escape | truncatewords: 25, "" }}
             .post-read-more
               %a{:href => "/posts/{{ post._slug }}"} Read full article here
           {{ post.featured_image.url | image_tag: 'class:img-responsive'}}
       {% endfor %}
       :javascript
-        get_masonry(45, 50, {columnwidth:10, gutter:15});    
+        get_layout(45, 50);    
 {% endblock %}

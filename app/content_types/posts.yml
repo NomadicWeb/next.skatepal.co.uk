@@ -24,39 +24,33 @@ fields:
     required: false
     localized: false
 
-- teaser:
-    label: Teaser
-    type: text
-    required: false
-    localized: false
-
 - featured_image:
     label: Featured image
     type: file
     required: false
-    hint: An image displayed next to `teaser` when listing posts
+    hint: An image displayed on the homepage when previewing the news post
     localized: false
 
 - post_image1:
-    label: Project image 1
+    label: Post Image 1
     type: file
     required: false
     localized: false
 
 - post_image2:
-    label: Project image 2
+    label: Post Image 2
     type: file
     required: false
     localized: false
 
 - post_image3:
-    label: Project image 3
+    label: Post Image 3
     type: file
     required: false
     localized: false
 
 - post_image4:
-    label: Project image 4
+    label: Post Image 4
     type: file
     required: false
     localized: false
