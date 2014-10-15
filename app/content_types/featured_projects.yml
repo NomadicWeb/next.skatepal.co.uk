@@ -1,6 +1,6 @@
 name: Featured projects
 slug: featured_projects
-description: A project completed or in progress by SkatePAL
+description: A SkatePAL project.
 label_field_name: title
 order_by: project_date
 order_direction: desc
@@ -31,7 +31,7 @@ fields:
     localized: false
 
 - area:
-    label: Size of project space
+    label: Project landscape type. Urban? Rural?
     type: text
     required: false
     localized: false
@@ -43,7 +43,7 @@ fields:
     localized: false
 
 - sectors:
-    label: An explanation of what sector means
+    label: Type of construction materials. Wooden construction? Concrete?
     type: text
     required: false
     localized: false
