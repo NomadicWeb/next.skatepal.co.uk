@@ -13,15 +13,18 @@ position: 6
 
 {% block 'main' %}
 .row.content-padding
-  .col-md-12.contact-center
-    {% for contact in contents.contact_info %}
-    .col-md-4
-      .content-block.contact-info
-        {{ contact.img.url | image_tag: 'class:img-responsive'}}
-        %p.c-name   {{ contact.name }}
-        %p.c-email  {{ contact.email }}
-        %p.c-number {{ contact.number }}
-    {% endfor %}
+  .contact-center
+    #grid
+      {% for contact in contents.contact_info %}
+      .item
+        .content-block.contact-info
+          {{ contact.img.url | image_tag: 'class:img-responsive'}}
+          %p.c-name   {{ contact.name }}
+          %p.c-email  {{ contact.email }}
+          %p.c-number {{ contact.number }}
+      {% endfor %}
+      :javascript
+        get_layout(20,28);
 {% endblock %}
 
 {% include 'footer' %}
