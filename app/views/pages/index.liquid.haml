@@ -3,10 +3,11 @@ title: Home
 listed: true
 published: true
 ---
+{% block 'carousel' %}
 {% capture carousel_img_one %}{% editable_file 'carousel_img_one' %}{% endeditable_file %}{% endcapture %}
 {% capture carousel_img_two %}{% editable_file 'carousel_img_two' %}{% endeditable_file %}{% endcapture %}
 {% capture carousel_img_three %}{% editable_file 'carousel_img_three' %}{% endeditable_file %}{% endcapture %}
-
+{% endblock %}
 {% include 'header' %}
 
 %body
