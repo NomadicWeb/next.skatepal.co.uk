@@ -19,25 +19,25 @@ fields:
     localized: false
 
 - client:
-    label: There all need to be redone
+    label: Who are SkatePAL building this project for?
     type: text
     required: false
     localized: false
 
 - status:
-    label: Blurgh
+    label: In progress, Completed, Planning? What stage is the project at.
     type: text
     required: false
     localized: false
 
 - area:
-    label: Someting else
+    label: Size of project space
     type: text
     required: false
     localized: false
 
 - location:
-    label: Which location did this project occur at?
+    label: Where is the project located at?
     type: text
     required: false
     localized: false
@@ -49,49 +49,49 @@ fields:
     localized: false
 
 - description:
-    label: A description of the project
+    label: A description of the project.
     type: text
     required: false
     localized: false
 
 - featured_image:
-    label: Another goddamn image
+    label: Featured image (appears on project listing page)
     type: file
     required: false
     localized: false
 
 - project_image1:
-    label: Image1
+    label: Image1 (appear on single project page)
     type: file
     required: false
     localized: false
 
 - project_image2:
-    label: Image2
+    label: Image2 (appear on single project page)
     type: file
     required: false
     localized: false
 
 - project_image3:
-    label: Image3
+    label: Image3 (appear on single project page)
     type: file
     required: false
     localized: false
 
 - project_image4:
-    label: Image4
+    label: Image4 (appear on single project page)
     type: file
     required: false
     localized: false
 
 - lat_coord:
-    label: latitude co-ordinates
+    label: latitude co-ordinates for map on single project page
     type: float
     required: false
     localized: false
          
 - lon_coord:
-    label: longitude co-ordinates
+    label: longitude co-ordinates for map on single project page
     type: float
     required: false
     localized: false
