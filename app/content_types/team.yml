@@ -10,7 +10,7 @@ fields:
     localized: false
 
 - filter:
-    label: Some atrribute used to filter
+    label: Filter for team members. We are using location such as Cork, Dublin, Edinburgh
     type: string
     required: false
     localized: false

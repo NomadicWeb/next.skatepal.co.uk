@@ -11,7 +11,7 @@ fields:
     localized: false
 
 - url:
-    label: Url
+    label: youtube url for video
     type: text
     required: true
     localized: false

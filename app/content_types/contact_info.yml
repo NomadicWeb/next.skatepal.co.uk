@@ -24,7 +24,7 @@ fields:
     localized: false
 
 - img:
-    label: Img
+    label: A lovely picture of your face lads.
     type: file
     required: false
     localized: false
