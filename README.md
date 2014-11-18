@@ -11,8 +11,7 @@ TODO
     - minify css + javascript
     - improve S3 assets loading?
   - clean up content on existing site
-    - remove <p> tags - LUKE -
-    - featured images same height + text overflow
+    - featured images same height + text overflow - LUKE -
     - about us text spacing + height, color etc etc.
     - project filter working
     - team filters working
