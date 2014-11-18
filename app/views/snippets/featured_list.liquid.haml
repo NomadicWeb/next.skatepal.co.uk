@@ -5,6 +5,6 @@
       %a{:href => "projects/{{project.title | downcase | dasherize }}"}
         %h4.project-title {{ project.title | escape}}
       %small.project-location {{ project.location | escape}}
-    %img.post-featured-image.img-responsive{:src => "{{ project.featured_image.url }}", 
+    %img.post-featured-image.img-responsive{:src => "{{ project.featured_image.url | resize: '350x300' }}", 
       :alt => "{{ project.title | escape }}"} 
 {% endfor %}
