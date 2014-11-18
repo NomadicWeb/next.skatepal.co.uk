@@ -11,13 +11,10 @@ TODO
     - minify css + javascript
     - improve S3 assets loading?
   - clean up content on existing site
-    - about us text spacing + height, color etc etc. - LUKE -
     - project filter working
     - team filters working
-    - contact - use picture of charlies face and
-      add kevin and james
+    - contact - use picture of charlies face and add kevin and james - LUKE -
   - Implement changes we agreed on
-    - add homepage tab
     - filter videos
     - filter for team members - Martin
   - Add Donate button
