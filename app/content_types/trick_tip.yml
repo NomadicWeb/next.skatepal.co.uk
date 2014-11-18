@@ -15,3 +15,9 @@ fields:
     type: text
     required: true
     localized: false
+
+- filter:
+    label: Filter for trick tips
+    type: string
+    required: false
+    localized: false

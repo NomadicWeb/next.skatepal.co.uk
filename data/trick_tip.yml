@@ -1,15 +1,19 @@
 - "How to kickflip":
     url: "http://www.youtube.com/embed/sywtYlIqOOU"
+    filter: "trick tip"
 
 - "How to do a handstand":
     url: "http://www.youtube.com/embed/sywtYlIqOOU"
+    filter: "trick tip"
 
 - "Fuck off":
     url: "http://www.youtube.com/embed/sywtYlIqOOU"
+    filter: "trick tip"
 
 - "Fuck off":
     url: "http://www.youtube.com/embed/sywtYlIqOOU"
-        
+    filter: "other"
+
 - "Fuck off":
     url: "http://www.youtube.com/embed/sywtYlIqOOU"
-
+    filter: "other"

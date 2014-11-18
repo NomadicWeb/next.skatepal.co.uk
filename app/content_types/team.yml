@@ -10,7 +10,7 @@ fields:
     localized: false
 
 - filter:
-    label: Filter for team members. We are using location such as Cork, Dublin, Edinburgh
+    label: Filter for team members. We are using status of memeber, volunteer, managing team etc
     type: string
     required: false
     localized: false

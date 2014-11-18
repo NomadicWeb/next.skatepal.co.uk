@@ -5,6 +5,17 @@ published: true
 position: 5
 ---
 
+-# init the filters array
+%script var filters = [];
+
+-# for each project, push each field onto 'fs'
+{% for video in contents.trick_tip %}
+%script
+  filters.push({
+  "Type":   "{{ video.filter }}", 
+  });
+{% endfor %}
+
 {% extends 'index'%}
 
 {% block 'carousel' %}
@@ -19,15 +30,25 @@ position: 5
 
 {% block 'main' %}
 .row.video-content-padding
-  .col-md-12
+  .col-md-3.filter-column
+    .content-block
+      %ul#filter
+        %li
+          %li.arrange 
+            Arrange by
+            %a.active{:href => "#", "data-filter" => "*"} All
+        %script write_filters(dedup(filters));
+  .col-md-9
     #grid.trick-tips-grid
       {% for video in contents.trick_tip %}
-      .item
+      {% capture filter %} {{ video.filter | downcase | dasherize }} {% endcapture %}
+
+      .item{:class => "{{filter}}"}
         .content-block
           %iframe.allowfullscreen{ "src" => "{{ video.url }}", "frameborder" => "0", "width" => "100%", "height" => "200"}
           %p.video-name{ "align" => "center"} {{ video.name }}
       {% endfor %}
       :javascript
-        get_layout(28, 33);
+        get_layout(28, 30);
 {% endblock %}
 {% include 'footer' %}
