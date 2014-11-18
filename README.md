@@ -19,6 +19,9 @@ TODO
     - contact - use picture of charlies face and
       add kevin and james
   - Implement changes we agreed on
+    - add homepage tab
+    - filter videos
+    - filter for team members - Martin
   - Add Donate button
   - Implement translations
 
