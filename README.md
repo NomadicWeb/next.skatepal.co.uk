@@ -18,7 +18,7 @@ TODO
   - Implement changes we agreed on
     - filter videos - DONE
     - filter for team members - DONE
-  - Add Donate button - Martin (the bud is medical)
+  - Add Donate button - Martin
   - Implement translations
 
 
