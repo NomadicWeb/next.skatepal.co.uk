@@ -60,4 +60,4 @@ fields:
     type: text
     required: false
     localized: false
-    text_formatting: html
+    text_formatting: text
