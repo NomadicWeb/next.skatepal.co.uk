@@ -3,7 +3,7 @@
 
   %h3.post-title {{ post.title | escape}}
   %small.post-info {{ post.posted_at | localized_date: %m/%d/%y }}
-  %p.post-info {{ post.body | truncatewords: 30, "" | escape | strip_html }}
+  %p.post-info {{ post.body | truncatewords: 30, ""  | strip_html }}
   %small.read-more
     .post-read-more
       %a{:href => "/posts/{{ post._slug }}"} Read the full story
