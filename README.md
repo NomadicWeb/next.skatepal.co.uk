@@ -11,6 +11,13 @@ TODO
     - minify css + javascript
     - improve S3 assets loading?
   - clean up content on existing site
+    - remove <p> tags
+    - featured images same height + text overflow
+    - about us text spacing + height, color etc etc.
+    - project filter working
+    - team filters working
+    - contact - use picture of charlies face and
+      add kevin and james
   - Implement changes we agreed on
   - Add Donate button
   - Implement translations
