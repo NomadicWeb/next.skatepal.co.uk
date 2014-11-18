@@ -140,8 +140,7 @@ function initialize_map() {
     var map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
         google.maps.event.trigger(map, 'resize');
-    var marker = new google.maps.Marker({
-        position: location, });
+    var marker = new google.maps.Marker({ position: location });
     marker.setMap(map);
 }
 
