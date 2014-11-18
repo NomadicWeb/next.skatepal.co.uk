@@ -16,10 +16,9 @@ TODO
     - team filters working
 
   - Implement changes we agreed on
-    - filter videos
-    - filter for team members - Martin
-
-  - Add Donate button
+    - filter videos - DONE
+    - filter for team members - DONE
+  - Add Donate button - Martin (the bud is medical)
   - Implement translations
 
 
