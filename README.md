@@ -7,7 +7,7 @@ and our latest efforts are staged here[[2]].
 TODO
 ====
   - reduce loading times - LUKE - || I'll do the lot of these
-    - remove unused assets
+    * remove unused assets
     - minify css + javascript
     - improve S3 assets loading?
 
