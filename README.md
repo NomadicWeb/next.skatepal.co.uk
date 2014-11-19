@@ -7,14 +7,10 @@ and our latest efforts are staged here[[2]].
 TODO
 ====
   - clean up content on existing site
-    - project filter working
-    - team filters working
-  - Implement changes we agreed on
-    - filter videos - DONE
-    - filter for team members - DONE
-  - Add Donate button - Martin
+    - organise project filters
+    - organise team filters
   - Implement translations
-  - Add links to twitter, facebook and youtube tooltips at side
+  - Add links to twitter, facebook and youtube tooltips at side - LUKE -
   - Add Timmy and Sams face in team
   - Remove Google API calls from the head. Only load on project page
   - Figure out how to update the pages on the site (without nuking all content)
