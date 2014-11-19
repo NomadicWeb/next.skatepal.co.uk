@@ -1,5 +1,5 @@
-.row.logo_and_navbar
   .col-md-12
+.row.logo_and_navbar
     %nav.navbar.navbar-default{:role => "navigation"}
       .container-fluid
         .navbar-header
@@ -18,8 +18,6 @@
         .collapse.navbar-collapse#navbar-collapse
           %ul.nav.navbar-nav.pull-right.going-down
             {% nav 'site', no_wrapper: true, active_class: "active" %}
-            %li#lang-link.link.last
-              %a{:href => "#"} English | العربية
             %li#donate
               %form{"method" => "post" , "action" => "https://www.paypal.com/cgi-bin/webscr"}
                 %input{:type => "hidden" , "value" => "_donations" , "name" => "cmd"}
@@ -28,3 +26,5 @@
                 %input{:type => "hidden" , "value" => "GBP" , "name" => "currency_code"}
                 %input{:type => "hidden" , "value" => "PP-DonationsBF:btn_donateCC_LG_gif:NonHostedGuest" , "name" => "bn"}
                 %input.submit-link{:type => "submit" , "value" => "Donate"}
+            %li#lang-link.link.last
+              %a{:href => "#"} English | العربية
