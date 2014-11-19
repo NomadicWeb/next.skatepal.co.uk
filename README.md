@@ -8,7 +8,7 @@ TODO
 ====
   - Implement translations
   - Remove Google API calls from the head. Only load on project page (Martin)
-  - Sort out what to do with the Contact page clusterfuck (james sucks)
+  - Sort out what to do with the Contact page clusterfuck (james sucks) (Luke)
 
 # REMEMBER - WHEN PUSHING TO STAGING IN THE END
 #   - SAVE THE LINKS + TEXT FROM THE ABOUT-US PAGE AND COPY THEM OVER
