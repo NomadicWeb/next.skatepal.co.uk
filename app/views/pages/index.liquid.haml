@@ -16,11 +16,21 @@ published: true
 
   .container
     %div#fixedsocial
-      - ["facebook", "twitter", "youtube"].each do |social|
-        %div{:class => "#{social}flat"}
-          %i{:class => "fa fa-#{social} fa-2x",
+      %div.facebookflat
+        %a{:href => "https://www.facebook.com/SkatePalestine"}
+          %i{:class => "fa fa-facebook fa-2x",
             "data-toggle" => "tooltip",
-            "title" => "Join us on #{social}!"}
+            "title" => "Join us on Facebook!"}
+      %div.twitterflat
+        %a{:href => "https://twitter.com/Skate_PAL"}
+          %i{:class => "fa fa-twitter fa-2x",
+            "data-toggle" => "tooltip",
+            "title" => "Join us on Twitter!"}
+      %div.youtubeflat
+        %a{:href => "http://www.youtube.com/user/SkatePalestine"}
+          %i{:class => "fa fa-youtube fa-2x",
+            "data-toggle" => "tooltip",
+            "title" => "Join us on Youtube!"}
 
     %script get_tooltips();
 
