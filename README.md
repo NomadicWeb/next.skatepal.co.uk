@@ -11,7 +11,7 @@ TODO
     - organise team filters
     - Add Timmy and Sams face in team
   - Implement translations
-  - Remove Google API calls from the head. Only load on project page
+  - Remove Google API calls from the head. Only load on project page (Martin)
   - Sort out what to do with the Contact page clusterfuck (james sucks)
 
 
