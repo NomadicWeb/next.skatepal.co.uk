@@ -12,6 +12,7 @@ TODO
     - Add Timmy and Sams face in team
   - Implement translations
   - Remove Google API calls from the head. Only load on project page
+  - Sort out what to do with the Contact page clusterfuck (james sucks)
 
 
 [1]: https://www.skatepal.co.uk
