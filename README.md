@@ -9,8 +9,8 @@ TODO
   - Make Charlie's current site data, the new test data
     - organise project filters
     - organise team filters
+    - Add Timmy and Sams face in team
   - Implement translations
-  - Add Timmy and Sams face in team
   - Remove Google API calls from the head. Only load on project page
 
 
