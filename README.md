@@ -8,7 +8,6 @@ TODO
 ====
   - Implement translations
   - Remove Google API calls from the head. Only load on project page (Martin)
-  - Sort out what to do with the Contact page clusterfuck (james sucks) (Luke)
   - Fix overflow on feature project text
 
 # REMEMBER - WHEN PUSHING TO STAGING IN THE END
