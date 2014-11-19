@@ -20,6 +20,7 @@ TODO
   - Figure out how to update the pages on the site (without nuking all content)
     - for example, I have fixed the about-us page, but I can't upload the new
       code ... what to do?
+  - Make Charlie's current site data, the new test data
 
 
 [1]: https://www.skatepal.co.uk
