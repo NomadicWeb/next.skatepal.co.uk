@@ -1,4 +1,8 @@
 .container-fluid.footer
+  %p.pull-right
+    {% for contact in contents.contact_info %}
+    %small
+      {{ contact.name }} | {{ contact.email }} | {{ contact.number }}
+    {% endfor %}
   %p.pull-left
     %small &copy; SkatePAL {{ now | localized_date: '%Y' }}
-    
