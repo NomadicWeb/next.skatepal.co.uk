@@ -6,13 +6,15 @@ and our latest efforts are staged here[[2]].
 
 TODO
 ====
-  - Make Charlie's current site data, the new test data
-    - organise project filters
-    - organise team filters
-    - Add Timmy and Sams face in team
   - Implement translations
   - Remove Google API calls from the head. Only load on project page (Martin)
   - Sort out what to do with the Contact page clusterfuck (james sucks)
+
+# REMEMBER - WHEN PUSHING TO STAGING IN THE END
+#   - SAVE THE LINKS + TEXT FROM THE ABOUT-US PAGE AND COPY THEM OVER
+#     TO THE NEW SITE
+#   - FIX PROJECT, TEAM FILTERS
+#   - TIMMY + SAMS FACE FOR TEAM PAGE
 
 
 [1]: https://www.skatepal.co.uk
