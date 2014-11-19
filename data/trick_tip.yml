@@ -1,19 +1,22 @@
-- "How to kickflip":
-    url: "http://www.youtube.com/embed/sywtYlIqOOU"
-    filter: "trick tip"
-
-- "How to do a handstand":
-    url: "http://www.youtube.com/embed/sywtYlIqOOU"
-    filter: "trick tip"
-
-- "Fuck off":
-    url: "http://www.youtube.com/embed/sywtYlIqOOU"
-    filter: "trick tip"
-
-- "Fuck off":
-    url: "http://www.youtube.com/embed/sywtYlIqOOU"
-    filter: "other"
-
-- "Fuck off":
-    url: "http://www.youtube.com/embed/sywtYlIqOOU"
-    filter: "other"
+---
+- Drop In:
+    _slug: drop-in
+    url: "//www.youtube.com/embed/NONYlTmmMhE"
+- Rock Fakie:
+    _slug: rock-fakie
+    url: "//www.youtube.com/embed/0SUVViUhh9c"
+- Frontside 180:
+    _slug: frontside-180
+    url: "//www.youtube.com/embed/cv3_XWophEs"
+- Tail stall:
+    _slug: russell-brandt-being-rad
+    url: "//www.youtube.com/embed/mncwtUHdkWw"
+- Ollie:
+    _slug: ollie
+    url: "//www.youtube.com/embed/GWbLK4WhT-0"
+- Kickflip:
+    _slug: kickflip
+    url: "//www.youtube.com/embed/Zp1zyRH2SMk"
+- Pop Shuvit:
+    _slug: pop-shuvit
+    url: "//www.youtube.com/embed/tFEvjYVkWck"

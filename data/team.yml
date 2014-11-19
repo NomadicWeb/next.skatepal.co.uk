@@ -1,35 +1,68 @@
-- "Charlie":
-    filter: "scotland"
-    img: "http://placehold.it/200X200"
-
-- "Martin":
-    filter: "dublin"
-    img: "http://placehold.it/200X200"
-
-- "Luke":
-    filter: "cork"
-    img: "http://placehold.it/200X200"
-
-- "Sam":
-    filter: "scotland"
-    img: "http://placehold.it/200X200"
-
-- "Chris":
-    filter: "dublin"
-    img: "http://placehold.it/200X200"
-
-- "fanny":
-    filter: "cork"
-    img: "http://placehold.it/200X200"
-
-- "yolo":
-    filter: "scotland"
-    img: "http://placehold.it/200X200"
-
-- "mojo":
-    filter: "dublin"
-    img: "http://placehold.it/200X200"
-
-- "hola":
-    filter: "cork"
-    img: "http://placehold.it/200X200"
+---
+- Charlie Davis:
+    _slug: charlie-d
+    filter: Managing team
+    img: "/samples/team/charlie-d/me.jpg"
+- James McConville:
+    _slug: james-mcconville
+    filter: Managing Team
+    img: "/samples/team/james-mcconville/james.jpg"
+- Kevin Loftus:
+    _slug: kevin-loftus
+    img: "/samples/team/kevin-loftus/kevin.jpg"
+- Aram Sabbah:
+    _slug: aram-sabbah
+    img: "/samples/team/aram-sabbah/aram.jpg"
+- Adham Tamimi:
+    _slug: adham-tamimi
+    img: "/samples/team/adham-tamimi/adham.jpg"
+- Jack Davis:
+    _slug: jack-davis
+    img: "/samples/team/jack-davis/jack.jpg"
+- Geoffrey Elston:
+    _slug: geoffrey-elston
+    img: "/samples/team/geoffrey-elston/geoffrey_elston.jpg"
+- Mark Mcallister:
+    _slug: mark-mcallister
+    img: "/samples/team/mark-mcallister/mark_mcallister.jpg"
+- Mick Kirkman:
+    _slug: mick-kirkman
+    img: "/samples/team/mick-kirkman/mick.jpg"
+- 'Mai Alem ':
+    _slug: mai-alem
+    filter: Ramallah Skate Team
+    img: "/samples/team/mai-alem/may_on_ramp.jpg"
+- 'Sirus Gahan ':
+    _slug: sirus-gahan
+    img: "/samples/team/sirus-gahan/sirus.jpg"
+- Harry Gerrard:
+    _slug: sam-dearden
+    img: "/samples/team/sam-dearden/Harry_Gerrard__2_.jpg"
+- Luke Murphy:
+    _slug: luke-murphy
+    img: "/samples/team/luke-murphy/luke_m.jpg"
+- 'Martin O''Grady ':
+    _slug: martin-ogrady
+    img: "/samples/team/martin-ogrady/Martin_O_Grady.jpg"
+- Finn Weddle:
+    _slug: finn-weddle
+    img: "/samples/team/finn-weddle/Finn_Weddle.jpg"
+- Huw ó Droma:
+    _slug: huw-o-droma
+    img: "/samples/team/huw-o-droma/huw.jpg"
+- 'Sam Comrie ':
+    _slug: sam-comrie
+    img: "/samples/team/sam-comrie/Sam.jpg"
+- Rosie Knight:
+    _slug: rosie-knight
+    img: "/samples/team/rosie-knight/Roseanne_Knight.jpg"
+- Timmy O' Connell:
+    _slug: timmy-o-connell
+    filter: Past Volunteer
+- 'Sam Dearden ':
+    _slug: sam-dearden-1
+    filter: past volunteer
+- Chris Jones:
+    _slug: chris-jones
+    filter: past volunteer
+    img: "/samples/team/chris-jones/chris_jones.jpg"

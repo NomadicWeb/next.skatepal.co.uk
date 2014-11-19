@@ -1,79 +1,28 @@
-- "Mini ramp":
-    client: "Islamic Youth Centre"
-    status: "Completed"
-    area: "Urban"
-    location: "Ramallah, State of Palestine"
-    sectors: "Wooden construction"
-    description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_date: "2013-08-04 15:00:00 -0500"
-    featured_image: "http://placehold.it/350x300"
-    project_image1: "http://placehold.it/700x480"
-    project_image2: "http://placehold.it/335x300"
-    project_image3: "http://placehold.it/335x300"
-    project_image4: "http://placehold.it/700x300"
-    lat_coord: 51.508742
-    lon_coord: -0.120850
-
-- "Concrete park":
-    client: "Nazir K. foundation"
-    status: "Completed"
-    area: "Rural"
-    location: "Zebabdeh, State of Palestine"
-    sectors: "Concrete"
-    description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_date: "2013-08-04 15:00:00 -0500"
-    featured_image: "http://placehold.it/350x300"
-    project_image1: "http://placehold.it/700x480"
-    project_image2: "http://placehold.it/335x300"
-    project_image3: "http://placehold.it/335x300"
-    project_image4: "http://placehold.it/700x300"
-    lat_coord: 51.508742
-    lon_coord: -0.120850
-
-- "Another place":
-    client: "Some other client"
-    status: "In progress"
-    area: "Urban"
-    location: "Another place in the world"
-    sectors: "Plastic"
-    description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_date: "2013-08-04 15:00:00 -0500"
-    featured_image: "http://placehold.it/350x300"
-    project_image1: "http://placehold.it/700x480"
-    project_image2: "http://placehold.it/335x300"
-    project_image3: "http://placehold.it/335x300"
-    project_image4: "http://placehold.it/700x300"
-    lat_coord: 51.508742
-    lon_coord: -0.120850
-
-- "Another another place":
-    client: "Some other other client"
-    status: "In progress"
-    area: "Urban"
-    location: "La Paz, Bolivia"
-    sectors: "Plastic"
-    description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_date: "2013-08-04 15:00:00 -0500"
-    featured_image: "http://placehold.it/350x300"
-    project_image1: "http://placehold.it/700x480"
-    project_image2: "http://placehold.it/335x300"
-    project_image3: "http://placehold.it/335x300"
-    project_image4: "http://placehold.it/700x300"
-    lat_coord: 51.508742
-    lon_coord: -0.120850
-
-- "Another test shit":
-    client: "Bob"
-    status: "In progress"
-    area: "Urban"
-    location: "La Paz, Bolivia"
-    sectors: "Plastic"
-    description: "A big long write up about how rad the shit mini ramp is in Ramallah"
-    project_date: "2013-08-04 15:00:00 -0500"
-    featured_image: "http://placehold.it/350x300"
-    project_image1: "http://placehold.it/700x480"
-    project_image2: "http://placehold.it/335x300"
-    project_image3: "http://placehold.it/335x300"
-    project_image4: "http://placehold.it/700x300"
-    lat_coord: 51.508742
-    lon_coord: -0.120850
+---
+- 'Ramallah Skatepark ':
+    _slug: ramallah-skatepark
+    project_date: 08/07/2014 00:00
+    client: The Islamic Club
+    status: 'Completed '
+    area: Urban
+    location: 'The Islamic Club, Ramallah Tahta '
+    sectors: Wooden
+    description: 'Wooden skatepark at the Islamic Club, Ramallah. The park consists
+      of a mini ramp, kicker ramp and a launch ramp, with more obstacles to follow.
+      The Club also has boards which can be used on site. '
+    featured_image: "/samples/featured_projects/ramallah-skatepark/ram_1.jpg"
+    project_image1: "/samples/featured_projects/ramallah-skatepark/ram_2.jpg"
+- 'Zebabdeh Skatepark ':
+    _slug: zebabdeh-skatepark
+    project_date: 08/01/2014 00:00
+    client: 'The Nazih Khalil foundation '
+    status: Completed
+    area: Urban
+    location: 'Khilab, Zebabdeh '
+    sectors: 'Concrete '
+    description: 'Palestine''s first concrete skatepark. The site is a 300 ms concrete
+      skate park with 2 flat banks, long quarter pipe, volcano, fun box, corner pyramid
+      and grind ledges. The site also has boards which can be used on site. '
+    featured_image: "/samples/featured_projects/zebabdeh-skatepark/_DSC4892.jpg"
+    project_image1: "/samples/featured_projects/zebabdeh-skatepark/_DSC4879.jpg"
+    project_image2: "/samples/featured_projects/zebabdeh-skatepark/_DSC4877.jpg"
