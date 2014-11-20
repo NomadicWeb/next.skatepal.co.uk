@@ -9,7 +9,9 @@ content_type: "featured_projects"
   var lat = {{featured_project.lat_coord}};
   var lon = {{featured_project.lon_coord}};
   var showmap = true;
-  if(lat && lon == ""){
+  console.log("lat is " + lat + " lon is " + lon);
+  if(lat == 0 && lon == 0){
+    console.log("we in here or?");
     showmap = false;
   }
 {% extends parent %}
@@ -38,7 +40,7 @@ content_type: "featured_projects"
 
         .project-extras
           .project-map#hide
-            %p Location
+            %p#hide Location
             #map-canvas
     .col-md-9
       .content-block.project-images
@@ -46,4 +48,5 @@ content_type: "featured_projects"
         {{ featured_project.project_image2.url | image_tag: 'class:img-responsive float-img' }}
         {{ featured_project.project_image3.url | image_tag: 'class:img-responsive' }}
         {{ featured_project.project_image4.url | image_tag: 'class:img-responsive' }}
+%script{"type" => "text/javascript", "src" => "https://maps.googleapis.com/maps/api/js?key=AIzaSyCfWhP-xURy2HzjXVsmSdW_icaNngybK48"}
 {% endblock %}

@@ -2,13 +2,9 @@
 jQuery(document).ready(function() {
     //if no co-ordinates are entered by the user we hide 
     //the map div and do not initialize the map
+    // var scriptUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCfWhP-xURy2HzjXVsmSdW_icaNngybK48"
     if("showmap" in window ){
-        
-        if(showmap == true){
-            google.maps.event.addDomListener(window, 'load', initialize_map);
-        }else{
-            document.getElementById('hide').style.display = 'none';
-        }
+        loadScript();
     }
     
     $('#filter li a').on( 'click', function() {
@@ -19,6 +15,34 @@ jQuery(document).ready(function() {
     });
 });
 
+function loadScript(url){
+    if(showmap === true){
+        var location = new google.maps.LatLng(lat,lon);
+        var mapOptions = {
+            center: location,
+            zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+        google.maps.event.trigger(map, 'resize');
+        var marker = new google.maps.Marker({ position: location });
+        marker.setMap(map);
+    }
+    else{
+        document.getElementById('hide').style.display = 'none';
+        }
+}
+
+function checkMap(){
+    console.log("checking map");
+    if(showmap == true){
+        console.log("show map has a value of true");
+         initialize_map();
+        }
+        else{
+            document.getElementById('hide').style.display = 'none';
+         }
+    }
 
 // function to initialise tooltips for social icons
 function get_tooltips(){
@@ -131,7 +155,7 @@ function get_layout(min, max){
 }
 
 function initialize_map() {
-    
+    console.log("Map being initalized");
     var location = new google.maps.LatLng(lat,lon);
     var mapOptions = {
         center: location,

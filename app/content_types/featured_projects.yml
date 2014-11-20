@@ -85,13 +85,13 @@ fields:
     localized: false
 
 - lat_coord:
-    label: latitude co-ordinates for map on single project page
+    label: latitude co-ordinates for map on single project page PLEASE GIVE A DEFAULT VALUE OF 0 IF NO LAT COORD
     type: float
     required: false
     localized: false
          
 - lon_coord:
-    label: longitude co-ordinates for map on single project page
+    label: longitude co-ordinates for map on single project page, PLEASE GIVE DEFAULT VALUE OF 0 IF NO LON COORD
     type: float
     required: false
     localized: false
