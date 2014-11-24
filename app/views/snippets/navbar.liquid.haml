@@ -12,9 +12,10 @@
             %span.icon-bar
             %span.icon-bar
               %span.icon-bar
-          %a{"href" => "/"}
+          %a#eng-home-icon{"href" => "/"}
             %img.navbar-brand.img-responsive{:src => "/samples/skatepal_logo.png", "style" => "margin-top: -7px"}
-
+          %a#arb-home-icon{"href" => "/?lang=arb", "style" => "display: none;"}
+            %img.navbar-brand.img-responsive{:src => "/samples/skatepal_logo.png", "style" => "margin-top: -7px"}
         .collapse.navbar-collapse#navbar-collapse
           %ul.nav.navbar-nav.pull-right.going-down#eng-menu
             {% nav 'site', no_wrapper: true, active_class: "active" %}

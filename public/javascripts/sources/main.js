@@ -186,12 +186,14 @@ function is_lang(lang){
 function getUrlParameter(){
     var sPageURL = window.location.search.substring(1);
     var sURLVariable = sPageURL.split('=');
-    console.log(sURLVariable[1]);
     
     if(sURLVariable[1] == "arb"){
         console.log("the param is arb");
         document.getElementById('eng-menu').style.display = 'none';
         document.getElementById('arab-menu').style.display = 'block';
+        
+        document.getElementById('eng-home-icon').style.display = 'none';
+        document.getElementById('arb-home-icon').style.display = 'block';
     }
 
     else if(sURLVariable[1] == "eng"){
