@@ -2,7 +2,7 @@
 jQuery(document).ready(function() {
     //if no co-ordinates are entered by the user we hide 
     //the map div and do not initialize the map
-    // var scriptUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCfWhP-xURy2HzjXVsmSdW_icaNngybK48"
+    getUrlParameter();
     if("showmap" in window ){
         loadScript();
     }
@@ -12,6 +12,28 @@ jQuery(document).ready(function() {
         var filterValue = $(this).attr('data-filter');
         console.log(filterValue);
         container.isotope({ filter: filterValue });
+    });
+
+    $('#eng-link').on( 'click', function(){
+        
+    }
+
+    $('#eng-link').on( 'click', function(){
+        var arabicUrl = window.location.href;
+        if(arabicUrl.contains("?lang=arb" || "#?lang=arb")){
+            var engUrl = arabicUrl.split("?")[0];
+            window.location = engUrl;
+        }
+    });
+
+    $('#arb-link').on( 'click', function(){
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariable = sPageURL.split('=');
+        var url = window.location.href;
+        if(sURLVariable[1] != "arb"){
+            url = url + '?lang=arb';
+        }
+        window.location = url;
     });
 });
 
@@ -168,3 +190,18 @@ function initialize_map() {
     marker.setMap(map);
 }
 
+
+function getUrlParameter(){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariable = sPageURL.split('=');
+    console.log(sURLVariable[1]);
+    
+    if(sURLVariable[1] == "arb"){
+        console.log("the param is arb");
+    }
+
+    else if(sURLVariable[1] == "eng"){
+            console.log("the param is eng");
+
+    }
+}
