@@ -58,13 +58,13 @@ position: 3
         -# we create this list from main.js
         -# by writing unique filters to the DOM
         %li
-          %li.arrange
+          %li.arrange.en-lang
             Arrange by
-            %a.active{:href => "#", "data-filter" => "*"} All
+            %a.active.en-lang{:href => "#", "data-filter" => "*"} All
 
-          %li.arrange.dyn-lang.hidden
+          %li.arrange.arb-lang.hidden
             Arrange by - AR
-            %a.active.dyn-lang.hidden{:href => "#", "data-filter" => "*"} All - AR
+            %a.active.arb-lang.hidden{:href => "#", "data-filter" => "*"} All - AR
         %script write_filters(dedup(filters));
 
   .col-md-9
@@ -118,12 +118,12 @@ position: 3
       .col-md-3.item{:class => "{{client}} {{client_ar}} {{status}} {{status_ar}} {{area}} {{area_ar}} {{location}} {{location_ar}} {{project_date}} {{sector}} {{sector_ar}}" }
         .content-block
           %a{:href => "/projects/{{ project._slug }}"}
-            %p.project-title {{ project.title }}
-            %p.project-info {{ project.location }} | {{ project.sectors }}
+            %p.project-title.en-lang {{ project.title }}
+            %p.project-info.en-lang {{ project.location }} | {{ project.sectors }}
 
             // Arabic translations
-            %p.project-title.dyn-lang.hidden {{ project.title_ar }}
-            %p.project-info.dyn-lang.hidden {{ project.location_ar }} | {{ project.sectors_ar }}
+            %p.project-title.arb-lang.hidden {{ project.title_ar }}
+            %p.project-info.arb-lang.hidden {{ project.location_ar }} | {{ project.sectors_ar }}
 
           {{ project.featured_image.url | image_tag: 'class:img-responsive'}}
       {% endfor %}
