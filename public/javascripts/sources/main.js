@@ -1,11 +1,7 @@
 // main call
 jQuery(document).ready(function() {
-    //if no co-ordinates are entered by the user we hide 
-    //the map div and do not initialize the map
     getUrlParameter();
-    if("showmap" in window ){
-        loadScript();
-    }
+    if("showmap" in window ){ loadScript(); }
     
     $('#filter li a').on( 'click', function() {
         var container = $('#grid');
@@ -174,6 +170,16 @@ function initialize_map() {
         google.maps.event.trigger(map, 'resize');
     var marker = new google.maps.Marker({ position: location });
     marker.setMap(map);
+}
+
+// 'lang' is a language string, can be 'en' or 'arb'
+// returns a Boolean, True if we are in the chosen language
+// (lang='lang' in the url)
+function is_lang(lang){
+    if(lang === "en"){lang = undefined;}
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariable = sPageURL.split('=');
+    return sURLVariable[1] === lang;
 }
 
 
