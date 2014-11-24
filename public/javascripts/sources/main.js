@@ -15,10 +15,7 @@ jQuery(document).ready(function() {
     });
 
     $('#eng-link').on( 'click', function(){
-        
-    }
-
-    $('#eng-link').on( 'click', function(){
+        console.log("hey");
         var arabicUrl = window.location.href;
         if(arabicUrl.contains("?lang=arb" || "#?lang=arb")){
             var engUrl = arabicUrl.split("?")[0];
@@ -33,6 +30,7 @@ jQuery(document).ready(function() {
         if(sURLVariable[1] != "arb"){
             url = url + '?lang=arb';
         }
+        console.log("the url is " + url);
         window.location = url;
     });
 });
