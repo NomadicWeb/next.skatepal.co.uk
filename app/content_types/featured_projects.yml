@@ -13,10 +13,8 @@ fields:
     localized: false
 
 - title_ar:
-    label: Arabic: Title
     type: string
     required: true
-    localized: false
 
 - project_date:
     label: Start date of project
@@ -31,10 +29,8 @@ fields:
     localized: false
 
 - client_ar:
-    label: Arabic: Who are SkatePAL building this project for?
     type: text
-    required: false
-    localized: false
+    required: true
 
 - status:
     label: In progress, Completed, Planning? What stage is the project at.
@@ -43,10 +39,8 @@ fields:
     localized: false
 
 - status_ar:
-    label: In progress, Completed, Planning? What stage is the project at.
     type: text
-    required: false
-    localized: false
+    required: true
 
 - area:
     label: Project landscape type. Urban? Rural?
@@ -55,10 +49,8 @@ fields:
     localized: false
 
 - area_ar:
-    label: Arabic: Project landscape type. Urban? Rural?
     type: text
-    required: false
-    localized: false
+    required: true
 
 - location:
     label: Where is the project located at?
@@ -67,10 +59,8 @@ fields:
     localized: false
 
 - location_ar:
-    label: Arabic: Where is the project located at?
     type: text
-    required: false
-    localized: false
+    required: true
 
 - sectors:
     label: Type of construction materials. Wooden construction? Concrete?
@@ -79,10 +69,8 @@ fields:
     localized: false
 
 - sectors_ar:
-    label: Arabic: Type of construction materials. Wooden construction? Concrete?
     type: text
-    required: false
-    localized: false
+    required: true
 
 - description:
     label: A description of the project.
@@ -91,10 +79,8 @@ fields:
     localized: false
 
 - description_ar:
-    label: Arabic: A description of the project.
     type: text
-    required: false
-    localized: false
+    required: true
 
 - featured_image:
     label: Featured image (appears on project listing page)
