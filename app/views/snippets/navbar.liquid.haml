@@ -16,7 +16,7 @@
             %img.navbar-brand.img-responsive{:src => "/samples/skatepal_logo.png", "style" => "margin-top: -7px"}
 
         .collapse.navbar-collapse#navbar-collapse
-          %ul.nav.navbar-nav.pull-right.going-down
+          %ul.nav.navbar-nav.pull-right.going-down#eng-menu
             {% nav 'site', no_wrapper: true, active_class: "active" %}
             %li#donate
               %form{"method" => "post" , "action" => "https://www.paypal.com/cgi-bin/webscr"}
@@ -30,3 +30,4 @@
               %a{:href => "#"} English|
             %li#arb-link.link.last 
               %a{:href => "#"} العربية
+          {% include 'arab_menu' %}

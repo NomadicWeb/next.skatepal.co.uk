@@ -1,0 +1,25 @@
+%ul.nav.navbar-nav.pull-right.going-down#arab-menu{"style" => "display: none;"}
+  %li#posts-link.link.first
+    %a{:href => "/posts"} NewsA
+  %li#skatepal-story-link.link
+    %a{:href => "/skatepal-story"} AboutA
+  %li#projects-link.link
+    %a{:href => "/projects"} ProjectsA
+  %li#team-link.link
+    %a{:href => "/team"} TeamA
+  %li#videos-link.link
+    %a{:href => "/videos"} NewsA
+  %li#donate
+    %form{"method" => "post" , "action" => "https://www.paypal.com/cgi-bin/webscr"}
+      %input{:type => "hidden" , "value" => "_donations" , "name" => "cmd"}
+      %input{:type => "hidden" , "value" => "charliedavis87@gmail.com" , "name" => "business"}
+      %input{:type => "hidden" , "value" => "0" , "name" => "no_note"}
+      %input{:type => "hidden" , "value" => "GBP" , "name" => "currency_code"}
+      %input{:type => "hidden" , "value" => "PP-DonationsBF:btn_donateCC_LG_gif:NonHostedGuest" , "name" => "bn"}
+      %input.submit-link{:type => "submit" , "value" => "Donate"}
+  %li#eng-link
+    %a{:href => "#"} English|
+  %li#arb-link.link.last 
+    %a{:href => "#"} العربية
+
+

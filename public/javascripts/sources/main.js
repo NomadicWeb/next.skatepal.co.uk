@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
         container.isotope({ filter: filterValue });
     });
 
-    $('#eng-link').on( 'click', function(){
+    $(document).delegate( '#eng-link', 'click', function(){
         console.log("hey");
         var arabicUrl = window.location.href;
         if(arabicUrl.contains("?lang=arb" || "#?lang=arb")){
@@ -23,7 +23,8 @@ jQuery(document).ready(function() {
         }
     });
 
-    $('#arb-link').on( 'click', function(){
+    $(document).delegate('#arb-link', 'click', function(){
+        console.log("clicked!!!!!!!!");
         var sPageURL = window.location.search.substring(1);
         var sURLVariable = sPageURL.split('=');
         var url = window.location.href;
@@ -196,6 +197,8 @@ function getUrlParameter(){
     
     if(sURLVariable[1] == "arb"){
         console.log("the param is arb");
+        document.getElementById('eng-menu').style.display = 'none';
+        document.getElementById('arab-menu').style.display = 'block';
     }
 
     else if(sURLVariable[1] == "eng"){
