@@ -8,7 +8,8 @@ content_type: "posts"
 {% extends parent %}
 
 {% block 'head' %} 
-%small.page-breadcrumb News > {{ post.title }}
+%small.page-breadcrumb.en-lang News > {{ post.title }}
+%small.page-breadcrumb.arb-lang.hidden News - AR > {{ post.title_ar }}
 {% endblock %}
 
 {% block main %}
@@ -20,6 +21,8 @@ content_type: "posts"
         %p {{ post.posted_at | localized_date: '%m.%d.%y' }}
       .textcol
         %p {{ post.body }}
+      .textcol.arb-lang.hidden
+        %p {{ post.body_ar }}
   .col-md-9
     .content-block.project-images
       {{ post.post_image1.url | image_tag: 'class:img-responsive header-img' }}
