@@ -15,24 +15,11 @@ jQuery(document).ready(function() {
     });
 
     $(document).delegate( '#eng-link', 'click', function(){
-        console.log("hey");
-        var arabicUrl = window.location.href;
-        if(arabicUrl.contains("?lang=arb" || "#?lang=arb")){
-            var engUrl = arabicUrl.split("?")[0];
-            window.location = engUrl;
-        }
+        removeArabicParam();
     });
 
     $(document).delegate('#arb-link', 'click', function(){
-        console.log("clicked!!!!!!!!");
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariable = sPageURL.split('=');
-        var url = window.location.href;
-        if(sURLVariable[1] != "arb"){
-            url = url + '?lang=arb';
-        }
-        console.log("the url is " + url);
-        window.location = url;
+        appendArabicParam();
     });
 });
 
@@ -204,5 +191,26 @@ function getUrlParameter(){
     else if(sURLVariable[1] == "eng"){
             console.log("the param is eng");
 
+    }
+}
+
+
+function appendArabicParam(){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariable = sPageURL.split('=');
+    var url = window.location.href;
+    if(sURLVariable[1] != "arb"){
+        url = url + '?lang=arb';
+    }
+    console.log("the url is " + url);
+    window.location = url;
+}
+
+function removeArabicParam(){
+
+    var arabicUrl = window.location.href;
+    if(arabicUrl.contains("?lang=arb" || "#?lang=arb")){
+        var engUrl = arabicUrl.split("?")[0];
+        window.location = engUrl;
     }
 }
