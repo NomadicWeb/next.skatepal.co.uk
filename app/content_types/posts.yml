@@ -12,6 +12,10 @@ fields:
     required: true
     localized: false
 
+- title_ar:
+    label: Title
+    required: true
+
 - posted_at:
     label: Posted at
     type: date_time
@@ -60,4 +64,9 @@ fields:
     type: text
     required: false
     localized: false
+    text_formatting: html
+
+- body_ar:
+    type: text
+    required: true
     text_formatting: html
