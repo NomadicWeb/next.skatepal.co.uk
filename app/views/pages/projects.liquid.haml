@@ -10,24 +10,24 @@ position: 3
 
 -# for each project, push each field onto 'fs'
 {% for project in contents.featured_projects %}
-%script
-  if(is_lang("arb")){
+:javascript
+  if(is_lang('arb')){
     filters.push({
-    "Client":   "{{ project.client_ar }}",
-    "Status":   "{{ project.status_ar }}",
-    "Area":     "{{ project.area_ar }}",
-    "Location": "{{ project.location_ar }}",
-    "Date":     "{{ project.project_date | localized_date: "20%y" }}",
-    "Sector":   "{{ project.sectors_ar }}"
+      "Client":   "{{ project.client_ar }}",
+      "Status":   "{{ project.status_ar }}",
+      "Area":     "{{ project.area_ar }}",
+      "Location": "{{ project.location_ar }}",
+      "Date":     "{{ project.project_date | localized_date: "20%y" }}",
+      "Sector":   "{{ project.sectors_ar }}"
     });
   }else{
     filters.push({
-    "Client":   "{{ project.client }}",
-    "Status":   "{{ project.status }}",
-    "Area":     "{{ project.area }}",
-    "Location": "{{ project.location }}",
-    "Date":     "{{ project.project_date | localized_date: "20%y" }}",
-    "Sector":   "{{ project.sectors }}"
+      "Client":   "{{ project.client }}",
+      "Status":   "{{ project.status }}",
+      "Area":     "{{ project.area }}",
+      "Location": "{{ project.location }}",
+      "Date":     "{{ project.project_date | localized_date: "20%y" }}",
+      "Sector":   "{{ project.sectors }}"
     });
   }
 {% endfor %}
