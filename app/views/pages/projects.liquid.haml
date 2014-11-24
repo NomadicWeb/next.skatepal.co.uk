@@ -62,9 +62,9 @@ position: 3
             Arrange by
             %a.active{:href => "#", "data-filter" => "*"} All
 
-          %li.arrange.dyn-lang
+          %li.arrange.dyn-lang.hidden
             Arrange by - AR
-            %a.active.dyn-lang{:href => "#", "data-filter" => "*"} All - AR
+            %a.active.dyn-lang.hidden{:href => "#", "data-filter" => "*"} All - AR
         %script write_filters(dedup(filters));
 
   .col-md-9
@@ -122,8 +122,8 @@ position: 3
             %p.project-info {{ project.location }} | {{ project.sectors }}
 
             // Arabic translations
-            %p.project-title.dyn-lang {{ project.title_ar }}
-            %p.project-info.dyn-lang {{ project.location_ar }} | {{ project.sectors_ar }}
+            %p.project-title.dyn-lang.hidden {{ project.title_ar }}
+            %p.project-info.dyn-lang.hidden {{ project.location_ar }} | {{ project.sectors_ar }}
 
           {{ project.featured_image.url | image_tag: 'class:img-responsive'}}
       {% endfor %}
