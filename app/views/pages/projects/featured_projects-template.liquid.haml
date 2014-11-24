@@ -9,16 +9,15 @@ content_type: "featured_projects"
   var lat = {{featured_project.lat_coord}};
   var lon = {{featured_project.lon_coord}};
   var showmap = true;
-  console.log("lat is " + lat + " lon is " + lon);
   if(lat == 0 && lon == 0){
-    console.log("we in here or?");
     showmap = false;
   }
 {% extends parent %}
 
 
 {% block 'head' %} 
-%small.page-breadcrumb Projects -> {{ page.title }} 
+%small.page-breadcrumb.en-lang Projects -> {{ page.title }} 
+%small.page-breadcrumb.arb-lang.hidden Projects -> {{ page.title }} 
 {% endblock %}
 
 
@@ -27,7 +26,7 @@ content_type: "featured_projects"
   .col-md-12
     .col-md-3
       .content-block
-        .project-info
+        .project-info.en-lang
           %p Date: {{ featured_project.project_date | localized_date: "20%y"}}
           %p Client: {{ featured_project.client }}
           %p Status: {{ featured_project.status }}
@@ -35,12 +34,24 @@ content_type: "featured_projects"
           %p Location: {{ featured_project.location }}
           %p Sector: {{ featured_project.sectors }}
 
-        .project-description
+        .project-info.arb-lang.hidden
+          %p Date-AR: {{ featured_project.project_date_ar | localized_date: "20%y"}}
+          %p Client-AR: {{ featured_project.client_ar }}
+          %p Status-AR: {{ featured_project.status_ar }}
+          %p Area-AR: {{ featured_project.area_ar }}
+          %p Location-AR: {{ featured_project.location_ar }}
+          %p Sector-AR: {{ featured_project.sectors_ar }}
+
+        .project-description.en-lang
           %p {{ featured_project.description }}
+
+        .project-description.arb-lang.hidden
+          %p {{ featured_project.description_ar }}
 
         .project-extras
           .project-map#hide
-            %p#hide Location
+            %p.en-lang#hide Location
+            %p.arb-lang.hidden#hide Location-AR
             #map-canvas
     .col-md-9
       .content-block.project-images
