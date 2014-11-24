@@ -7,4 +7,11 @@
       %small.project-location {{ project.location | escape}}
     %img.post-featured-image.img-responsive{:src => "{{ project.featured_image.url | resize: '350x300' }}", 
       :alt => "{{ project.title | escape }}"} 
+
+    .featured-list-hover.dyn-lang.hidden
+      %a{:href => "projects/{{project.title_ar | downcase | dasherize }}"}
+        %h4.project-title {{ project.title_ar | escape}}
+      %small.project-location {{ project.location_ar | escape}}
+    %img.post-featured-image.img-responsive{:src => "{{ project.featured_image.url | resize: '350x300' }}", 
+      :alt => "{{ project.title_ar | escape }}"} 
 {% endfor %}
