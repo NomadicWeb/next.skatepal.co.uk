@@ -11,6 +11,8 @@ position: 3
 -# for each project, push each field onto 'fs'
 {% for project in contents.featured_projects %}
 %script
+  // @TODO - If arabic, push client_ar, status_ar, 
+  //                         area_ar, location_ar, sectors_ar
   filters.push({
   "Client":   "{{ project.client }}",
   "Status":   "{{ project.status }}",
@@ -20,7 +22,6 @@ position: 3
   "Sector":   "{{ project.sectors }}"
   });
 {% endfor %}
-
 
 {% extends 'index'%}
 
@@ -40,9 +41,9 @@ position: 3
         -# we create this list from main.js
         -# by writing unique filters to the DOM
         %li
-          %li.arrange
+          %li.arrange.dyn-lang
             Arrange by
-            %a.active{:href => "#", "data-filter" => "*"} All
+            %a.active.dyn-lang{:href => "#", "data-filter" => "*"} All
         %script write_filters(dedup(filters));
 
   .col-md-9
@@ -53,29 +54,51 @@ position: 3
       {{project.client | dasherize | downcase}} 
       {% endcapture %}
 
+      {% capture client_ar %} 
+      {{project.client_ar | dasherize | downcase}} 
+      {% endcapture %}
+
       {% capture status %} 
       {{project.status | dasherize | downcase}} 
+      {% endcapture %}
+
+      {% capture status_ar %} 
+      {{project.status_ar | dasherize | downcase}} 
       {% endcapture %}
 
       {% capture area %} 
       {{project.area | dasherize | downcase}} 
       {% endcapture %}
 
+      {% capture area_ar %} 
+      {{project.area_ar | dasherize | downcase}} 
+      {% endcapture %}
+
       {% capture location %} 
       {{project.location | dasherize | downcase}} 
+      {% endcapture %}
+
+      {% capture location_ar %} 
+      {{project.location_ar | dasherize | downcase}} 
       {% endcapture %}
 
       {% capture sector %} 
       {{project.sectors | dasherize | downcase}} 
       {% endcapture %}
 
+      {% capture sector_ar %} 
+      {{project.sectors_ar | dasherize | downcase}} 
+      {% endcapture %}
+
       {% capture project_date %} 
       {{project.project_date | localized_date: "20%y"}} 
       {% endcapture %}
 
+      // @TODO - do check if is arabic, if it is, switch the varibales!
       .col-md-3.item{:class => "{{client}} {{status}} {{area}} {{location}} {{project_date}} {{sector}}"}
         .content-block
           %a{:href => "/projects/{{ project._slug }}"}
+            // @TODO - if arabic, use the other arabic fields
             %p.project-title    {{ project.title }}
             %p.project-info {{ project.location }} | {{ project.sectors }}
           {{ project.featured_image.url | image_tag: 'class:img-responsive'}}
