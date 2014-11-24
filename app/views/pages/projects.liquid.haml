@@ -8,29 +8,37 @@ position: 3
 -# init the filters array
 %script var filters = [];
 
-  -# if(is_lang('arb')){
-  -#   {% for project in contents.featured_projects %}
-  -#     filters.push({
-  -#       "Client-AR":   "{{ project.client_ar }}",
-  -#       "Status-AR":   "{{ project.status_ar }}",
-  -#       "Area-AR":     "{{ project.area_ar }}",
-  -#       "Location-AR": "{{ project.location_ar }}",
-  -#       "Date-AR":     "{{ project.project_date | localized_date: "20%y" }}",
-  -#       "Sector-AR":   "{{ project.sectors_ar }}"
-  -#     });
-  -#   {% endfor %}
-  -# }else{
-  -#   {% for project in contents.featured_projects %}
-  -#     filters.push({
-  -#       "Client":   "{{ project.client }}",
-  -#       "Status":   "{{ project.status }}",
-  -#       "Area":     "{{ project.area }}",
-  -#       "Location": "{{ project.location }}",
-  -#       "Date":     "{{ project.project_date | localized_date: "20%y" }}",
-  -#       "Sector":   "{{ project.sectors }}"
-  -#     });
-  -#   {% endfor %}
-  -# }
+{% for project in contents.featured_projects %}
+:javascript
+  // we are hacking this in here because we do the filtering
+  // magic before main.js loads. It sucks, we know.
+  function is_lang(lang){
+      if(lang === "en"){lang = undefined;}
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariable = sPageURL.split('=');
+      return sURLVariable[1] === lang;
+  }
+
+  if(is_lang('arb')){
+    filters.push({
+      "ClientAR":   "{{ project.client_ar }}",
+      "StatusAR":   "{{ project.status_ar }}",
+      "AreaAR":     "{{ project.area_ar }}",
+      "LocationAR": "{{ project.location_ar }}",
+      "DateAR":     "{{ project.project_date | localized_date: "20%y" }}",
+      "SectorAR":   "{{ project.sectors_ar }}"
+    });
+  }else{
+    filters.push({
+      "Client":   "{{ project.client }}",
+      "Status":   "{{ project.status }}",
+      "Area":     "{{ project.area }}",
+      "Location": "{{ project.location }}",
+      "Date":     "{{ project.project_date | localized_date: "20%y" }}",
+      "Sector":   "{{ project.sectors }}"
+    });
+  }
+{% endfor %}
 
 {% extends 'index'%}
 
