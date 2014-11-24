@@ -1,14 +1,26 @@
 {% for post in contents.posts limit:3 %}
 .a-post
 
-  %h3.post-title {{ post.title | escape}}
+  %h3.post-title.en-lang {{ post.title | escape}}
+  %h3.post-title.arb-lang.hidden {{ post.title_ar | escape}}
+
   %small.post-info {{ post.posted_at | localized_date: %m/%d/%y }}
-  %p.post-info {{ post.body | truncatewords: 30, ""  | strip_html }}
+
+  %p.post-info.en-lang  {{ post.body | truncatewords: 30, ""  | strip_html }}
+  %p.post-info.arb-lang {{ post.body_ar | truncatewords: 30, ""  | strip_html }}
+
   %small.read-more
     .post-read-more
       %a{:href => "/posts/{{ post._slug }}"} Read the full story
+  %small.read-more.arb-lang.hidden
+    .post-read-more
+      %a{:href => "/posts/{{ post._slug }}"} Read the full story - AR
+
   {% if post.featured_image.url %}
   %img.post-featured-image.img-responsive{:src => "{{ post.featured_image.url }}", :alt => "{{ post.title | escape }}"}
   {% endif %}
 {% endfor %}
-%a.see-all{:href => "/posts"} See all posts ...
+
+
+%a.see-all.en-lang{:href => "/posts"} See all posts ...
+%a.see-all.arb-lang.hidden{:href => "/posts"} See all posts ... - AR
