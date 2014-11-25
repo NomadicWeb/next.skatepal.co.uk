@@ -1,6 +1,22 @@
 // main call
 jQuery(document).ready(function() {
+    
     getUrlParameter();
+
+    var lang = "arb";
+
+    if(is_lang(lang)){
+        var currentPageName = location.pathname.split('/').slice(-1)[0];
+        $('.arab-li a').each(function(){
+            var hrefAttr = $(this).attr('href');
+            if(currentPageName != ""){
+                if(hrefAttr.indexOf(currentPageName) >= 0){
+                    $(this).closest('li').addClass('active');
+                }
+            }
+        });
+    }
+
     if("showmap" in window ){ loadScript(); }
     
     $('#filter li a').on( 'click', function() {
@@ -16,6 +32,10 @@ jQuery(document).ready(function() {
 
     $(document).delegate('#arb-link', 'click', function(){
         appendArabicParam();
+    });
+
+    $('.arab-li').on( 'click', function(){
+        $(this).addClass('active');
     });
 });
 
