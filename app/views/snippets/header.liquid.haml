@@ -12,16 +12,11 @@
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 
     -# PRODUCTION
-    -# @TODO MARTIN
-
-    -# DEVELOPMENT
-    {{ 'application' | stylesheet_tag }}
-    {{ 'font-awesome.min' | stylesheet_tag }}
-
-    -# PRODUCTION
+    {{ 'dist/fin' | stylesheet_tag }}
     {{ 'dist/fin.js' | javascript_tag }}
 
     -# DEVELOPMENT
+    -# {{ 'application' | stylesheet_tag }}
     -# {{ 'sources/jquery.js' | javascript_tag }}
     -# {{ 'sources/isotope.js' | javascript_tag }}
     -# {{ 'sources/imagesloaded' | javascript_tag }}
