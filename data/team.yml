@@ -2,63 +2,84 @@
 - Charlie Davis:
     _slug: charlie-d
     filter: "Scotland"
+    filter_ar: "Scotland"
 - James McConville:
     _slug: james-mcconville
     filter: "Ireland"
+    filter_ar: "Ireland"
 - Kevin Loftus:
     _slug: kevin-loftus
     filter: "Ireland"
+    filter_ar: "Ireland"
 - Aram Sabbah:
     _slug: aram-sabbah
     filter: "Palestine"
+    filter_ar: "Palestine"
 - Adham Tamimi:
     _slug: adham-tamimi
     filter: "Palestine"
+    filter_ar: "Palestine"
 - Jack Davis:
     _slug: jack-davis
     filter: "Scotland"
+    filter_ar: "Scotland"
 - Geoffrey Elston:
     _slug: geoffrey-elston
     filter: "England"
+    filter_ar: "England"
 - Mark Mcallister:
     _slug: mark-mcallister
     filter: "England"
+    filter_ar: "England"
 - Mick Kirkman:
     _slug: mick-kirkman
     filter: "England"
+    filter_ar: "England"
 - 'Mai Alem ':
     _slug: mai-alem
     filter: "Palestine"
+    filter_ar: "Palestine"
 - 'Sirus Gahan ':
     _slug: sirus-gahan
     filter: "England"
+    filter_ar: "England"
 - Harry Gerrard:
     _slug: sam-dearden
     filter: "England"
+    filter_ar: "England"
 - Luke Murphy:
     _slug: luke-murphy
     filter: "Ireland"
+    filter_ar: "Ireland"
 - 'Martin O Grady ':
     _slug: martin-ogrady
     filter: "Ireland"
+    filter_ar: "Ireland"
 - Finn Weddle:
     _slug: finn-weddle
     filter: "England"
+    filter_ar: "England"
 - Huw ó Droma:
     _slug: huw-o-droma
     filter: "Ireland"
+    filter_ar: "Ireland"
 - 'Sam Comrie ':
     _slug: sam-comrie
     filter: "Scotland"
+    filter_ar: "Scotland"
 - Rosie Knight:
     _slug: rosie-knight
     filter: "Scotland"
+    filter_ar: "Scotland"
 - Timmy O' Connell:
     _slug: timmy-o-connell
     filter: "Ireland"
+    filter_ar: "Ireland"
 - 'Sam Dearden ':
     _slug: sam-dearden-1
     filter: "England"
+    filter_ar: "England"
 - Chris Jones:
     _slug: chris-jones
     filter: "Wales"
+    filter_ar: "Wales"
