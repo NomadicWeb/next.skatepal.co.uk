@@ -26,7 +26,7 @@ position: 5
     });
   }else{
     filters.push({
-    "نوع":   "{{ video.filter }}", 
+    "نوع":   "{{ video.filter_ar }}", 
     });
   }
 {% endfor %}
@@ -68,7 +68,7 @@ position: 5
       {% for video in contents.trick_tip %}
       {% capture filter %} {{ video.filter | downcase | dasherize }} {% endcapture %}
 
-      .item{:class => "{{filter}}"}
+      .item{:class => "{{filter}} {{filter_ar}}"}
         .content-block
           %iframe.allowfullscreen{ "src" => "{{ video.url }}", "frameborder" => "0", "width" => "100%", "height" => "200"}
           %p.video-name{ "align" => "center"} {{ video.name }}
