@@ -71,6 +71,7 @@ position: 4
       {% for member in contents.team %}
 
       {% capture filter %} {{ member.filter | downcase | dasherize }} {% endcapture %}
+      {% capture filter %} {{ member.filter_ar | downcase | dasherize }} {% endcapture %}
 
       .item{:class => "{{filter}} {{filter_ar}}"}
         .content-block.team

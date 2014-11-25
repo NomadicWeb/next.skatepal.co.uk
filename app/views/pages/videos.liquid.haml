@@ -67,6 +67,7 @@ position: 5
     #grid.trick-tips-grid
       {% for video in contents.trick_tip %}
       {% capture filter %} {{ video.filter | downcase | dasherize }} {% endcapture %}
+      {% capture filter_ar %} {{ video.filter | downcase | dasherize }} {% endcapture %}
 
       .item{:class => "{{filter}} {{filter_ar}}"}
         .content-block
