@@ -29,7 +29,6 @@ jQuery(document).ready(function() {
     $('#filter li a').on( 'click', function() {
         var container = $('#grid');
         var filterValue = $(this).attr('data-filter');
-        console.log(filterValue);
         container.isotope({ filter: filterValue });
     });
     
@@ -140,8 +139,7 @@ function write_filters(the_filters){
             $('#filter').append(el);
 
             // only write the filter section header once
-            if(!written){ 
-                $('#filter .' + filter_header + ' li').prepend(f);
+            if(!written){ $('#filter .' + filter_header + ' li').prepend(f);
                 written = true
             }
 
