@@ -10,10 +10,24 @@ position: 4
 
 -# for each project, push each field onto 'fs'
 {% for member in contents.team %}
-%script
-  filters.push({
-  "Team":   "{{ member.filter }}", 
-  });
+:javascript
+  // we are hacking this in here because we do the filtering
+  // magic before main.js loads. It sucks, we know.
+  function is_lang(lang){
+      if(lang === "en"){lang = undefined;}
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariable = sPageURL.split('=');
+      return sURLVariable[1] === lang;
+  }
+  if(!is_lang('arb')){
+    filters.push({
+    "Team":   "{{ member.filter }}", 
+    });
+  }else{
+    filters.push({
+    "Team-AR":   "{{ member.filter }}", 
+    });
+  }
 {% endfor %}
 
 {% extends 'index'%}
@@ -25,7 +39,7 @@ position: 4
 {% include 'header' %}
 
 {% block 'head' %}
-%small.page-breadcrumb.en-lang {{ page.title }} 
+%small.page-breadcrumb.eng-lang {{ page.title }} 
 %small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
 
 %p.pull-right.right-tagline.eng-lang

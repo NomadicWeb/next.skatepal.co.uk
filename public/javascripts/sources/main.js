@@ -208,13 +208,16 @@ function getUrlParameter(){
     var sPageURL = window.location.search.substring(1);
     var sURLVariable = sPageURL.split('=');
     
-    if(sURLVariable[1] == "arb"){
+    if(sURLVariable[1] === "arb"){
         console.log("the param is arb");
         document.getElementById('eng-menu').style.display = 'none';
         document.getElementById('arab-menu').style.display = 'block';
         
         document.getElementById('eng-home-icon').style.display = 'none';
         document.getElementById('arb-home-icon').style.display = 'block';
+
+        $('.eng-lang').addClass('hidden');
+        $('.arb-lang').removeClass('hidden');
     }
 
     else if(sURLVariable[1] == "eng"){

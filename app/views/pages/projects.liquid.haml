@@ -65,9 +65,9 @@ position: 3
         -# we create this list from main.js
         -# by writing unique filters to the DOM
         %li
-          %li.arrange.en-lang
+          %li.arrange.eng-lang
             Arrange by
-            %a.active.en-lang{:href => "#", "data-filter" => "*"} All
+            %a.active.eng-lang{:href => "#", "data-filter" => "*"} All
 
           %li.arrange.arb-lang.hidden
             Arrange by - AR
@@ -125,8 +125,8 @@ position: 3
       .col-md-3.item{:class => "{{client}} {{client_ar}} {{status}} {{status_ar}} {{area}} {{area_ar}} {{location}} {{location_ar}} {{project_date}} {{sector}} {{sector_ar}}" }
         .content-block
           %a{:href => "/projects/{{ project._slug }}"}
-            %p.project-title.en-lang {{ project.title }}
-            %p.project-info.en-lang {{ project.location }} | {{ project.sectors }}
+            %p.project-title.eng-lang {{ project.title }}
+            %p.project-info.eng-lang {{ project.location }} | {{ project.sectors }}
 
             // Arabic translations
             %p.project-title.arb-lang.hidden {{ project.title_ar }}

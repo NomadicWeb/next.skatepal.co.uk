@@ -1,7 +1,7 @@
 {% for project in contents.featured_projects %}
 .col-md-4.a-project
   .content-block
-    .featured-list-hover.en-lang
+    .featured-list-hover.eng-lang
       %a{:href => "projects/{{project.title | downcase | dasherize }}"}
         %h4.project-title {{ project.title | escape}}
       %small.project-location {{ project.location | escape}}
