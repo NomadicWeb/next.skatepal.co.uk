@@ -3,41 +3,45 @@
     _slug: ramallah-skatepark
     project_date: 08/07/2014 00:00
     client: The Islamic Club
-    client_ar: CLIENT - AR
+    client_ar: نادي رام الله الإسلامي
     status: 'Completed '
-    status_ar: 'Completed - AR'
+    status_ar: 'اكتمل '
     area: Urban
-    area_ar: Urban - AR
+    area_ar: مناطق حضرية
     location: 'The Islamic Club, Ramallah Tahta '
-    location_ar: 'The Islamic Club, Ramallah Tahta - AR'
+    location_ar: 'نادي رام الله الإسلامي، رام الله التحتا'
     sectors: Wooden
-    sectors_ar: Wooden - AR
+    sectors_ar: خشبي
     description: 'Wooden skatepark at the Islamic Club, Ramallah. The park consists
       of a mini ramp, kicker ramp and a launch ramp, with more obstacles to follow.
       The Club also has boards which can be used on site. '
-    description_ar: 'DESCRIPTION - AR'
+    description_ar: 'حلبة تزلج خشبية في نادي الإسلامي ,رام الله. وتتكون الحديقة 
+        من منحدر صغير، كيكر المنحدر ومنحدر الاطلاق، مع المزيد من العقبات . 
+        لدى النادي أيضا لوحات والتي يمكن استخدامها في الموقع.'
     featured_image: "/samples/featured_projects/ramallah-skatepark/ram_1.jpg"
     project_image1: "/samples/featured_projects/ramallah-skatepark/ram_2.jpg"
     lat_coord: 0
     lon_coord: 0
 
-- 'Zebabdeh Skatepark ':
+- 'Zebabdeh Skatepark':
     _slug: zebabdeh-skatepark
     project_date: 08/01/2014 00:00
     client: 'The Nazih Khalil foundation '
-    client_ar: CLIENT - AR
+    client_ar: مؤسسة نزيه خليل
     status: Completed
-    status_ar: Completed - AR
+    status_ar: اكتمل
     area: Urban
-    area_ar: Urban AR
+    area_ar: مناطق حضرية
     location: 'Khilab, Zebabdeh '
-    location_ar: 'Khilab, Zebabdeh - AR'
+    location_ar: 'خلاب، الزبابدة'
     sectors: 'Concrete '
     sectors_ar: Wooden - AR
     description: 'Palestine''s first concrete skatepark. The site is a 300 ms concrete
       skate park with 2 flat banks, long quarter pipe, volcano, fun box, corner pyramid
       and grind ledges. The site also has boards which can be used on site. '
-    description_ar: 'DESCRIPTION - AR'
+    description_ar: 'أول حلبة تزلج فلسطين . كان الموقع عبارة عن 300 متر مربع مع البنوك مسطحة، 
+        وأنابيب الربع الطويل، بركان، مربع متعة، الهرم الزاوية وطحن الحواف. يحتوي الموقع 
+        لوحات تزلج والتي يمكن استخدامها في الموقع. '
     featured_image: "/samples/featured_projects/zebabdeh-skatepark/_DSC4892.jpg"
     project_image1: "/samples/featured_projects/zebabdeh-skatepark/_DSC4879.jpg"
     project_image2: "/samples/featured_projects/zebabdeh-skatepark/_DSC4877.jpg"

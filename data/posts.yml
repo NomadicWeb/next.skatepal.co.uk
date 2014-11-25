@@ -1,16 +1,18 @@
 ---
 - 'Support 7 Hills skatepark project in Amman! ':
+    title_ar: "دعم مشروع حلبة تزلج  7هيلز في عمان"
     _slug: support-7-hills-skatepark-project-in-amman
     posted_at: 10/18/2014 00:00
     tags:
     - 7 hills
     featured_image: "/samples/posts/support-7-hills-skatepark-project-in-amman/7_hills_team.jpg"
-    body: "<p>Check our the 7Hills skatepark project in Amman. Mohammed Zakaria is
-      the founder of Amman based Philadelphia Skateboards, and he and his team are
-      fundraising to build a community skatepark for the growing scene there!</p>"
-- Dazed article about SkatePAL:
+    body: "Check our the 7Hills skatepark project in Amman. Mohammed Zakaria is the founder of Amman based Philadelphia Skateboards, and he and his team are fundraising to build a community skatepark for the growing scene there!"
+    body_ar: ""
+
+- 'Dazed article about SkatePAL':
+    title_ar: ""
     _slug: dazed-article-about-skatepal
     posted_at: 09/19/2014 00:00
     featured_image: "/samples/posts/dazed-article-about-skatepal/kids_in_zeb_park.jpg"
-    body: <p>Latest article written abotu skateaPAL in Dazed Magazine, entitles "skatepark
-      in a troubled land".&nbsp;</p>
+    body: "Latest article written abotu skateaPAL in Dazed Magazine, entitles skatepark in a troubled land"
+    body_ar: ""
