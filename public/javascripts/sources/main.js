@@ -45,6 +45,13 @@ jQuery(document).ready(function() {
     $(document).delegate('#arb-link', 'click', function(){
         appendArabicParam();
     });
+    
+    //For links that are not specific 
+    //language links ie 'arb' or 'eng'
+    //we need to append arb when in arabicmode
+    $(document).delegate('.arb-lang a', 'click', function(){
+        $(this).attr('href', $(this).attr('href') + '?lang=arb');
+    });
 });
 
 // load google map API if show map div
@@ -231,3 +238,4 @@ function removeArabicParam(){
         window.location = engUrl;
     }
 }
+
