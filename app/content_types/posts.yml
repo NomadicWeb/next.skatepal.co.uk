@@ -13,7 +13,7 @@ fields:
     localized: false
 
 - title_ar:
-    label: Title
+    label:  Ar Title
     required: true
 
 - posted_at:
