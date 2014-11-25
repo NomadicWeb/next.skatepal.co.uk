@@ -1,10 +1,15 @@
 // main call
 jQuery(document).ready(function() {
     
+    //Used to check if arb param exists
+    //and load arabic or english translation 
+    //depending whether param exists.
     getUrlParameter();
 
     var lang = "arb";
-
+    
+    //Check if we page is in arabic and add
+    //active class to page corresponding navbar item.
     if(is_lang(lang)){
         var currentPageName = location.pathname.split('/').slice(-1)[0];
         $('.arab-li a').each(function(){
@@ -16,7 +21,9 @@ jQuery(document).ready(function() {
             }
         });
     }
-
+    
+    //Only load google map API's if showmap 
+    //div is not hidden.
     if("showmap" in window ){ loadScript(); }
     
     $('#filter li a').on( 'click', function() {
@@ -25,49 +32,31 @@ jQuery(document).ready(function() {
         console.log(filterValue);
         container.isotope({ filter: filterValue });
     });
-
+    
+    //Remove Arabic param when english link clicked
     $(document).delegate( '#eng-link', 'click', function(){
         removeArabicParam();
+        //return false so that '#' is not appened to the url
         return false;
     });
 
+    //Add arabic param to the url when the arabic link
+    //is clicked.
     $(document).delegate('#arb-link', 'click', function(){
         appendArabicParam();
     });
-
-    $('.arab-li').on( 'click', function(){
-        $(this).addClass('active');
-    });
 });
 
+// load google map API if show map div
+// is in window 
 function loadScript(url){
     if(showmap === true){
-        var location = new google.maps.LatLng(lat,lon);
-        var mapOptions = {
-            center: location,
-            zoom: 12
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-        mapOptions);
-        google.maps.event.trigger(map, 'resize');
-        var marker = new google.maps.Marker({ position: location });
-        marker.setMap(map);
+        initialize_map();
     }
     else{
         document.getElementById('hide').style.display = 'none';
         }
 }
-
-function checkMap(){
-    console.log("checking map");
-    if(showmap == true){
-        console.log("show map has a value of true");
-         initialize_map();
-        }
-        else{
-            document.getElementById('hide').style.display = 'none';
-         }
-    }
 
 // function to initialise tooltips for social icons
 function get_tooltips(){
@@ -180,7 +169,6 @@ function get_layout(min, max){
 }
 
 function initialize_map() {
-    console.log("Map being initalized");
     var location = new google.maps.LatLng(lat,lon);
     var mapOptions = {
         center: location,
@@ -208,8 +196,8 @@ function getUrlParameter(){
     var sPageURL = window.location.search.substring(1);
     var sURLVariable = sPageURL.split('=');
     
-    if(sURLVariable[1] === "arb"){
-        console.log("the param is arb");
+    if(sURLVariable[1] == "arb"){
+
         document.getElementById('eng-menu').style.display = 'none';
         document.getElementById('arab-menu').style.display = 'block';
         
@@ -219,14 +207,9 @@ function getUrlParameter(){
         $('.eng-lang').addClass('hidden');
         $('.arb-lang').removeClass('hidden');
     }
-
-    else if(sURLVariable[1] == "eng"){
-            console.log("the param is eng");
-
-    }
 }
 
-
+//appends '?param=arb' if arabic language selected
 function appendArabicParam(){
     var sPageURL = window.location.search.substring(1);
     var sURLVariable = sPageURL.split('=');
@@ -234,10 +217,12 @@ function appendArabicParam(){
     if(sURLVariable[1] != "arb"){
         url = url + '?lang=arb';
     }
-    console.log("the url is " + url);
     window.location = url;
 }
 
+//When switching from arabic to eng 
+//this method will remove the 'arb'
+//param
 function removeArabicParam(){
 
     var arabicUrl = window.location.href;
