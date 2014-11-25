@@ -89,7 +89,7 @@ position: 1
             %p
             %p {{post.body_ar | escape | truncatewords: 25, "" }}
             .post-read-more
-              %a{:href => "/posts/{{ post._slug }}"} Read full article here - AR
+              %a{:href => "/posts/{{ post._slug }}"} قراءة المقال كاملا هنا
           {{ post.featured_image.url | image_tag: 'class:img-responsive'}}
       {% endfor %}
       :javascript

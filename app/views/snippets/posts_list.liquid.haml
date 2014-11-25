@@ -9,8 +9,8 @@
   %p.post-info.eng-lang  {{ post.body | truncatewords: 30, ""  | strip_html }}
   %p.post-info.arb-lang.hidden {{ post.body_ar | truncatewords: 30, ""  | strip_html }}
 
-  %small.read-more.eng-lang
-    .post-read-more
+  %small.read-more
+    .post-read-more.eng-lang
       %a{:href => "/posts/{{ post._slug }}"} Read the full story
   %small.read-more.arb-lang.hidden
     .post-read-more
