@@ -18,6 +18,9 @@ content_type: "featured_projects"
 {% block 'head' %} 
 %small.page-breadcrumb.en-lang Projects -> {{ page.title }} 
 %small.page-breadcrumb.arb-lang.hidden Projects -> {{ page.title }} 
+
+%p.pull-right.right-tagline
+  {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
 {% endblock %}
 
 

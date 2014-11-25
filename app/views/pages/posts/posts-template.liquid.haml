@@ -10,6 +10,9 @@ content_type: "posts"
 {% block 'head' %} 
 %small.page-breadcrumb.en-lang News > {{ post.title }}
 %small.page-breadcrumb.arb-lang.hidden News - AR > {{ post.title_ar }}
+
+%p.pull-right.right-tagline
+  {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
 {% endblock %}
 
 {% block main %}

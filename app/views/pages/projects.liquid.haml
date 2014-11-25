@@ -48,6 +48,11 @@ position: 3
 
 {% block 'head' %}
 %small.page-breadcrumb {{ page.title }}
+%small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
+
+%p.pull-right.right-tagline
+  {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
+
 {% endblock %}
 
 {% block 'main' %}
