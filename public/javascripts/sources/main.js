@@ -51,6 +51,10 @@ jQuery(document).ready(function() {
     $(document).delegate('.arb-lang a', 'click', function(){
         $(this).attr('href', $(this).attr('href') + '?lang=arb');
     });
+    
+    $(document).delegate('#filter a', 'click', function(){
+        return false;
+    });
 });
 
 // load google map API if show map div
