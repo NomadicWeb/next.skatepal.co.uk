@@ -1,5 +1,6 @@
 ---
 - 'Ramallah Skatepark ':
+    title_ar: "حلبة تزلج رام الله"
     _slug: ramallah-skatepark
     project_date: 08/07/2014 00:00
     client: The Islamic Club
@@ -18,12 +19,11 @@
     description_ar: 'حلبة تزلج خشبية في نادي الإسلامي ,رام الله. وتتكون الحديقة 
         من منحدر صغير، كيكر المنحدر ومنحدر الاطلاق، مع المزيد من العقبات . 
         لدى النادي أيضا لوحات والتي يمكن استخدامها في الموقع.'
-    featured_image: "/samples/featured_projects/ramallah-skatepark/ram_1.jpg"
-    project_image1: "/samples/featured_projects/ramallah-skatepark/ram_2.jpg"
     lat_coord: 0
     lon_coord: 0
 
 - 'Zebabdeh Skatepark':
+    title_ar: "حلبة تزلج الزبابدة"
     _slug: zebabdeh-skatepark
     project_date: 08/01/2014 00:00
     client: 'The Nazih Khalil foundation '
@@ -36,14 +36,11 @@
     location_ar: 'خلاب، الزبابدة'
     sectors: 'Concrete '
     sectors_ar: خشبي
-    description: 'Palestine''s first concrete skatepark. The site is a 300 ms concrete
+    description: "Palestine's first concrete skatepark. The site is a 300 ms concrete
       skate park with 2 flat banks, long quarter pipe, volcano, fun box, corner pyramid
-      and grind ledges. The site also has boards which can be used on site. '
+      and grind ledges. The site also has boards which can be used on site."
     description_ar: 'أول حلبة تزلج فلسطين . كان الموقع عبارة عن 300 متر مربع مع البنوك مسطحة، 
         وأنابيب الربع الطويل، بركان، مربع متعة، الهرم الزاوية وطحن الحواف. يحتوي الموقع 
         لوحات تزلج والتي يمكن استخدامها في الموقع. '
-    featured_image: "/samples/featured_projects/zebabdeh-skatepark/_DSC4892.jpg"
-    project_image1: "/samples/featured_projects/zebabdeh-skatepark/_DSC4879.jpg"
-    project_image2: "/samples/featured_projects/zebabdeh-skatepark/_DSC4877.jpg"
     lat_coord: 0
     lon_coord: 0
