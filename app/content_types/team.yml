@@ -15,6 +15,11 @@ fields:
     required: false
     localized: false
 
+- filter_ar:
+    label: Arabic version of filter
+    type: string
+    required: false
+
 - img:
     label: Image
     type: file
