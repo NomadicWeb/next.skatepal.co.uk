@@ -28,6 +28,7 @@ jQuery(document).ready(function() {
 
     $(document).delegate( '#eng-link', 'click', function(){
         removeArabicParam();
+        return false;
     });
 
     $(document).delegate('#arb-link', 'click', function(){
