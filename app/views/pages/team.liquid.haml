@@ -57,9 +57,12 @@ position: 4
         -# we create this list from main.js
         -# by writing unique filters to the DOM
         %li 
-          %li.arrange 
+          %li.arrange.eng-lang
             Arrange by
             %a.active{:href => "#", "data-filter" => "*"} All
+          %li.arrange.arb-lang.hidden
+            الترتيب بواسطة
+            %a.active{:href => "#", "data-filter" => "*"} الجميع
         %script write_filters(dedup(filters));
 
   .col-md-9
