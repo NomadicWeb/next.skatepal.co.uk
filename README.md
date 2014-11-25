@@ -6,17 +6,12 @@ and our latest efforts are staged here[[2]].
 
 TODO
 ====
-  - Implement translations
-  - Remove Google API calls from the head. Only load on project page (Martin)
-
 # REMEMBER - WHEN PUSHING TO STAGING IN THE END
 #   - SAVE THE LINKS + TEXT FROM THE ABOUT-US PAGE AND COPY THEM OVER
 #     TO THE NEW SITE
 #   - FIX PROJECT, TEAM FILTERS
 #   - TIMMY + SAMS FACE FOR TEAM PAGE
-#   - JS ERROR FOR FILTERS
 #   - CANNOT SWITCH LANG WHEN URL ENDS WITH '#'
-#   - IDENTIFY THE LINKS THAT WILL CONTAIN LANG CLASS 
 #   - IMPLEMENT HIDING THE TAGS
 
 
