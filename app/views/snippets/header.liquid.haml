@@ -1,9 +1,8 @@
 !!!
 %html{lang: "en"}
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "content-type"}
-    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}
     %meta{charset: "utf-8"}
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}
     %meta{name: "keywords", content: "{{ site.meta_keywords }} {{ page.meta_keywords }}"}
     %title {{ page.title }} - {{ site.name }}
 
@@ -11,11 +10,21 @@
     %link{"href" => "http://fonts.googleapis.com/css?family=Abel", "rel" => "stylesheet", "type" => "text/css"}
     /[if lt IE 9]
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    -# PRODUCTION
+    -# @TODO MARTIN
+
+    -# DEVELOPMENT
     {{ 'application' | stylesheet_tag }}
     {{ 'font-awesome.min' | stylesheet_tag }}
-    {{ 'sources/jquery.js' | javascript_tag }}
-    {{ 'sources/isotope.js' | javascript_tag }}
-    {{ 'sources/imagesloaded' | javascript_tag }}
-    {{ 'sources/bootstrap.min.js' | javascript_tag }}
-    {{ 'sources/main.js' | javascript_tag }}
+
+    -# PRODUCTION
+    {{ 'dist/fin.js' | javascript_tag }}
+
+    -# DEVELOPMENT
+    -# {{ 'sources/jquery.js' | javascript_tag }}
+    -# {{ 'sources/isotope.js' | javascript_tag }}
+    -# {{ 'sources/imagesloaded' | javascript_tag }}
+    -# {{ 'sources/bootstrap.min.js' | javascript_tag }}
+    -# {{ 'sources/main.js' | javascript_tag }}
     {% inline_editor %}
