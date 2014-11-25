@@ -16,10 +16,12 @@ content_type: "featured_projects"
 
 
 {% block 'head' %} 
-%small.page-breadcrumb.en-lang Projects -> {{ page.title }} 
-%small.page-breadcrumb.arb-lang.hidden Projects -> {{ page.title }} 
+%small.page-breadcrumb.eng-lang Projects -> {{ page.title }} 
+%small.page-breadcrumb.arb-lang.hidden المشاريع -> {{ page.title_ar }}
 
-%p.pull-right.right-tagline
+%p.pull-right.right-tagline.eng-lang
+  {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
+%p.pull-right.right-tagline.arb-lang.hidden
   {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
 {% endblock %}
 
@@ -29,7 +31,7 @@ content_type: "featured_projects"
   .col-md-12
     .col-md-3
       .content-block
-        .project-info.en-lang
+        .project-info.eng-lang
           %p Date: {{ featured_project.project_date | localized_date: "20%y"}}
           %p Client: {{ featured_project.client }}
           %p Status: {{ featured_project.status }}
@@ -38,14 +40,14 @@ content_type: "featured_projects"
           %p Sector: {{ featured_project.sectors }}
 
         .project-info.arb-lang.hidden
-          %p Date-AR: {{ featured_project.project_date_ar | localized_date: "20%y"}}
-          %p Client-AR: {{ featured_project.client_ar }}
-          %p Status-AR: {{ featured_project.status_ar }}
-          %p Area-AR: {{ featured_project.area_ar }}
-          %p Location-AR: {{ featured_project.location_ar }}
-          %p Sector-AR: {{ featured_project.sectors_ar }}
+          %p التاريخ: {{ featured_project.project_date | localized_date: "20%y"}}
+          %p العميل: {{ featured_project.client_ar }}
+          %p الحالة: {{ featured_project.status_ar }}
+          %p المنطقة: {{ featured_project.area_ar }}
+          %p المكان: {{ featured_project.location_ar }}
+          %p القطاع: {{ featured_project.sectors_ar }}
 
-        .project-description.en-lang
+        .project-description.eng-lang
           %p {{ featured_project.description }}
 
         .project-description.arb-lang.hidden
@@ -53,8 +55,8 @@ content_type: "featured_projects"
 
         .project-extras
           .project-map#hide
-            %p.en-lang#hide Location
-            %p.arb-lang.hidden#hide Location-AR
+            %p.eng-lang#hide Location
+            %p.arb-lang.hidden#hide الموقع
             #map-canvas
     .col-md-9
       .content-block.project-images

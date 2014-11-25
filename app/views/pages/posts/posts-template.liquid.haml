@@ -8,11 +8,13 @@ content_type: "posts"
 {% extends parent %}
 
 {% block 'head' %} 
-%small.page-breadcrumb.en-lang News > {{ post.title }}
-%small.page-breadcrumb.arb-lang.hidden News - AR > {{ post.title_ar }}
+%small.page-breadcrumb.eng-lang News > {{ post.title }}
+%small.page-breadcrumb.arb-lang.hidden الاخبار > {{ post.title_ar }}
 
-%p.pull-right.right-tagline
-  {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
+%p.pull-right.right-tagline.eng-lang
+  {% editable_text title, hint: "English tagline", format: raw, rows: 2 %}{% endeditable_text %}
+%p.pull-right.right-tagline.arb-lang.hidden
+  {% editable_text title, hint: "Arabic tagline", format: raw, rows: 2 %}{% endeditable_text %}
 {% endblock %}
 
 {% block main %}
@@ -22,7 +24,7 @@ content_type: "posts"
     .post-block.about
       .post-date
         %p {{ post.posted_at | localized_date: '%m.%d.%y' }}
-      .textcol
+      .textcol.eng-lang
         %p {{ post.body }}
       .textcol.arb-lang.hidden
         %p {{ post.body_ar }}
