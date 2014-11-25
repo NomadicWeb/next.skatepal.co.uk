@@ -25,7 +25,8 @@ position: 2
 {% include 'header' %}
 
 {% block 'head' %} 
-%small.page-breadcrumb {{ page.title }} 
+%small.page-breadcrumb.en-lang {{ page.title }} 
+%small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
 {% endblock %}
 
 {% block 'main' %}
