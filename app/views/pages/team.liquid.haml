@@ -18,8 +18,7 @@ position: 4
       var sPageURL = window.location.search.substring(1);
       var sURLVariable = sPageURL.split('=');
       return sURLVariable[1] === lang;
-  }
-  if(!is_lang('arb')){
+  } if(!is_lang('arb')){
     filters.push({
     "Location":   "{{ member.filter }}", 
     });
@@ -71,7 +70,7 @@ position: 4
       {% for member in contents.team %}
 
       {% capture filter %} {{ member.filter | downcase | dasherize }} {% endcapture %}
-      {% capture filter %} {{ member.filter_ar | downcase | dasherize }} {% endcapture %}
+      {% capture filter_ar %} {{ member.filter_ar | downcase | dasherize }} {% endcapture %}
 
       .item{:class => "{{filter}} {{filter_ar}}"}
         .content-block.team

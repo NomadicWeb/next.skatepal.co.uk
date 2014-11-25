@@ -103,7 +103,7 @@ position: 3
       {% endcapture %}
 
       {% capture location %} 
-      {{project.location | dasherize | downcase}} 
+      {{project.location | dasherize | downcase | remove: ","}} 
       {% endcapture %}
 
       {% capture location_ar %} 
