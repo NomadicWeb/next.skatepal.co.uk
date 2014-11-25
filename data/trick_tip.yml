@@ -2,21 +2,35 @@
 - Drop In:
     _slug: drop-in
     url: "//www.youtube.com/embed/NONYlTmmMhE"
+    filter: "trick-tip"
+    filter_ar: "خدعة طرف"
 - Rock Fakie:
     _slug: rock-fakie
     url: "//www.youtube.com/embed/0SUVViUhh9c"
+    filter: "trick-tip"
+    filter_ar: "خدعة طرف"
 - Frontside 180:
     _slug: frontside-180
     url: "//www.youtube.com/embed/cv3_XWophEs"
+    filter: "trick-tip"
+    filter_ar: "خدعة طرف"
 - Tail stall:
     _slug: russell-brandt-being-rad
     url: "//www.youtube.com/embed/mncwtUHdkWw"
+    filter: "trick-tip"
+    filter_ar: "خدعة طرف"
 - Ollie:
     _slug: ollie
     url: "//www.youtube.com/embed/GWbLK4WhT-0"
+    filter: "trick-tip"
+    filter_ar: "خدعة طرف"
 - Kickflip:
     _slug: kickflip
     url: "//www.youtube.com/embed/Zp1zyRH2SMk"
+    filter: "trick-tip"
+    filter_ar: "خدعة طرف"
 - Pop Shuvit:
     _slug: pop-shuvit
     url: "//www.youtube.com/embed/tFEvjYVkWck"
+    filter: "trick-tip"
+    filter_ar: "خدعة طرف"

@@ -21,11 +21,11 @@ position: 4
   }
   if(!is_lang('arb')){
     filters.push({
-    "Team":   "{{ member.filter }}", 
+    "Location":   "{{ member.filter }}", 
     });
   }else{
     filters.push({
-    "الفريق":   "{{ member.filter }}", 
+    "المكان":   "{{ member.filter }}", 
     });
   }
 {% endfor %}
@@ -60,6 +60,7 @@ position: 4
           %li.arrange.eng-lang
             Arrange by
             %a.active{:href => "#", "data-filter" => "*"} All
+
           %li.arrange.arb-lang.hidden
             الترتيب بواسطة
             %a.active{:href => "#", "data-filter" => "*"} الجميع
