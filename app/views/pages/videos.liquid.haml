@@ -26,7 +26,7 @@ position: 5
     });
   }else{
     filters.push({
-    "Type-AR":   "{{ video.filter }}", 
+    "نوع":   "{{ video.filter }}", 
     });
   }
 {% endfor %}
@@ -41,7 +41,7 @@ position: 5
 
 {% block 'head' %} 
 %small.page-breadcrumb.eng-lang {{ page.title }} 
-%small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
+%small.page-breadcrumb.arb-lang.hidden مقاطع الفيديو
 
 %p.pull-right.right-tagline.eng-lang
   {% editable_text title, hint: "English tagline", format: raw, rows: 2 %}{% endeditable_text %}
@@ -60,8 +60,8 @@ position: 5
             Arrange by
             %a.active{:href => "#", "data-filter" => "*"} All
           %li.arrange.arb-lang.hidden
-            Arrange by - AR
-            %a.active{:href => "#", "data-filter" => "*"} All - AR
+            الترتيب بواسطة
+            %a.active{:href => "#", "data-filter" => "*"} الجميع
         %script write_filters(dedup(filters));
   .col-md-9
     #grid.trick-tips-grid

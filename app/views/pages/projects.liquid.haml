@@ -21,12 +21,12 @@ position: 3
 
   if(is_lang('arb')){
     filters.push({
-      "ClientAR":   "{{ project.client_ar }}",
-      "StatusAR":   "{{ project.status_ar }}",
-      "AreaAR":     "{{ project.area_ar }}",
-      "LocationAR": "{{ project.location_ar }}",
-      "DateAR":     "{{ project.project_date | localized_date: "20%y" }}",
-      "SectorAR":   "{{ project.sectors_ar }}"
+      "العميل":   "{{ project.client_ar }}",
+      "الحالة":   "{{ project.status_ar }}",
+      "المنطقة":  "{{ project.area_ar }}",
+      "المكان":   "{{ project.location_ar }}",
+      "التاريخ":  "{{ project.project_date | localized_date: "20%y" }}",
+      "القطاع":   "{{ project.sectors_ar }}"
     });
   }else{
     filters.push({
@@ -48,7 +48,7 @@ position: 3
 
 {% block 'head' %}
 %small.page-breadcrumb {{ page.title }}
-%small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
+%small.page-breadcrumb.arb-lang.hidden المشروع
 
 %p.pull-right.right-tagline.eng-lang
   {% editable_text title, hint: "English tagline", format: raw, rows: 2 %}{% endeditable_text %}
@@ -70,8 +70,8 @@ position: 3
             %a.active.eng-lang{:href => "#", "data-filter" => "*"} All
 
           %li.arrange.arb-lang.hidden
-            Arrange by - AR
-            %a.active.arb-lang.hidden{:href => "#", "data-filter" => "*"} All - AR
+            الترتيب بواسطة
+            %a.active.arb-lang.hidden{:href => "#", "data-filter" => "*"} الجميع
         %script write_filters(dedup(filters));
 
   .col-md-9

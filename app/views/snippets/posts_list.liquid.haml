@@ -14,7 +14,7 @@
       %a{:href => "/posts/{{ post._slug }}"} Read the full story
   %small.read-more.arb-lang.hidden
     .post-read-more
-      %a{:href => "/posts/{{ post._slug }}"} Read the full story - AR
+      %a{:href => "/posts/{{ post._slug }}"} قراءة القصة الكاملة
 
   {% if post.featured_image.url %}
   %img.post-featured-image.img-responsive{:src => "{{ post.featured_image.url }}", :alt => "{{ post.title | escape }}"}
@@ -23,4 +23,4 @@
 
 
 %a.see-all.eng-lang{:href => "/posts"} See all posts ...
-%a.see-all.arb-lang.hidden{:href => "/posts"} See all posts ... - AR
+%a.see-all.arb-lang.hidden{:href => "/posts"} رؤية جميع المشاركات

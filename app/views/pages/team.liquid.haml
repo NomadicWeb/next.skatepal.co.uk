@@ -25,7 +25,7 @@ position: 4
     });
   }else{
     filters.push({
-    "Team-AR":   "{{ member.filter }}", 
+    "الفريق":   "{{ member.filter }}", 
     });
   }
 {% endfor %}
@@ -40,7 +40,7 @@ position: 4
 
 {% block 'head' %}
 %small.page-breadcrumb.eng-lang {{ page.title }} 
-%small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
+%small.page-breadcrumb.arb-lang.hidden الفريق
 
 %p.pull-right.right-tagline.eng-lang
   {% editable_text title, hint: "English tagline", format: raw, rows: 2 %}{% endeditable_text %}

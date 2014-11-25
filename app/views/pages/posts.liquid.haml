@@ -27,7 +27,7 @@ position: 1
     });
   }else{
     filters.push({
-    "Year-AR":   "{{ post.posted_at | localized_date: '20%y' }}"
+    "عام":   "{{ post.posted_at | localized_date: '20%y' }}"
     });
   }
 {% endfor %}
@@ -39,7 +39,7 @@ position: 1
 {% endblock %}
 {% block 'head' %} 
 %small.page-breadcrumb.eng-lang {{ page.title }} 
-%small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
+%small.page-breadcrumb.arb-lang.hidden الاخبار
 
 %p.pull-right.right-tagline.eng-lang
   {% editable_text title, hint: "English tagline", format: raw, rows: 2 %}{% endeditable_text %}
@@ -61,8 +61,8 @@ position: 1
             Arrange by
             %a.active{:href => "#", "data-filter" => "*"} All
           %li.arrange.arb-lang.hidden
-            Arrange by - AR
-            %a.active{:href => "#", "data-filter" => "*"} All - AR
+            الترتيب بواسطة
+            %a.active{:href => "#", "data-filter" => "*"} الجميع
         %script write_filters(dedup(filters));
 
   .col-md-9
