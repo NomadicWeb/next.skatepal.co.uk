@@ -50,8 +50,10 @@ position: 3
 %small.page-breadcrumb {{ page.title }}
 %small.page-breadcrumb.arb-lang.hidden {{ page.title }} - AR
 
-%p.pull-right.right-tagline
-  {% editable_text title, hint: "a title", format: raw, rows: 2 %}{% endeditable_text %}
+%p.pull-right.right-tagline.eng-lang
+  {% editable_text title, hint: "English tagline", format: raw, rows: 2 %}{% endeditable_text %}
+%p.pull-right.right-tagline.arb-lang.hidden
+  {% editable_text title, hint: "Arabic tagline", format: raw, rows: 2 %}{% endeditable_text %}
 
 {% endblock %}
 
