@@ -165,6 +165,7 @@ function get_layout(min, max){
         var v = $(items[i]);
         v.addClass("w" + i);
         v.css("width", rand_width);
+        console.log("get layout");
     }
 
     // get masonry layout from isotope
@@ -175,6 +176,11 @@ function get_layout(min, max){
         layoutMode: 'fitRows'
         })
     });
+}
+
+function display_team(){
+    $(".grid-team").fadeIn('slow');
+
 }
 
 function initialize_map() {
