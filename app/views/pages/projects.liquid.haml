@@ -75,7 +75,9 @@ position: 3
         %script write_filters(dedup(filters));
 
   .col-md-9
-    #grid
+    %p.loading-block
+      Loading, please wait ....
+    #grid.grid-load
       {% for project in contents.featured_projects %}
 
       {% capture client %} 

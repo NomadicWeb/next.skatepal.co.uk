@@ -64,7 +64,9 @@ position: 5
             %a.active{:href => "#", "data-filter" => "*"} الجميع
         %script write_filters(dedup(filters));
   .col-md-9
-    #grid.trick-tips-grid
+    %p.loading-block
+      Loading, please wait ....
+    #grid.trick-tips-grid.grid-load
       {% for video in contents.trick_tip %}
       {% capture filter %} {{ video.filter | downcase | dasherize }} {% endcapture %}
       {% capture filter_ar %} {{ video.filter_ar | downcase | dasherize }} {% endcapture %}

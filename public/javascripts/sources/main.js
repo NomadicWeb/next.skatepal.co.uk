@@ -175,12 +175,9 @@ function get_layout(min, max){
         itemSelector: '.item',
         layoutMode: 'fitRows'
         })
+        $(".loading-block").fadeOut();
+        $(".grid-load").animate({opacity: 1});
     });
-}
-
-function display_team(){
-    $(".grid-team").fadeIn('slow');
-
 }
 
 function initialize_map() {

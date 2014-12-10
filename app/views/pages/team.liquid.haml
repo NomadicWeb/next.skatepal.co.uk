@@ -66,7 +66,9 @@ position: 4
         %script write_filters(dedup(filters));
 
   .col-md-9
-    #grid.grid-team
+    %p.loading-block
+      Loading, please wait ....
+    #grid.grid-load
       {% for member in contents.team %}
 
       {% capture filter %} {{ member.filter | downcase | dasherize }} {% endcapture %}
@@ -79,7 +81,6 @@ position: 4
       {% endfor %}
       :javascript
         get_layout(20, 25);
-        display_team();
 {% endblock %}
 
 {% include 'footer' %}

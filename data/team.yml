@@ -3,83 +3,104 @@
     _slug: charlie-d
     filter: "Scotland"
     filter_ar: "أسكتلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4b6d0e8e44d600014b/files/me.jpg"
 - James McConville:
     _slug: james-mcconville
     filter: "Ireland"
     filter_ar: "أيرلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4c6d0e8e447b00014c/files/james.jpg"
 - Kevin Loftus:
     _slug: kevin-loftus
     filter: "Ireland"
     filter_ar: "أيرلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4c6d0e8ef60a00014d/files/kevin.jpg"
 - Aram Sabbah:
     _slug: aram-sabbah
     filter: "Palestine"
     filter_ar: "فلسطين"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4d6d0e8ee85500014e/files/aram.jpg"
 - Adham Tamimi:
     _slug: adham-tamimi
     filter: "Palestine"
     filter_ar: "فلسطين"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4d6d0e8ea39200014f/files/adham.jpg"
 - Jack Davis:
     _slug: jack-davis
     filter: "Scotland"
     filter_ar: "أسكتلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4e6d0e8e08fc000150/files/jack.jpg"
 - Geoffrey Elston:
     _slug: geoffrey-elston
     filter: "England"
     filter_ar: "انجلترا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4e6d0e8eb08b000151/files/geoffrey_elston.jpg"
 - Mark Mcallister:
     _slug: mark-mcallister
     filter: "England"
     filter_ar: "انجلترا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4e6d0e8eb08b000151/files/geoffrey_elston.jpg"
 - Mick Kirkman:
     _slug: mick-kirkman
     filter: "England"
     filter_ar: "انجلترا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee4f6d0e8ee5f8000152/files/mark_mcallister.jpg"
 - 'Mai Alem ':
     _slug: mai-alem
     filter: "Palestine"
     filter_ar: "فلسطين"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee506d0e8ec60b000154/files/may_on_ramp.jpg"
 - 'Sirus Gahan ':
     _slug: sirus-gahan
     filter: "England"
     filter_ar: "انجلترا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee516d0e8e701f000155/files/sirus.jpg"
 - Harry Gerrard:
     _slug: sam-dearden
     filter: "England"
     filter_ar: "انجلترا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee526d0e8e3284000156/files/Harry_Gerrard__2_.jpg"
 - Luke Murphy:
     _slug: luke-murphy
     filter: "Ireland"
     filter_ar: "أيرلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee526d0e8e3f32000157/files/luke_m.jpg"
 - 'Martin O Grady ':
     _slug: martin-ogrady
     filter: "Ireland"
     filter_ar: "أيرلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee536d0e8e6086000158/files/Martin_O_Grady.jpg"
 - Finn Weddle:
     _slug: finn-weddle
     filter: "England"
     filter_ar: "انجلترا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee536d0e8ec1f5000159/files/Finn_Weddle.jpg"
 - Huw ó Droma:
     _slug: huw-o-droma
     filter: "Ireland"
     filter_ar: "أيرلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee546d0e8e4a2c00015a/files/huw.jpg"
 - 'Sam Comrie ':
     _slug: sam-comrie
     filter: "Scotland"
     filter_ar: "أسكتلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee556d0e8e1cd800015b/files/Sam.jpg"
 - Rosie Knight:
     _slug: rosie-knight
     filter: "Scotland"
     filter_ar: "أسكتلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee556d0e8ed5f200015c/files/Roseanne_Knight.jpg"
 - Timmy O' Connell:
     _slug: timmy-o-connell
     filter: "Ireland"
     filter_ar: "أيرلندا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee566d0e8ecf8600015d/files/timmy.png"
 - 'Sam Dearden ':
     _slug: sam-dearden-1
     filter: "England"
     filter_ar: "انجلترا"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee576d0e8e8c9600015e/files/sam.jpg"
 - Chris Jones:
     _slug: chris-jones
     filter: "Wales"
     filter_ar: "ويلز"
+    img: "https://skatepal-bucket.s3.amazonaws.com/sites/5474ee246d0e8ea8b9000102/content_entry5474ee436d0e8e28c6000130/5474ee586d0e8e3cdc00015f/files/chris_jones.jpg"
